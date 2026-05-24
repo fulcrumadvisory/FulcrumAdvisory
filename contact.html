@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Fulcrum Advisory</title>
+  <meta name="description" content="Schedule a call or send a message to David Taylor at Fulcrum Advisory. Direct access — no intake team, no sales funnel." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.fulcrumadvisory.us/contact.html" />
+  <meta property="og:title" content="Contact | Fulcrum Advisory" />
+  <meta property="og:description" content="Reach David Taylor directly. FOCI, CMMC, and GovCon AI advisory inquiries answered personally within one business day." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Fulcrum Advisory",
+    "url": "https://www.fulcrumadvisory.us/contact.html",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "David Taylor",
+      "email": "david.taylor@fulcrumadvisory.us"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-name">Fulcrum Advisory</span>
+      <span class="logo-tag">Defense · Cybersecurity · AI</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn--gold btn--sm nav-cta">Schedule a Call</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="insights.html">Insights</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn--gold" style="margin-top:16px">Schedule a Call</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span>
+      <span>Contact</span>
+    </nav>
+    <h1>Let's Talk</h1>
+    <p class="page-header-sub">Every inquiry is handled personally by David Taylor. Expect a response within one business day.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="gap:var(--space-6);align-items:start">
+
+      <!-- CONTACT FORM -->
+      <div>
+        <span class="eyebrow">Send a Message</span>
+        <h2 style="margin-bottom:var(--space-4)">Start the Conversation</h2>
+
+        <!-- ============================================================
+          CONTACT FORM — Use same solution as Paradise Beach House website
+          Replace this comment block with your form implementation
+          (Formspree / EmailJS / Netlify Forms / etc.)
+          Form should POST to your handler and show success/error state.
+          Fields: name, company, email, inquiry_type (select), message
+          ============================================================ -->
+
+        <div id="contact-form-container">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="company">Company / Organization</label>
+            <input type="text" id="company" name="company" placeholder="ACME Defense LLC" />
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email</label>
+            <input type="email" id="email" name="email" placeholder="you@yourcompany.com" required />
+          </div>
+          <div class="form-group">
+            <label for="inquiry">Inquiry Type</label>
+            <select id="inquiry" name="inquiry">
+              <option value="">Select a topic…</option>
+              <option value="foci">FOCI Advisory</option>
+              <option value="cmmc">CMMC Compliance</option>
+              <option value="ai">AI / GCC High Deployment</option>
+              <option value="vciso">Fractional vCISO</option>
+              <option value="other">General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Briefly describe your situation or question…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--lg" style="width:100%">Send Message</button>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin-top:12px;text-align:center">
+            Your message goes directly to David. No intake team, no CRM drip campaigns.
+          </p>
+        </div>
+      </div>
+
+      <!-- DIRECT CONTACT + CALENDLY -->
+      <div>
+        <span class="eyebrow">Schedule a Call</span>
+        <h2 style="margin-bottom:var(--space-3)">Or Book Directly</h2>
+        <p style="margin-bottom:var(--space-4)">Prefer to get straight to a call? Use the calendar below to find a time that works.</p>
+
+        <!-- ============================================================
+          CALENDLY EMBED — Replace with your Calendly inline embed snippet
+          Example:
+          <div class="calendly-inline-widget"
+               data-url="https://calendly.com/YOUR_LINK"
+               style="min-width:320px;height:630px;">
+          </div>
+          <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+          ============================================================ -->
+        <div id="calendly-embed" style="min-height:480px;background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--space-4)">
+          <div>
+            <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:var(--space-3)"><strong>Calendly calendar will appear here.</strong><br>Replace this block with your Calendly embed snippet.</p>
+            <a href="#" data-placeholder="true" class="btn btn--gold">Open Calendly →</a>
+          </div>
+        </div>
+
+        <!-- DIRECT CONTACT -->
+        <div style="margin-top:var(--space-4);padding:var(--space-3);background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius)">
+          <h5 style="margin-bottom:var(--space-2)">Prefer Email?</h5>
+          <a href="mailto:david.taylor@fulcrumadvisory.us" style="display:flex;align-items:center;gap:8px;font-weight:600;color:var(--blue);font-size:0.9rem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            david.taylor@fulcrumadvisory.us
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="section--sm section--gray">
+  <div class="container">
+    <div style="max-width:640px;margin:0 auto;text-align:center">
+      <span class="eyebrow">What to Expect</span>
+      <h2 style="margin:8px 0 var(--space-4)">A Direct, No-Fluff Engagement Process</h2>
+    </div>
+    <div class="grid-3" style="max-width:900px;margin:0 auto">
+      <div style="text-align:center;padding:var(--space-3)">
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:8px">01</div>
+        <h4 style="margin-bottom:6px">You Reach Out</h4>
+        <p style="font-size:0.875rem">Send a message or book a call. No RFQ required, no NDA before hello.</p>
+      </div>
+      <div style="text-align:center;padding:var(--space-3)">
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:8px">02</div>
+        <h4 style="margin-bottom:6px">David Responds</h4>
+        <p style="font-size:0.875rem">Personally. Within one business day. With a frank assessment of whether and how he can help.</p>
+      </div>
+      <div style="text-align:center;padding:var(--space-3)">
+        <div style="font-family:var(--font-serif);font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:8px">03</div>
+        <h4 style="margin-bottom:6px">Scoped &amp; Started</h4>
+        <p style="font-size:0.875rem">A clear scope of work or retainer agreement. No bloated proposals, no lengthy procurement cycles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-name">Fulcrum Advisory</div>
+        <span class="logo-tag">Defense · Cybersecurity · AI</span>
+        <p>Cleared GovCon advisory for defense contractors navigating FOCI, CMMC, and the emerging AI compliance landscape.</p>
+        <div class="footer-contact">
+          <a href="mailto:david.taylor@fulcrumadvisory.us">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            david.taylor@fulcrumadvisory.us
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services/foci-advisory.html">FOCI Advisory</a></li>
+          <li><a href="services/cmmc-compliance.html">CMMC Compliance</a></li>
+          <li><a href="services/ai-govcon.html">AI in GCC High</a></li>
+          <li><a href="services/vciso-advisory.html">Fractional vCISO</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Insights</h5>
+        <ul>
+          <li><a href="insights/dfars-foci-rule-2025.html">DFARS FOCI Rule 2025</a></li>
+          <li><a href="insights/ai-cmmc-gcc-high.html">AI &amp; CMMC</a></li>
+          <li><a href="insights/cmmc-final-rule-2024.html">CMMC Final Rule</a></li>
+          <li><a href="insights.html">All Articles</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Fulcrum Advisory. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('siteNav');
+  const toggle = document.getElementById('navToggle');
+  const mobile = document.getElementById('navMobile');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+  toggle.addEventListener('click', () => mobile.classList.toggle('open'));
+  mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobile.classList.remove('open')));
+</script>
+</body>
+</html>
