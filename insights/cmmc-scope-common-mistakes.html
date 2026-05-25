@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Five Scoping Mistakes That Sink CMMC Assessments Before They Start | Fulcrum Advisory</title>
+  <meta name="description" content="The five most common CMMC scoping mistakes — treating the CUI environment as everything, missing external service providers, ignoring security protection assets — and how to avoid them before a C3PAO assessor finds them." />
+  <meta name="keywords" content="CMMC scoping mistakes, CUI scoping, CMMC assessment prep, C3PAO assessment, security protection assets, external service providers CMMC, SSP system boundary, CMMC Level 2 scoping" />
+  <meta name="author" content="David Taylor" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.fulcrumadvisory.us/insights/cmmc-scope-common-mistakes.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Five Scoping Mistakes That Sink CMMC Assessments Before They Start" />
+  <meta property="og:description" content="Most CMMC failures begin not in the controls but in the scoping decisions made months before the assessor arrives." />
+  <meta property="og:url" content="https://www.fulcrumadvisory.us/insights/cmmc-scope-common-mistakes.html" />
+  <meta property="og:site_name" content="Fulcrum Advisory" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Five Scoping Mistakes That Sink CMMC Assessments Before They Start" />
+  <meta name="twitter:description" content="Most CMMC failures begin not in the controls but in the scoping decisions made months before the assessor arrives." />
+
+  <!-- Schema.org: Article -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"The Five Scoping Mistakes That Sink CMMC Assessments Before They Start","description":"The five most common CMMC scoping mistakes — and how to avoid them before a C3PAO assessor finds them for you.","datePublished":"2024-04-09","dateModified":"2024-04-09","author":{"@type":"Person","name":"David Taylor","url":"https://www.fulcrumadvisory.us/about.html"},"publisher":{"@type":"Organization","name":"Fulcrum Advisory","url":"https://www.fulcrumadvisory.us"},"mainEntityOfPage":"https://www.fulcrumadvisory.us/insights/cmmc-scope-common-mistakes.html"}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+</head>
+<body>
+
+<nav class="site-nav" id="siteNav"><div class="nav-inner"><a href="../index.html" class="nav-logo"><span class="logo-name">Fulcrum Advisory</span><span class="logo-tag">Defense · Cybersecurity · AI</span></a><div class="nav-links"><a href="../index.html">Home</a><a href="../services.html">Services</a><a href="../about.html">About</a><a href="../insights.html" class="active">Insights</a><a href="../contact.html">Contact</a></div><a href="../contact.html" class="btn btn--gold btn--sm nav-cta">Schedule a Call</a><button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button></div></nav>
+<div class="nav-mobile" id="navMobile"><a href="../index.html">Home</a><a href="../services.html">Services</a><a href="../about.html">About</a><a href="../insights.html">Insights</a><a href="../contact.html">Contact</a><a href="../contact.html" class="btn btn--gold" style="margin-top:16px">Schedule a Call</a></div>
+
+<div class="article-header">
+  <div class="container container--narrow">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../insights.html">Insights</a><span class="sep">/</span><span>CMMC Scoping Mistakes</span></nav>
+    <div class="article-meta">
+      <span class="article-tag">CMMC · Compliance</span>
+      <span class="article-date">April 9, 2024 · 7 min read</span>
+    </div>
+    <h1>The Five Scoping Mistakes That Sink CMMC Assessments Before They Start</h1>
+    <p class="article-sub">Most CMMC failures begin not in the controls but in the scoping decisions made months before the assessor arrives — and by then, the mistakes are expensive to fix.</p>
+    <div class="article-author">
+      <div class="author-avatar">DT</div>
+      <div class="author-info">
+        <div class="author-name">David Taylor</div>
+        <div class="author-role">Principal · Fulcrum Advisory</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="container container--narrow">
+
+    <p>There is a version of CMMC preparation where you do the scoping work correctly up front, produce a defensible system boundary, document it in a tight SSP, conduct a gap assessment against only the systems that actually matter, and arrive at your C3PAO assessment with a manageable list of findings. There is another version where you scope everything, document nothing, and walk into the assessment having done three times the work for a result that still has critical gaps. Most companies are doing the second version.</p>
+
+    <p>Scoping is not glamorous. It does not appear on assessment checklists. But it is where CMMC assessments are won or lost. A correctly scoped CMMC environment with 90% of controls implemented will outperform an over-scoped environment with 95% of controls implemented, because the 5% gaps in the over-scoped environment are spread across a surface area no one can fully track.</p>
+
+    <p>These are the five scoping mistakes I see most consistently, and what to do about each of them.</p>
+
+    <h2>Mistake 1 — Treating "CUI Environment" as "Everything"</h2>
+
+    <p>The most common scoping mistake is the broadest one: deciding that because CUI could theoretically exist on any system, all systems are in scope. This is not how the CMMC scoping guidance works, and applying it this way makes CMMC compliance genuinely unmanageable for most organizations.</p>
+
+    <p>The CMMC scoping guidance — drawn from the NIST SP 800-171 Rev 3 framework and the DoD's own scoping guidance published alongside the final rule — identifies three categories of in-scope assets: CUI assets (systems that process, store, or transmit CUI), security protection assets (systems that protect CUI assets), and contractor risk managed assets (systems that are on the same network but don't directly process CUI and aren't security protection assets). Contractor risk managed assets carry a lighter assessment burden than CUI assets.</p>
+
+    <p>The scoping exercise is a deliberate, documented analysis that asks: which specific systems, by name, actually process, store, or transmit CUI? The answer is almost always a narrower list than the initial instinct suggests. Contract deliverables might flow through a specific shared drive, not through every shared drive. Proposal content might exist only in a designated SharePoint site. Engineering drawings might be stored in a specific PLM system accessible only from a defined workstation set.</p>
+
+    <p>Narrowing the CUI environment — through network segmentation, access controls, and documented data handling procedures — is one of the most cost-effective investments a defense contractor can make. A CUI enclave of 15 systems with strong controls is assessed differently from a "everything" scope of 200 systems with incomplete controls.</p>
+
+    <h2>Mistake 2 — Forgetting External Service Providers</h2>
+
+    <p>Your cloud backup provider that backs up CUI servers is in scope. Your managed IT provider that has remote access to in-scope systems is in scope. Your hosted email provider where CUI-containing emails are stored is in scope. If an external service provider processes, stores, or transmits CUI on your behalf — or provides security functions that protect systems that do — that provider is part of your CMMC scope and needs to appear in your SSP.</p>
+
+    <p>This is where the assessment conversation gets uncomfortable. Contractors who have not done this analysis arrive at assessment having documented their own environment thoroughly but having no documentation of their cloud providers' CMMC compliance posture. The assessor will ask. "We use Microsoft 365 GCC High" is an answer. "We use our IT company's backup solution and we're not sure what it is" is a finding.</p>
+
+    <p>The CMMC external service provider (ESP) requirements mean that your SSP needs to document each ESP, what CUI it processes, what CMMC requirements it is responsible for, and how you have verified or will verify its compliance. For cloud providers with existing FedRAMP authorizations (like Microsoft 365 GCC High), this is straightforward — the FedRAMP package documents the controls, and you inherit them. For smaller managed service providers, the conversation is harder but no less required.</p>
+
+    <p>Before your gap assessment, pull a complete list of every external service your organization uses that touches CUI or the systems that protect it. This list almost always has surprises: a legacy backup agent still running on a few servers, a remote monitoring tool the IT team installed years ago, a document management system hosted by a third party. Each one needs to be evaluated and documented.</p>
+
+    <h2>Mistake 3 — Missing Security Protection Assets</h2>
+
+    <p>Security protection assets are systems that protect CUI systems even if they don't directly process CUI. They are in scope for CMMC because compromising them compromises the security of CUI systems. This is the scoping category that most self-assessments miss entirely — and it is a category that C3PAO assessors specifically look for.</p>
+
+    <p>Your Active Directory or Azure Entra ID is a security protection asset. It controls authentication and authorization for CUI systems. If an attacker compromises your identity infrastructure, they can reach your CUI systems. Your SIEM is a security protection asset. Your endpoint detection and response platform is a security protection asset. Your MFA platform is a security protection asset. Your vulnerability scanning tool that scans CUI systems is a security protection asset. Your patch management system that manages CUI system configurations is a security protection asset.</p>
+
+    <p>These systems don't need to meet every requirement applicable to CUI assets, but they do need to appear in your SSP, and the controls applied to them need to be appropriate for their role in protecting the CUI environment. An identity system with weak administrative password practices is a finding even if no CUI ever flows through it directly, because the control it provides over CUI systems makes it part of the security architecture.</p>
+
+    <p>When you draw your system boundary diagram, explicitly label security protection assets separately from CUI assets. This demonstrates to the assessor that you understand the distinction and have made deliberate decisions about what falls into each category.</p>
+
+    <h2>Mistake 4 — Not Documenting CUI Flows</h2>
+
+    <p>A CUI data flow diagram is not optional. It is the foundation of the scoping analysis. If you cannot draw it — if you cannot trace, system by system, where CUI enters your environment, how it moves through it, where it is stored, and how it exits — you cannot defend your scope boundary. And if you cannot defend your scope boundary, the assessor will expand it.</p>
+
+    <p>The data flow diagram should show ingress points: where does CUI come into the environment? Email attachments from prime contractors. File transfers from government systems. Documents downloaded from government portals like PIEE or DOD SAFE. These are entry points. The diagram traces from each entry point through every system the CUI touches: email servers, file shares, workstations, collaboration tools, cloud storage, printing systems, and any systems that receive data derived from CUI.</p>
+
+    <p>Every junction in the data flow is a control point. An undocumented junction — a path by which CUI moves from a documented system to an undocumented one — is a finding because it suggests the system boundary is wrong. Assessors look at data flows carefully. If your diagram shows CUI living in a SharePoint site but your users routinely download files to desktops that aren't in scope, the diagram is wrong and the scope is wrong.</p>
+
+    <p>Building the data flow diagram often reveals scope decisions that need to be revisited. It's common to discover that a system assumed to be out of scope is actually in the data flow path, or that a control assumed to prevent CUI from reaching a system is not actually enforced. Better to discover this during scoping than during assessment.</p>
+
+    <h2>Mistake 5 — Treating the SSP as a One-Time Document</h2>
+
+    <p>An SSP created for an initial gap assessment that is not updated for two years will not match the environment when the C3PAO assessor arrives. This seems obvious, but it is one of the most common failure modes I see. Organizations invest significant effort in SSP development, declare it complete, and then make no effort to maintain it as the environment evolves.</p>
+
+    <p>The SSP is a living document. Every time you add a system to the CUI environment, the SSP changes. Every time you add an external service provider that processes CUI, the SSP changes. Every time you change how a specific control is implemented — switching EDR vendors, changing your patch management process, migrating email to a new platform — the SSP changes. Every time you add a significant new employee who is a user of CUI systems, your user inventory changes.</p>
+
+    <p>NIST SP 800-171 Rev 3 requirement 03.12.04 specifically requires that system security plans be reviewed and updated periodically. "Periodically" is an organization-defined parameter, but DCSA and C3PAO assessors expect meaningful update frequency. An SSP with a "last updated" date from two years ago is a problem before the assessor has read a single control implementation statement.</p>
+
+    <p>Build SSP maintenance into your operational processes. Change management procedures should include an SSP review step. When IT makes a significant configuration change, someone is responsible for evaluating whether it affects the SSP. When a new contract brings new CUI handling requirements, the SSP is updated to reflect them. The SSP is a compliance artifact that must reflect operational reality — not a document that describes how the environment worked when you wrote it.</p>
+
+    <p>Getting scoping right before starting the gap assessment saves time, money, and audit exposure. A well-scoped CUI environment with a current, accurate SSP and a documented data flow diagram arrives at assessment in a fundamentally stronger position than one where the scope was never formally defined. It is not the visible part of CMMC compliance work — but it is where assessments are won or lost.</p>
+
+    <div class="article-cta">
+      <h3 style="color:var(--white)">Preparing for a CMMC assessment and not sure if your scope is right?</h3>
+      <p style="color:rgba(255,255,255,0.65)">David Taylor conducts CUI scoping and data flow analysis as the first step of every CMMC engagement — before gap assessment, before remediation, before the assessor arrives.</p>
+      <a href="../contact.html" class="btn btn--gold">Schedule a Call</a>
+    </div>
+
+  </div>
+</div>
+
+<section class="section section--gray">
+  <div class="container">
+    <span class="eyebrow">Related Insights</span>
+    <h2>Continue Reading</h2>
+    <div class="grid-3">
+
+      <article class="insight-card">
+        <div class="insight-card-image">
+          <div class="insight-card-image-bg" style="background:var(--navy-mid)"></div>
+          <span class="insight-card-tag">CMMC · Compliance</span>
+        </div>
+        <div class="insight-card-body">
+          <div class="insight-card-meta">January 14, 2025 · 7 min read</div>
+          <h3>CMMC Final Rule Is Live: The Clock Is Running for 80,000 Contractors</h3>
+          <p>32 CFR Part 170 took effect December 16, 2024. Here is what the phased rollout means for your contracts and what your first 90 days should look like.</p>
+          <div class="insight-card-footer">
+            <a href="cmmc-final-rule-2024.html" class="read-more">Read article →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="insight-card">
+        <div class="insight-card-image">
+          <div class="insight-card-image-bg" style="background:var(--navy-mid)"></div>
+          <span class="insight-card-tag">CMMC · NIST</span>
+        </div>
+        <div class="insight-card-body">
+          <div class="insight-card-meta">November 7, 2024 · 8 min read</div>
+          <h3>NIST SP 800-171 Rev 3 Is Final: What Changed and What It Means for Your SSP</h3>
+          <p>Rev 3 added 17 new requirements, reorganized control families, and introduced organization-defined parameters. Here is what changes for SSP authors.</p>
+          <div class="insight-card-footer">
+            <a href="nist-800-171-rev3.html" class="read-more">Read article →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="insight-card">
+        <div class="insight-card-image">
+          <div class="insight-card-image-bg" style="background:var(--navy-mid)"></div>
+          <span class="insight-card-tag">AI · Cloud</span>
+        </div>
+        <div class="insight-card-body">
+          <div class="insight-card-meta">July 22, 2024 · 10 min read</div>
+          <h3>GCC High vs. Commercial Azure: Why the Boundary Matters More Than the Vendor</h3>
+          <p>The compliance decision isn't which AI vendor to use — it's which Azure tenant your system lives in, and most contractors get this wrong.</p>
+          <div class="insight-card-footer">
+            <a href="gcc-high-ai-architecture.html" class="read-more">Read article →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-name">Fulcrum Advisory</div>
+        <span class="logo-tag">Defense · Cybersecurity · AI</span>
+        <p>Cleared GovCon advisory for defense contractors navigating FOCI, CMMC, and the emerging AI compliance landscape.</p>
+        <div class="footer-contact">
+          <a href="mailto:david.taylor@fulcrumadvisory.us">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            david.taylor@fulcrumadvisory.us
+          </a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Services</h5><ul>
+        <li><a href="../services/foci-advisory.html">FOCI Advisory</a></li>
+        <li><a href="../services/cmmc-compliance.html">CMMC Compliance</a></li>
+        <li><a href="../services/ai-govcon.html">AI in GCC High</a></li>
+        <li><a href="../services/vciso-advisory.html">Fractional vCISO</a></li>
+        <li><a href="../services.html">All Services</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Insights</h5><ul>
+        <li><a href="dfars-foci-rule-2025.html">DFARS FOCI Rule 2025</a></li>
+        <li><a href="ai-cmmc-gcc-high.html">AI &amp; CMMC Compliance</a></li>
+        <li><a href="cmmc-final-rule-2024.html">CMMC Final Rule</a></li>
+        <li><a href="nist-800-171-rev3.html">NIST 800-171 Rev 3</a></li>
+        <li><a href="../insights.html">All Articles</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Company</h5><ul>
+        <li><a href="../about.html">About David Taylor</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../contact.html#schedule">Schedule a Call</a></li>
+        <li><a href="../privacy.html">Privacy Policy</a></li>
+        <li><a href="../terms.html">Terms of Service</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Fulcrum Advisory. All rights reserved.</p>
+      <p style="font-family:var(--font-mono);font-size:0.68rem;color:rgba(255,255,255,0.2)">NIST · CMMC · NISPOM · RMF · FOCI · ISO 27001</p>
+      <div class="footer-legal"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a><a href="../sitemap.xml">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('siteNav');
+  const toggle = document.getElementById('navToggle');
+  const mobile = document.getElementById('navMobile');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+  toggle.addEventListener('click', () => mobile.classList.toggle('open'));
+  mobile.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => mobile.classList.remove('open'));
+  });
+</script>
+</body>
+</html>
