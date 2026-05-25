@@ -104,7 +104,7 @@
       </div>
       <h1>The Experience Is Real.<br><em>So Is the Accountability.</em></h1>
       <p class="hero-sub">
-        FOCI mitigation, CMMC compliance, and AI deployment inside GCC High — from a practitioner who has operated under these frameworks for over two decades, not just consulted on them.
+        FOCI mitigation, CMMC compliance, and AI deployment inside GCC High — built on 25+ years of operating under these frameworks inside the defense industrial base, not just advising on them from the outside.
       </p>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn--gold btn--lg">Schedule a Call</a>
@@ -131,13 +131,13 @@
         <div class="cred-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <span class="cred-text">Former CISO &amp; VP IS — FOCI-Mitigated Contractor, 2009–2025</span>
+        <span class="cred-text">Leadership From Inside the Industry — Not Outside It</span>
       </div>
       <div class="cred-item">
         <div class="cred-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         </div>
-        <span class="cred-text">16+ Years FOCI-Mitigated Contractor</span>
+        <span class="cred-text">16+ Years Operating Inside FOCI-Mitigated Environments</span>
       </div>
       <div class="cred-item">
         <div class="cred-icon">
@@ -249,29 +249,29 @@
         <div class="expertise-item">
           <span class="ei-number">01</span>
           <div>
-            <h4>Practitioner, Not Theorist</h4>
-            <p>16+ years as VP of IS and CISO inside a FOCI-mitigated defense contractor. Every recommendation comes from building and operating these systems in production.</p>
+            <h4>Practitioners, Not Theorists</h4>
+            <p>Our background includes 16+ years operating as IS and security leadership inside a FOCI-mitigated defense contractor. Every recommendation comes from building and running these programs in production — under real DCSA scrutiny.</p>
           </div>
         </div>
         <div class="expertise-item">
           <span class="ei-number">02</span>
           <div>
-            <h4>The Only Advisor Covering All Three</h4>
-            <p>FOCI, CMMC, and GCC High AI deployment are increasingly intersecting. Fulcrum Advisory is one of very few firms with hands-on depth across all three simultaneously.</p>
+            <h4>Three Disciplines. One Firm.</h4>
+            <p>FOCI, CMMC, and GCC High AI deployment are increasingly intersecting. Fulcrum Advisory is one of very few firms with hands-on depth across all three — so the compliance picture stays coherent as your needs evolve.</p>
           </div>
         </div>
         <div class="expertise-item">
           <span class="ei-number">03</span>
           <div>
             <h4>Inside the Environment, Not Outside It</h4>
-            <p>16 years inside a DCSA-scrutinized environment means advice held to the same standard we applied when compliance outcomes were our direct responsibility.</p>
+            <p>Our team has operated under the same frameworks we now advise on — inside live DCSA-scrutinized programs where compliance failures had real consequences. That accountability shapes how we work.</p>
           </div>
         </div>
         <div class="expertise-item">
           <span class="ei-number">04</span>
           <div>
             <h4>Built AI in a CMMC Environment</h4>
-            <p>Designed and deployed enterprise AI (Azure OpenAI + RAG) inside a GCC High CMMC-scoped environment — not a proof of concept, in production use.</p>
+            <p>We designed and deployed enterprise AI (Azure OpenAI + RAG) inside a GCC High CMMC-scoped environment — not a proof of concept. In production use. That's the difference between architecture advice and a vendor pitch.</p>
           </div>
         </div>
       </div>
@@ -419,14 +419,16 @@
   const mobile = document.getElementById('navMobile');
   const banner = document.querySelector('.alert-banner');
 
-  // Offset nav for banner
   function updateNavTop() {
-    if (banner) nav.style.top = banner.offsetHeight + 'px';
+    if (banner) {
+      const bannerBottom = banner.getBoundingClientRect().bottom;
+      nav.style.top = Math.max(0, bannerBottom) + 'px';
+    }
   }
   updateNavTop();
   window.addEventListener('resize', updateNavTop);
-
   window.addEventListener('scroll', () => {
+    updateNavTop();
     nav.classList.toggle('scrolled', window.scrollY > 40);
   });
 
