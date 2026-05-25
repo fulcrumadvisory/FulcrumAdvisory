@@ -6,7 +6,7 @@
   <title>AI in GCC High | Fulcrum Advisory</title>
   <meta name="description" content="Deploy Azure OpenAI and enterprise AI inside your CMMC boundary in GCC High. Production-tested architecture design, deployment, and SSP documentation for defense contractors." />
   <meta name="keywords" content="Azure OpenAI GCC High, AI CMMC compliance, GCC High AI deployment, enterprise AI defense contractor, RAG architecture CMMC, SSP amendment AI, GovCon AI" />
-  <meta name="author" content="David Taylor" />
+  <meta name="author" content="Fulcrum Advisory" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.fulcrumadvisory.us/services/ai-govcon.html" />
 
@@ -78,7 +78,7 @@
         <p>Leadership is demanding AI adoption. Your compliance officer is demanding you don't blow up the CMMC boundary. These two imperatives are not mutually exclusive — but reconciling them requires more than picking a vendor with a FedRAMP authorization and calling it done.</p>
         <p>"FedRAMP authorized" means a system has received a federal authorization to operate in a general sense. It does not mean that system is inside <em>your</em> authorization boundary. It is not an SSP entry. It does not define where your CUI flows. It will not survive a CMMC assessment. An assessor asking "show me how your AI system is documented in your SSP" is not a hypothetical — it is a question that will be asked, and contractors who deployed AI without answering it first are going to have a difficult day.</p>
         <p>The three decisions that determine compliance before any code is written: Does the AI system touch, process, or store CUI? Is your Azure tenant GCC High, not commercial? Have you amended your SSP to include the AI components? Contractors who skip these questions — and there are many — don't discover the problem until the evidence review is already underway.</p>
-        <p>David has designed and deployed a production enterprise AI assistant inside a CMMC-scoped GCC High environment. That is not a reference architecture or a proof of concept. It runs in production, with real users, against real CUI-adjacent data, inside a live DCSA compliance program. The architecture advice comes from having actually built it — not from reading vendor documentation.</p>
+        <p>Fulcrum Advisory has designed and deployed a production enterprise AI assistant inside a CMMC-scoped GCC High environment. That is not a reference architecture or a proof of concept. It runs in production, with real users, against real CUI-adjacent data, inside a live DCSA compliance program. The architecture advice comes from having actually built it — not from reading vendor documentation.</p>
       </div>
       <div class="service-right">
         <div class="service-pricing">
@@ -143,14 +143,14 @@
           <div class="step-num">1</div>
           <div class="step-content">
             <h4>Assess</h4>
-            <p>AI use case inventory, CUI boundary analysis, and GCC High tenant audit. David reviews your current Azure environment, documents CUI flows for each proposed AI use case, and determines what the compliant architecture needs to be before any build work begins. <strong>Deliverable:</strong> written readiness report with architecture recommendation and gap analysis.</p>
+            <p>AI use case inventory, CUI boundary analysis, and GCC High tenant audit. We review your current Azure environment, documents CUI flows for each proposed AI use case, and determines what the compliant architecture needs to be before any build work begins. <strong>Deliverable:</strong> written readiness report with architecture recommendation and gap analysis.</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">2</div>
           <div class="step-content">
             <h4>Design &amp; Deploy</h4>
-            <p>Architecture finalization, GCC High deployment, configuration, integration, and testing. David deploys Azure OpenAI, Azure AI Search (RAG), CosmosDB, and Entra ID authentication directly in your tenant, with your team having full visibility and access throughout. <strong>Deliverable:</strong> running production AI system in your GCC High Azure tenant.</p>
+            <p>Architecture finalization, GCC High deployment, configuration, integration, and testing. We deploy Azure OpenAI, Azure AI Search (RAG), CosmosDB, and Entra ID authentication directly in your tenant, with your team having full visibility and access throughout. <strong>Deliverable:</strong> running production AI system in your GCC High Azure tenant.</p>
           </div>
         </div>
         <div class="step-item">
@@ -175,7 +175,7 @@
       <div class="faq-list" style="margin-top:var(--space-4)">
         <div class="faq-item">
           <p class="faq-question">Does Azure OpenAI in GCC High have the same capabilities as commercial Azure OpenAI?</p>
-          <p class="faq-answer">No, and this matters for your architecture. GCC High Azure OpenAI has a subset of the models available in commercial Azure. Some features — certain GPT-4 variants, fine-tuning, some preview capabilities — may be unavailable or on a delayed release schedule compared to commercial. The architecture David designs accounts for what is actually available in GCC High at deployment time, not what the vendor marketing materials describe. This is one of the reasons the readiness assessment comes before architecture finalization.</p>
+          <p class="faq-answer">No, and this matters for your architecture. GCC High Azure OpenAI has a subset of the models available in commercial Azure. Some features — certain GPT-4 variants, fine-tuning, some preview capabilities — may be unavailable or on a delayed release schedule compared to commercial. The architecture we design accounts for what is actually available in GCC High at deployment time, not what the vendor marketing materials describe. This is one of the reasons the readiness assessment comes before architecture finalization.</p>
         </div>
         <div class="faq-item">
           <p class="faq-question">We already use Microsoft 365 GCC High. Does that mean our AI deployments are compliant?</p>
@@ -183,11 +183,11 @@
         </div>
         <div class="faq-item">
           <p class="faq-question">What does adding AI to our SSP actually look like?</p>
-          <p class="faq-answer">Your SSP needs to document the AI system components (the Azure services, their configuration, and data flows), how they handle CUI, the boundary between AI components and other systems, and how the relevant NIST SP 800-171 Rev 3 controls apply to the AI environment — particularly the AC, AU, CM, and SC families. The logging and audit trail requirements under AU are often the most significant gap in AI deployments that were not designed with compliance in mind. David writes these SSP amendments as part of the deployment engagement or as a standalone policy package.</p>
+          <p class="faq-answer">Your SSP needs to document the AI system components (the Azure services, their configuration, and data flows), how they handle CUI, the boundary between AI components and other systems, and how the relevant NIST SP 800-171 Rev 3 controls apply to the AI environment — particularly the AC, AU, CM, and SC families. The logging and audit trail requirements under AU are often the most significant gap in AI deployments that were not designed with compliance in mind. We write these SSP amendments as part of the deployment engagement or as a standalone policy package.</p>
         </div>
         <div class="faq-item">
           <p class="faq-question">Can you deploy in our tenant or do we need to manage the deployment ourselves?</p>
-          <p class="faq-answer">David deploys directly in your GCC High Azure tenant, with your team having full ownership and access throughout the engagement. There is no opaque black box. Your team sees every configuration decision and understands the architecture before the engagement ends. The deliverable is a running production system your team can operate and maintain independently — not a handoff document or architecture diagram they have to implement themselves afterward.</p>
+          <p class="faq-answer">We deploy directly in your GCC High Azure tenant, with your team having full ownership and access throughout the engagement. There is no opaque black box. Your team sees every configuration decision and understands the architecture before the engagement ends. The deliverable is a running production system your team can operate and maintain independently — not a handoff document or architecture diagram they have to implement themselves afterward.</p>
         </div>
       </div>
     </div>
@@ -199,7 +199,7 @@
   <div class="container">
     <div class="cta-block">
       <h3>Ready to Deploy AI Inside Your CMMC Boundary?</h3>
-      <p>David Taylor has built this in production — not just designed it on paper. If your organization is evaluating AI adoption inside a CMMC-scoped environment, the conversation starts with the compliance architecture, not the feature list.</p>
+      <p>Fulcrum Advisory has built this in production — not just designed it on paper. If your organization is evaluating AI adoption inside a CMMC-scoped environment, the conversation starts with the compliance architecture, not the feature list.</p>
       <a href="../contact.html" class="btn btn--gold btn--lg">Schedule a Call</a>
     </div>
   </div>
@@ -291,7 +291,7 @@
         <li><a href="../insights.html">All Articles</a></li>
       </ul></div>
       <div class="footer-col"><h5>Company</h5><ul>
-        <li><a href="../about.html">About David Taylor</a></li>
+        <li><a href="../about.html">About</a></li>
         <li><a href="../contact.html">Contact</a></li>
         <li><a href="../contact.html#schedule">Schedule a Call</a></li>
         <li><a href="../privacy.html">Privacy Policy</a></li>
