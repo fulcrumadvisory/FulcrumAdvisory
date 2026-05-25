@@ -1252,6 +1252,290 @@ code, .mono {
 }
 
 /* ----------------------------------------------------------
+   Service Page Layout
+   ---------------------------------------------------------- */
+.service-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.service-number {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--gray-light);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.service-left h2 { margin-bottom: var(--space-2); }
+.service-left ul {
+  padding-left: var(--space-3);
+  margin: var(--space-3) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-left ul li {
+  list-style: disc;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+}
+.service-left h4 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-1);
+}
+
+.service-right { position: sticky; top: calc(var(--nav-height) + var(--space-3)); }
+
+.service-pricing {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  box-shadow: var(--shadow);
+}
+
+.service-pricing h5 {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.pricing-table tr + tr { border-top: 1px solid var(--border); }
+
+.pricing-table td {
+  padding: var(--space-2) var(--space-1);
+  vertical-align: top;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+.pricing-table td:first-child {
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+  padding-right: var(--space-2);
+}
+
+.pricing-table td:last-child {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--gold);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* vCISO pricing box variant */
+.pricing-box {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.pricing-box .price-main {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--navy);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.pricing-box .price-detail {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: var(--space-1);
+}
+
+.pricing-box .price-detail span::before {
+  content: '— ';
+  color: var(--gold);
+}
+
+/* ----------------------------------------------------------
+   FAQ Component
+   ---------------------------------------------------------- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-3) 0;
+}
+
+.faq-question {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: var(--space-1);
+  padding-left: var(--space-3);
+  position: relative;
+}
+
+.faq-question::before {
+  content: 'Q';
+  position: absolute;
+  left: 0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--gold);
+  top: 2px;
+}
+
+.faq-answer {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  padding-left: var(--space-3);
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   Step / Process List
+   ---------------------------------------------------------- */
+.step-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  counter-reset: steps;
+}
+
+.step-item {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--navy);
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-content h4 {
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.step-content p {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   CTA Block
+   ---------------------------------------------------------- */
+.cta-block {
+  background: var(--navy);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cta-block::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+}
+
+.cta-block h3 { color: var(--white); margin-bottom: var(--space-2); }
+.cta-block p { color: rgba(255,255,255,0.65); max-width: 560px; margin: 0 auto var(--space-4); }
+
+/* ----------------------------------------------------------
+   Deliverable Grid (service detail pages)
+   ---------------------------------------------------------- */
+.deliverable-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.deliverable-item {
+  padding: var(--space-3);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius-sm);
+}
+
+.deliverable-item h4 {
+  font-size: 0.875rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.deliverable-item p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ----------------------------------------------------------
+   Responsive — Service Pages
+   ---------------------------------------------------------- */
+@media (max-width: 900px) {
+  .service-section { grid-template-columns: 1fr; }
+  .service-right { position: static; }
+  .deliverable-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .service-number { font-size: 2.5rem; }
+  .pricing-table td:first-child { white-space: normal; }
+  .pricing-table td:last-child { white-space: normal; }
+  .cta-block { padding: var(--space-4) var(--space-3); }
+}
+
+/* ----------------------------------------------------------
    Print
    ---------------------------------------------------------- */
 @media print {
