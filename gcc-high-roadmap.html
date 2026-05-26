@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>GCC High Roadmap Tracker | Fulcrum Advisory</title>
+  <meta name="description" content="Live GCC High feature availability tracker. Microsoft 365 GCC High roadmap items filtered for defense contractors — updated daily from the Microsoft Roadmap API." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.fulcrumadvisory.us/gcc-high-roadmap.html" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    .roadmap-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-3);transition:box-shadow 0.2s;position:relative;overflow:hidden}
+    .roadmap-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--border)}
+    .roadmap-card:hover{box-shadow:var(--shadow-lg)}
+    .roadmap-card.status-ga::before{background:#059669}
+    .roadmap-card.status-dev::before{background:var(--gold)}
+    .roadmap-card.status-roll::before{background:var(--blue)}
+    .status-pill{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;border-radius:2px;display:inline-block}
+    .pill-ga  {background:#ECFDF5;color:#059669}
+    .pill-dev {background:var(--gold-pale);color:var(--gold)}
+    .pill-roll{background:#EFF6FF;color:var(--blue)}
+    .pill-unkn{background:var(--gray-light);color:var(--text-muted)}
+    .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--space-4)}
+    .filter-btn{font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:7px 16px;border:1.5px solid var(--border);border-radius:2px;cursor:pointer;background:var(--white);color:var(--text-muted);transition:all 0.15s}
+    .filter-btn.active,.filter-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
+    .loading{text-align:center;padding:var(--space-6);color:var(--text-muted)}
+    .meta-bar{font-size:0.75rem;color:var(--text-muted);margin-bottom:var(--space-4);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .live-dot{width:7px;height:7px;background:#059669;border-radius:50%;display:inline-block}
+    .card-date{font-size:0.72rem;color:var(--text-muted);font-family:var(--font-mono)}
+    .card-desc{font-size:0.82rem;color:var(--text-muted);margin-top:6px;line-height:1.6}
+    .roadmap-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--space-3)}
+    .empty-state{text-align:center;padding:var(--space-6);color:var(--text-muted);font-size:0.9rem}
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-name">Fulcrum Advisory</span><span class="logo-tag">Defense · Cybersecurity · AI</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn--gold btn--sm nav-cta">Schedule a Call</a>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Home</a><a href="services.html">Services</a>
+  <a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn--gold" style="margin-top:16px">Schedule a Call</a>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span>
+      <a href="services/gcch-platforms.html">GCC High Platforms</a><span class="sep">/</span>
+      <span>Roadmap Tracker</span>
+    </nav>
+    <h1 style="margin-top:var(--space-2)">GCC High Roadmap Tracker</h1>
+    <p class="page-header-sub">Microsoft 365 features in development, rolling out, or generally available in GCC High — filtered for the defense industrial base. Updated daily via the Microsoft Roadmap API.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="meta-bar">
+      <span><span class="live-dot"></span> Live data — refreshed daily</span>
+      <span id="lastUpdated">Loading...</span>
+      <span id="itemCount"></span>
+      <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=GCC%20High"
+         target="_blank" rel="noopener"
+         style="color:var(--blue);font-weight:600;font-size:0.75rem">
+        View on Microsoft Roadmap ↗
+      </a>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Items</button>
+      <button class="filter-btn" data-filter="ga">Generally Available</button>
+      <button class="filter-btn" data-filter="rolling">Rolling Out</button>
+      <button class="filter-btn" data-filter="dev">In Development</button>
+    </div>
+
+    <div id="roadmapGrid" class="roadmap-grid">
+      <div class="loading">Loading GCC High roadmap data...</div>
+    </div>
+
+    <div style="margin-top:var(--space-5);padding:var(--space-4);background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius)">
+      <h4 style="margin-bottom:6px">How This Works</h4>
+      <p style="font-size:0.85rem;margin:0;color:var(--text-muted)">This page pulls live data from the Microsoft 365 Roadmap API and filters for items tagged for GCC High environments. Data is fetched daily via a GitHub Actions workflow and served as static JSON — no third-party tracking. Items shown reflect Microsoft's current public roadmap disclosures and may not include features under NDA or private preview. For advisory on specific feature availability in your GCC High tenant, <a href="contact.html" style="color:var(--blue)">contact Fulcrum Advisory</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section--sm section--dark">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-3)">
+    <div>
+      <h3 style="color:var(--white);margin-bottom:4px">Need Help Interpreting the Roadmap?</h3>
+      <p style="color:rgba(255,255,255,0.6);margin:0;font-size:0.9rem">Roadmap items don't always tell you what they mean for your CMMC boundary or SSP. We do.</p>
+    </div>
+    <a href="contact.html" class="btn btn--gold">Schedule a Call</a>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="logo-name">Fulcrum Advisory</div><span class="logo-tag">Defense · Cybersecurity · AI</span>
+    <p>Cleared GovCon advisory for defense contractors.</p>
+    <div class="footer-contact"><a href="mailto:info@fulcrumadvisory.us">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      info@fulcrumadvisory.us</a></div></div>
+  <div class="footer-col"><h5>Resources</h5><ul>
+    <li><a href="gcc-high-licensing.html">GCC High Licensing Guide</a></li>
+    <li><a href="gcc-high-roadmap.html">GCC High Roadmap</a></li>
+    <li><a href="regulatory-watch.html">Regulatory Watch</a></li>
+    <li><a href="insights.html">All Insights</a></li></ul></div>
+  <div class="footer-col"><h5>Services</h5><ul>
+    <li><a href="services/gcch-platforms.html">GCC High Platforms</a></li>
+    <li><a href="services/cmmc-compliance.html">CMMC Compliance</a></li>
+    <li><a href="services/ai-govcon.html">AI in GCC High</a></li></ul></div>
+  <div class="footer-col"><h5>Company</h5><ul>
+    <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="privacy.html">Privacy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Fulcrum Advisory. All rights reserved.</p>
+<div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+</div></div></footer>
+
+<script>
+const nav=document.getElementById('siteNav'),toggle=document.getElementById('navToggle'),mobile=document.getElementById('navMobile');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+toggle.addEventListener('click',()=>mobile.classList.toggle('open'));
+mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.remove('open')));
+
+// ── Roadmap Data Loader ───────────────────────────────────────────────────────
+let allItems = [];
+
+function statusInfo(status) {
+  const s = (status||'').toLowerCase();
+  if (s.includes('general availability') || s.includes('launched') || s === 'ga')
+    return {label:'Generally Available', cls:'pill-ga', cardCls:'status-ga'};
+  if (s.includes('rolling') || s.includes('roll out'))
+    return {label:'Rolling Out', cls:'pill-roll', cardCls:'status-roll'};
+  if (s.includes('development') || s.includes('dev'))
+    return {label:'In Development', cls:'pill-dev', cardCls:'status-dev'};
+  return {label: status||'Planned', cls:'pill-unkn', cardCls:''};
+}
+
+function formatDate(d) {
+  if (!d) return '';
+  const dt = new Date(d);
+  if (isNaN(dt)) return d;
+  return dt.toLocaleDateString('en-US',{month:'short',year:'numeric'});
+}
+
+function renderCards(items) {
+  const grid = document.getElementById('roadmapGrid');
+  if (!items.length) {
+    grid.innerHTML = '<div class="empty-state">No items found for this filter.</div>';
+    return;
+  }
+  grid.innerHTML = items.map(item => {
+    const s = statusInfo(item.status);
+    const link = item.link || '#';
+    const desc = item.description ? `<p class="card-desc">${item.description}</p>` : '';
+    return `
+      <div class="roadmap-card ${s.cardCls}">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px">
+          <span class="status-pill ${s.cls}">${s.label}</span>
+          <span class="card-date">${formatDate(item.date)}</span>
+        </div>
+        <h4 style="font-size:0.9rem;line-height:1.35;color:var(--navy)">${item.title||'Untitled'}</h4>
+        ${desc}
+        <a href="${link}" target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:4px;font-size:0.72rem;font-weight:700;
+                  letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-top:10px">
+          View on Roadmap ↗
+        </a>
+      </div>`;
+  }).join('');
+}
+
+function applyFilter(filter) {
+  document.querySelectorAll('.filter-btn').forEach(b=>{
+    b.classList.toggle('active', b.dataset.filter===filter);
+  });
+  if (filter==='all') { renderCards(allItems); return; }
+  const filtered = allItems.filter(item => {
+    const s = (item.status||'').toLowerCase();
+    if (filter==='ga')      return s.includes('general availability')||s.includes('launched')||s==='ga';
+    if (filter==='rolling') return s.includes('rolling')||s.includes('roll out');
+    if (filter==='dev')     return s.includes('development')||s.includes('dev');
+    return true;
+  });
+  renderCards(filtered);
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+});
+
+// Load JSON (generated daily by GitHub Action)
+fetch('assets/gcc-high-updates.json')
+  .then(r => r.ok ? r.json() : Promise.reject('not found'))
+  .then(data => {
+    allItems = data.items || [];
+    document.getElementById('itemCount').textContent = `${allItems.length} items`;
+    if (data.updated) {
+      const d = new Date(data.updated);
+      document.getElementById('lastUpdated').textContent =
+        'Last updated ' + d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    }
+    renderCards(allItems);
+  })
+  .catch(() => {
+    document.getElementById('roadmapGrid').innerHTML =
+      `<div class="empty-state">
+        Roadmap data is refreshed daily. If you're viewing this locally, run the GitHub Action first to generate <code>assets/gcc-high-updates.json</code>.<br><br>
+        <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=GCC%20High"
+           target="_blank" rel="noopener" style="color:var(--blue);font-weight:600">
+          View directly on Microsoft's roadmap ↗
+        </a>
+      </div>`;
+    document.getElementById('lastUpdated').textContent = 'Data pending first GitHub Action run';
+  });
+</script>
+</body></html>

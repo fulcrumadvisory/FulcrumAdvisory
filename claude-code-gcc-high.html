@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Claude Code Security Configuration for GCC High | Fulcrum Advisory</title>
+  <meta name="description" content="Security-hardened CLAUDE.md configuration for Claude Code in GCC High environments. Covers CUI boundary rules, GCC High endpoints, MCP server security, CMMC control mapping, and NSA AISC MCP guidance (May 2026)." />
+  <meta name="keywords" content="Claude Code GCC High, CLAUDE.md GCC High, AI coding CMMC, MCP security GCC High, Claude Code defense contractor, AI coding assistant GCC High, NSA MCP security guidance, OWASP Agentic AI GCC High" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.fulcrumadvisory.us/claude-code-gcc-high.html" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","name":"Claude Code Security Configuration for GCC High Environments","description":"Security-hardened CLAUDE.md template governing Claude Code behavior in Microsoft GCC High environments under CMMC L2, NIST SP 800-171, and DFARS 252.204-7012.","author":{"@type":"Organization","name":"Fulcrum Advisory","url":"https://www.fulcrumadvisory.us"},"datePublished":"2026-05-25","keywords":"Claude Code GCC High, MCP security, CMMC AI coding, GCC High endpoints"}</script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    .code-block{background:var(--navy);border-radius:var(--radius);padding:var(--space-3);font-family:var(--font-mono);font-size:0.78rem;color:rgba(255,255,255,0.85);line-height:1.7;overflow-x:auto;margin:var(--space-2) 0}
+    .code-block .comment{color:rgba(255,255,255,0.35)}
+    .code-block .key{color:#86EFAC}
+    .code-block .val{color:#FCD34D}
+    .code-block .bad{color:#FCA5A5}
+    .code-block .good{color:#86EFAC}
+    .endpoint-tbl{width:100%;border-collapse:collapse;font-size:0.8rem;margin:var(--space-2) 0}
+    .endpoint-tbl th{background:var(--navy-mid);color:var(--gold);padding:8px 12px;text-align:left;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase}
+    .endpoint-tbl td{padding:7px 12px;border-bottom:1px solid rgba(255,255,255,0.06);color:rgba(255,255,255,0.8)}
+    .endpoint-tbl td:first-child{color:rgba(255,255,255,0.5);font-size:0.72rem}
+    .endpoint-tbl td:last-child{font-family:var(--font-mono);font-size:0.72rem;color:#86EFAC}
+    .endpoint-tbl tr:nth-child(even) td{background:rgba(255,255,255,0.02)}
+    .prohibited-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:0.85rem;color:var(--text-mid)}
+    .prohibited-item:last-child{border:none}
+    .prohibited-item .px{color:#DC2626;flex-shrink:0;font-weight:700}
+    .framework-badge{display:inline-flex;align-items:center;gap:6px;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:2px;border:1px solid}
+    .fb-nsa{background:rgba(220,38,38,0.08);color:#DC2626;border-color:rgba(220,38,38,0.3)}
+    .fb-owasp{background:rgba(124,58,237,0.08);color:#7C3AED;border-color:rgba(124,58,237,0.3)}
+    .fb-nist{background:var(--gold-pale);color:var(--gold);border-color:rgba(200,150,46,0.3)}
+    .fb-mitre{background:#EFF6FF;color:var(--blue);border-color:rgba(27,79,138,0.3)}
+    .gate-overlay{position:fixed;inset:0;background:rgba(10,22,40,0.9);z-index:2000;display:none;align-items:center;justify-content:center;padding:var(--space-4)}
+    .gate-overlay.open{display:flex}
+    .gate-modal{background:var(--white);border-radius:var(--radius-lg);padding:var(--space-5);max-width:460px;width:100%;position:relative;box-shadow:var(--shadow-xl)}
+    .gate-close{position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:1.2rem}
+    .gate-success{display:none;text-align:center;padding:var(--space-3) 0}
+    .blur-preview{filter:blur(4px);user-select:none;pointer-events:none;opacity:0.5;position:relative}
+    .gate-overlay-inline{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:10}
+    .preview-wrapper{position:relative;overflow:hidden;border-radius:var(--radius);margin:var(--space-3) 0}
+  </style>
+</head>
+<body>
+
+<!-- Gate Modal -->
+<div class="gate-overlay" id="gateOverlay">
+  <div class="gate-modal">
+    <button class="gate-close" id="gateClose">✕</button>
+    <div id="gateForm">
+      <span class="eyebrow">Free Download</span>
+      <h3 style="margin-top:6px">Claude Code Security Config for GCC High</h3>
+      <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:var(--space-3)">630-line CLAUDE.md template. Drop it in your repo root and Claude Code inherits CMMC-aligned behavior automatically.</p>
+      <div class="form-group"><label for="gateName">Full Name</label><input type="text" id="gateName" placeholder="Jane Smith" required /></div>
+      <div class="form-group"><label for="gateCompany">Company</label><input type="text" id="gateCompany" placeholder="ACME Defense LLC" required /></div>
+      <div class="form-group"><label for="gateEmail">Work Email</label><input type="email" id="gateEmail" placeholder="you@company.com" required /></div>
+      <div class="form-group"><label for="gateRole">Your Role</label>
+        <select id="gateRole"><option value="">Select…</option><option>IT Director / CISO</option><option>Developer / DevOps</option><option>Program Manager</option><option>Compliance Officer</option><option>Consultant / Advisor</option><option>Other</option></select></div>
+      <!-- Wire to same handler as contact form -->
+      <button class="btn btn--gold" style="width:100%;margin-top:4px" id="gateSubmit">Download Full Configuration</button>
+      <p style="font-size:0.72rem;color:var(--text-muted);margin-top:10px;text-align:center">No spam. Relevant GCC High and CMMC content only.</p>
+    </div>
+    <div class="gate-success" id="gateSuccess" style="display:none">
+      <div style="font-size:2.5rem;margin-bottom:12px">✓</div>
+      <h3 style="color:#059669">Download Ready</h3>
+      <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:var(--space-3)">Your CLAUDE.md configuration is ready. Drop it in your repo root.</p>
+      <a id="gateDownloadLink" href="assets/Fulcrum-Claude-Code-GCC-High-Config.md" download="CLAUDE.md" class="btn btn--gold" style="display:inline-flex;align-items:center;gap:8px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download CLAUDE.md
+      </a>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav" id="siteNav"><div class="nav-inner"><a href="index.html" class="nav-logo"><span class="logo-name">Fulcrum Advisory</span><span class="logo-tag">Defense · Cybersecurity · AI</span></a><div class="nav-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="insights.html" class="active">Insights</a><a href="contact.html">Contact</a></div><a href="contact.html" class="btn btn--gold btn--sm nav-cta">Schedule a Call</a><button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button></div></nav>
+<div class="nav-mobile" id="navMobile"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a><a href="contact.html" class="btn btn--gold" style="margin-top:16px">Schedule a Call</a></div>
+
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="resources.html">Resources</a><span class="sep">/</span><span>Claude Code GCC High Config</span></nav>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:var(--space-2)">
+      <span class="framework-badge fb-nsa">NSA AISC May 2026</span>
+      <span class="framework-badge fb-owasp">OWASP Agentic AI</span>
+      <span class="framework-badge fb-nist">CMMC L2 · NIST 800-171</span>
+      <span class="framework-badge fb-mitre">MITRE ATLAS</span>
+    </div>
+    <h1 style="margin-top:var(--space-2)">Claude Code Security Configuration for GCC High</h1>
+    <p class="page-header-sub">A security-hardened CLAUDE.md that governs how Claude Code behaves inside a Microsoft GCC High environment — CUI boundary rules, endpoint enforcement, MCP security, and CMMC control mapping in one file.</p>
+  </div>
+</div>
+
+<!-- WHAT IT IS -->
+<section class="section"><div class="container">
+  <div class="grid-2" style="gap:var(--space-6);align-items:start">
+    <div>
+      <span class="eyebrow">What This Is</span>
+      <h2>One File. Claude Code Inherits CMMC-Aligned Behavior.</h2>
+      <span class="rule-gold"></span>
+      <p>When Claude Code finds a <code>CLAUDE.md</code> at the repository root, it reads and follows those instructions for the entire session. This configuration turns a general-purpose AI coding assistant into one that understands your GCC High boundary, refuses to write code that violates it, and flags DFARS-reportable events when it spots them.</p>
+      <p>It covers 14 sections — from CUI boundary enforcement and hardcoded-secret prohibition to MCP server security and GitHub Enterprise Server integration. References the NSA AISC Cybersecurity Information Sheet on MCP security published May 2026 and aligns with the new OWASP Agentic AI Top 10.</p>
+      <p>Drop it in your repo root. That's it.</p>
+      <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;margin-top:var(--space-4)">
+        <button onclick="openGate()" class="btn btn--gold btn--lg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Free
+        </button>
+        <a href="contact.html" class="btn btn--outline btn--lg">Discuss Custom Config</a>
+      </div>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:12px">630 lines · UNCLASSIFIED // FOUO · CMMC L2 · NIST 800-171 R2 · DFARS 252.204-7012</p>
+    </div>
+    <div>
+      <div style="background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-3)">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);margin-bottom:var(--space-2)">14 Sections Covered</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">01</span><span>Environment Identity & GCC High Boundary</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">02</span><span>Critical Security Constraints (CUI, Secrets, Auth)</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">03</span><span>GCC High Endpoint Reference (complete table)</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">04</span><span>MCP Server Security (NSA AISC May 2026)</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">05</span><span>Code Generation Standards</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">06</span><span>CMMC Control Mapping in Code Headers</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">07</span><span>AI Agent Security (OWASP Agentic AI Top 10)</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">08</span><span>Prohibited Actions (13 hard rules)</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">09</span><span>Required Patterns Checklist</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">10</span><span>Dependency & Supply Chain Security</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">11</span><span>GitHub Enterprise Server Integration</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">12</span><span>Evidence & Immutability (WORM storage patterns)</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">13</span><span>Incident & DFARS Reportable Event Detection</span></div>
+          <div style="display:flex;gap:10px;font-size:0.82rem"><span style="font-family:var(--font-mono);color:var(--gold);min-width:24px">14</span><span>Review Gates & CISO Sign-Off Requirements</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- TEASER: ENDPOINT TABLE (public) -->
+<section class="section section--gray"><div class="container">
+  <span class="eyebrow">Preview — Section 3</span>
+  <h2 style="margin-bottom:var(--space-2)">GCC High Endpoint Quick Reference</h2>
+  <p style="color:var(--text-muted);margin-bottom:var(--space-4)">Every API call Claude Code generates uses these endpoints. Commercial <code>.com</code> endpoints fail silently or route data outside your authorization boundary. This table is embedded in the config so Claude Code never gets it wrong.</p>
+
+  <div style="background:var(--navy);border-radius:var(--radius);overflow:hidden">
+    <div style="padding:12px 16px;background:var(--navy-mid);font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)">QUICK REFERENCE — GCC High vs Commercial</div>
+    <table class="endpoint-tbl">
+      <thead><tr><th>What you want</th><th>Commercial ✗ WRONG</th><th>GCC High ✓ CORRECT</th></tr></thead>
+      <tbody>
+        <tr><td>Login / Auth</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">login.microsoftonline.com</td><td>login.microsoftonline.us</td></tr>
+        <tr><td>Microsoft Graph</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">graph.microsoft.com</td><td>graph.microsoft.us</td></tr>
+        <tr><td>Azure Resource Manager</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">management.azure.com</td><td>management.usgovcloudapi.net</td></tr>
+        <tr><td>Key Vault</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">.vault.azure.net</td><td>.vault.usgovcloudapi.net</td></tr>
+        <tr><td>Blob Storage</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">.blob.core.windows.net</td><td>.blob.core.usgovcloudapi.net</td></tr>
+        <tr><td>Log Analytics</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">api.loganalytics.io</td><td>api.loganalytics.us</td></tr>
+        <tr><td>Sentinel Ingest</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">.ods.opinsights.azure.com</td><td>.ods.opinsights.azure.us</td></tr>
+        <tr><td>MDE API</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">api.securitycenter.microsoft.com</td><td>api.securitycenter.microsoft.us</td></tr>
+        <tr><td>Azure OpenAI</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">.openai.azure.com</td><td>.openai.azure.us</td></tr>
+        <tr><td>Cosmos DB</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">.documents.azure.com:443</td><td>.documents.azure.us:443</td></tr>
+        <tr><td>Intune / MDM</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">manage.microsoft.com</td><td>manage.microsoft.us</td></tr>
+        <tr><td>PowerShell env</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">(default / AzureCloud)</td><td>AzureUSGovernment</td></tr>
+        <tr><td>Graph PowerShell</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">(default)</td><td>-Environment USGov</td></tr>
+        <tr><td>Exchange Online</td><td style="color:#FCA5A5;font-family:var(--font-mono);font-size:0.72rem">(default)</td><td>O365USGovGCCHigh</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:0.78rem;color:var(--text-muted);margin-top:12px">The full config embeds this table plus authentication code patterns in Python, PowerShell, and TypeScript so Claude Code generates the correct endpoint in every language.</p>
+</div></section>
+
+<!-- TEASER: PROHIBITED ACTIONS (partial, public) -->
+<section class="section"><div class="container">
+  <div class="grid-2" style="gap:var(--space-6);align-items:start">
+    <div>
+      <span class="eyebrow">Preview — Section 8</span>
+      <h2>13 Things Claude Code Must Never Do in GCC High</h2>
+      <p style="color:var(--text-muted);margin-bottom:var(--space-4)">These prohibited patterns are embedded in the config. Claude Code refuses to generate them and explains why — keeping your developers from accidentally violating CMMC controls or routing CUI outside the boundary.</p>
+      <div style="background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-3)">
+        <div class="prohibited-item"><span class="px">✗</span><span>Write code that sends data to commercial <code>.com</code> Microsoft endpoints</span></div>
+        <div class="prohibited-item"><span class="px">✗</span><span>Hardcode any credential, token, key, or connection string</span></div>
+        <div class="prohibited-item"><span class="px">✗</span><span>Log or print authentication tokens, API keys, or secrets</span></div>
+        <div class="prohibited-item"><span class="px">✗</span><span>Generate code that disables TLS verification (<code>verify=False</code>, <code>InsecureSkipVerify</code>)</span></div>
+        <div class="prohibited-item"><span class="px">✗</span><span>Create outbound connections to non-allowlisted external domains</span></div>
+        <div class="prohibited-item"><span class="px">✗</span><span>Write code that reads or copies files from CUI-designated paths</span></div>
+        <div class="prohibited-item" style="filter:blur(3px);user-select:none"><span class="px">✗</span><span>Generate self-signed certificate creation for production use</span></div>
+        <div class="prohibited-item" style="filter:blur(3px);user-select:none"><span class="px">✗</span><span>Create code that stores audit logs in non-immutable locations</span></div>
+        <div style="text-align:center;padding:var(--space-2);font-size:0.8rem;color:var(--text-muted)">+ 7 more in the full config</div>
+      </div>
+    </div>
+
+    <div>
+      <span class="eyebrow">Preview — Section 2</span>
+      <h2>No Secrets. Ever.</h2>
+      <p style="color:var(--text-muted);margin-bottom:var(--space-3)">The config enforces Key Vault patterns and flags any generated code that puts a secret in plain text — even in a comment.</p>
+      <div class="code-block">
+<span class="comment"># PROHIBITED — Claude Code will refuse to generate</span>
+<span class="bad">api_key = "sk-..."</span>
+<span class="bad">client_secret = "abc123"</span>
+<span class="bad">connection_string = "Server=...;Password=..."</span>
+
+<span class="comment"># CORRECT — what the config enforces</span>
+<span class="key">from</span> azure.keyvault.secrets <span class="key">import</span> SecretClient
+<span class="key">from</span> azure.identity <span class="key">import</span> DefaultAzureCredential
+
+credential = DefaultAzureCredential()
+client = SecretClient(
+    vault_url=<span class="val">"https://VAULT.vault.usgovcloudapi.net"</span>,
+    credential=credential
+)
+secret = client.get_secret(<span class="val">"my-secret-name"</span>)
+      </div>
+
+      <span class="eyebrow" style="margin-top:var(--space-3)">Preview — Section 4</span>
+      <h3 style="margin-bottom:var(--space-2)">MCP Security — NSA Guidance Applied</h3>
+      <p style="font-size:0.875rem;color:var(--text-muted)">The May 2026 NSA AISC advisory on MCP security is embedded directly. Claude Code enforces authorized-only MCP server lists, input sanitization before every MCP call, and audit logging of all tool invocations.</p>
+      <div class="code-block" style="font-size:0.72rem">
+<span class="comment">// PROHIBITED — dynamic tool invocation</span>
+<span class="bad">const tool = userInput.requestedTool;</span>  <span class="comment">// NEVER</span>
+<span class="bad">await mcpClient.call(tool, params);</span>
+
+<span class="comment">// CORRECT — explicit allowlist</span>
+<span class="key">const</span> ALLOWED = [<span class="val">'search_knowledge_base'</span>, <span class="val">'get_doc_status'</span>];
+<span class="key">if</span> (!ALLOWED.includes(requestedTool)) {
+  <span class="key">throw new</span> Error(<span class="val">'Tool not in authorized list'</span>);
+}
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- DOWNLOAD CTA -->
+<section class="section section--gray"><div class="container">
+  <div class="callout callout--centered" style="max-width:700px;margin:0 auto">
+    <span class="eyebrow eyebrow--light">Free Download</span>
+    <h2 style="color:var(--white);margin:8px 0 var(--space-2)">Get the Complete 630-Line Configuration</h2>
+    <p style="color:rgba(255,255,255,0.65);margin-bottom:var(--space-4)">Covers all 14 sections including CMMC control mapping patterns, WORM evidence storage, DFARS incident detection, GitHub Enterprise Server integration, and the full NSA MCP security framework applied to Claude Code in GCC High.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <button onclick="openGate()" class="btn btn--gold btn--lg">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Free — Enter Work Email
+      </button>
+      <a href="contact.html" class="btn btn--outline-white btn--lg">Get a Custom Version</a>
+    </div>
+    <p style="font-size:0.75rem;color:rgba(255,255,255,0.4);margin-top:var(--space-2)">Fulcrum Advisory also builds custom CLAUDE.md configurations tailored to your specific GCC High tenant, CMMC scope, and development stack.</p>
+  </div>
+</div></section>
+
+<!-- CONTEXT -->
+<section class="section"><div class="container container--narrow">
+  <span class="eyebrow">Why This Exists</span>
+  <h2>AI Coding Assistants Are Coming to GovCon Whether You're Ready or Not</h2>
+  <span class="rule-gold"></span>
+  <p>Defense contractors are adopting AI coding tools — GitHub Copilot, Claude Code, Cursor — faster than their security teams can assess them. The risk isn't that the tools are malicious. The risk is that they're trained on commercial patterns and will confidently generate code that routes data to <code>graph.microsoft.com</code> instead of <code>graph.microsoft.us</code>, stores a connection string in plain text, or calls a commercial Azure OpenAI endpoint from inside your GCC High boundary.</p>
+  <p>A CLAUDE.md at the repo root changes the behavior before any code is written. It's the equivalent of a new developer reading your security policy on day one — except Claude Code actually follows it, every session, without exception.</p>
+  <p>This configuration was built from experience deploying production AI systems inside a CMMC-scoped GCC High environment, combined with the NSA's May 2026 guidance on MCP server security and the new OWASP Agentic AI Top 10. It's not a theoretical framework — it's what we use.</p>
+  <div style="margin-top:var(--space-4);display:flex;gap:var(--space-3);flex-wrap:wrap">
+    <a href="services/ai-govcon.html" class="btn btn--outline">AI in GCC High Services</a>
+    <a href="gcc-high-parity.html" class="btn btn--outline">GCC High Parity Map</a>
+    <a href="regulatory-watch.html" class="btn btn--outline">Regulatory Watch</a>
+  </div>
+</div></section>
+
+<section class="section--sm section--dark">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-3)">
+    <div><h3 style="color:var(--white);margin-bottom:4px">Need a Custom Configuration?</h3>
+    <p style="color:rgba(255,255,255,0.6);margin:0;font-size:0.9rem">We build CLAUDE.md configurations tailored to your specific GCC High tenant, CMMC scope, and development stack.</p></div>
+    <a href="contact.html" class="btn btn--gold">Schedule a Call</a>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><div class="logo-name">Fulcrum Advisory</div><span class="logo-tag">Defense · Cybersecurity · AI</span><p>Cleared GovCon advisory for defense contractors navigating FOCI, CMMC, and the AI compliance landscape.</p><div class="footer-contact"><a href="mailto:info@fulcrumadvisory.us"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@fulcrumadvisory.us</a></div></div>
+<div class="footer-col"><h5>Resources</h5><ul><li><a href="resources.html">All Resources</a></li><li><a href="claude-code-gcc-high.html">Claude Code GCC High</a></li><li><a href="gcc-high-licensing.html">GCC High Licensing</a></li><li><a href="gcc-high-parity.html">Parity Map</a></li><li><a href="regulatory-watch.html">Regulatory Watch</a></li></ul></div>
+<div class="footer-col"><h5>Services</h5><ul><li><a href="services/ai-govcon.html">AI in GCC High</a></li><li><a href="services/gcch-platforms.html">GCC High Platforms</a></li><li><a href="services/cmmc-compliance.html">CMMC Compliance</a></li></ul></div>
+<div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="contract-vehicles.html">Contract Vehicles</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 Fulcrum Advisory. All rights reserved.</p><div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div></div></footer>
+
+<script>
+const nav=document.getElementById('siteNav'),toggle=document.getElementById('navToggle'),mobile=document.getElementById('navMobile');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+toggle.addEventListener('click',()=>mobile.classList.toggle('open'));
+mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.remove('open')));
+
+function openGate(){
+  document.getElementById('gateForm').style.display='';
+  document.getElementById('gateSuccess').style.display='none';
+  document.getElementById('gateOverlay').classList.add('open');
+  document.getElementById('gateName').focus();
+}
+document.getElementById('gateClose').addEventListener('click',()=>document.getElementById('gateOverlay').classList.remove('open'));
+document.getElementById('gateOverlay').addEventListener('click',e=>{if(e.target===document.getElementById('gateOverlay'))document.getElementById('gateOverlay').classList.remove('open')});
+
+document.getElementById('gateSubmit').addEventListener('click',async()=>{
+  const name=document.getElementById('gateName').value.trim();
+  const email=document.getElementById('gateEmail').value.trim();
+  if(!name||!email){alert('Please enter your name and work email.');return;}
+  const btn=document.getElementById('gateSubmit');
+  btn.textContent='Processing…';btn.disabled=true;
+  /* ============================================================
+     Wire to same form handler as contact form (Paradise solution)
+     POST: {name, email, company, role, resource:'claude-code-gcc-high', _subject:'Resource Download'}
+     On success: call gateSuccess()
+     TEMP: immediate reveal — replace with actual POST
+  ============================================================ */
+  setTimeout(gateSuccess, 700);
+});
+
+function gateSuccess(){
+  document.getElementById('gateForm').style.display='none';
+  document.getElementById('gateSuccess').style.display='block';
+}
+</script>
+</body></html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>GCC High vs. Azure Commercial: Service Parity Map | Fulcrum Advisory</title>
+  <meta name="description" content="Service-by-service comparison of Azure capabilities available in GCC High vs. commercial Azure. AI/ML, developer tools, networking, identity, and compliance — with CMMC relevance notes." />
+  <meta name="keywords" content="GCC High Azure parity, GCC High service availability, Azure DevOps GCC High, Azure OpenAI GCC High, GCC High vs commercial Azure, Microsoft 365 GCC High features" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.fulcrumadvisory.us/gcc-high-parity.html" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    .parity-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin-bottom:var(--space-5)}
+    .parity-table th{background:var(--navy);color:var(--white);padding:10px 14px;text-align:left;font-family:var(--font-sans);font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap}
+    .parity-table td{padding:9px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+    .parity-table tr:nth-child(even) td{background:var(--off-white)}
+    .parity-table td:first-child{font-weight:700;color:var(--navy);white-space:nowrap}
+    .parity-table td:nth-child(2){font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)}
+    .c-yes{color:#059669;font-weight:700}
+    .c-no{color:#DC2626;font-weight:700}
+    .c-partial{color:#D97706;font-weight:700}
+    .note{font-size:0.75rem;color:var(--text-muted);margin-top:3px}
+    .section-heading{display:flex;align-items:center;gap:var(--space-2);margin:var(--space-5) 0 var(--space-3);padding-bottom:var(--space-2);border-bottom:2px solid var(--gold)}
+    .section-heading h3{margin:0;color:var(--navy)}
+    .endpoint-block{background:var(--navy);border-radius:var(--radius);padding:var(--space-4);margin-bottom:var(--space-4);font-family:var(--font-mono)}
+    .ep-row{display:flex;gap:var(--space-3);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.07);flex-wrap:wrap}
+    .ep-row:last-child{border:none}
+    .ep-label{font-size:0.72rem;color:var(--gold);min-width:160px;font-weight:700}
+    .ep-comm{font-size:0.72rem;color:rgba(255,255,255,0.45);flex:1}
+    .ep-gcch{font-size:0.72rem;color:#86EFAC;flex:1}
+    .legend{display:flex;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-4);padding:var(--space-3);background:var(--off-white);border-radius:var(--radius);border:1px solid var(--border)}
+    .legend-item{display:flex;align-items:center;gap:6px;font-size:0.78rem;color:var(--text-mid)}
+    .updated-note{font-size:0.75rem;color:var(--text-muted);margin-top:var(--space-3);padding:var(--space-2) var(--space-3);background:var(--gold-pale);border-radius:var(--radius-sm);border:1px solid rgba(200,150,46,0.2)}
+  </style>
+</head>
+<body>
+<nav class="site-nav" id="siteNav"><div class="nav-inner"><a href="index.html" class="nav-logo"><span class="logo-name">Fulcrum Advisory</span><span class="logo-tag">Defense · Cybersecurity · AI</span></a><div class="nav-links"><a href="index.html">Home</a><a href="services.html" class="active">Services</a><a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a></div><a href="contact.html" class="btn btn--gold btn--sm nav-cta">Schedule a Call</a><button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button></div></nav>
+<div class="nav-mobile" id="navMobile"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a><a href="contact.html" class="btn btn--gold" style="margin-top:16px">Schedule a Call</a></div>
+
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="services/gcch-platforms.html">GCC High Platforms</a><span class="sep">/</span><span>Azure Parity Map</span></nav>
+    <h1 style="margin-top:var(--space-2)">GCC High vs. Azure Commercial — Service Parity Map</h1>
+    <p class="page-header-sub">What's available, what's not, and what works differently in the sovereign cloud. Verified against Microsoft documentation and production GCC High deployments.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <div class="legend">
+      <div class="legend-item"><span class="c-yes">✓ Available</span> — Generally Available in GCC High</div>
+      <div class="legend-item"><span class="c-partial">~ Partial</span> — Available with limitations or feature gaps</div>
+      <div class="legend-item"><span class="c-no">✗ Not Available</span> — Not in GCC High as of this publication</div>
+    </div>
+
+    <div class="updated-note">
+      ⚠ Service availability changes with Microsoft releases. Always verify current status at <a href="https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod" target="_blank" rel="noopener" style="color:var(--blue)">Microsoft Learn — GCC High and DoD</a> before architecture or licensing decisions. Updated May 2026. Verify changes via the <a href="gcc-high-roadmap.html" style="color:var(--blue)">GCC High Roadmap Tracker</a>.
+    </div>
+
+    <!-- ENDPOINT DIFFERENCES -->
+    <div class="section-heading"><h3>Critical Endpoint Differences</h3></div>
+    <p style="margin-bottom:var(--space-3);color:var(--text-muted);font-size:0.875rem">Every integration, app registration, and API call must target GCC High endpoints — not commercial. Using commercial endpoints in a GCC High tenant fails silently or routes data incorrectly.</p>
+    <div class="endpoint-block">
+      <div class="ep-row" style="border-bottom:1px solid rgba(255,255,255,0.15);padding-bottom:8px;margin-bottom:4px">
+        <span class="ep-label" style="color:rgba(255,255,255,0.5)">Service</span>
+        <span class="ep-comm" style="color:rgba(255,255,255,0.5)">Commercial Endpoint</span>
+        <span class="ep-gcch" style="color:rgba(255,255,255,0.5)">GCC High Endpoint</span>
+      </div>
+      <div class="ep-row"><span class="ep-label">Microsoft Graph</span><span class="ep-comm">graph.microsoft.com</span><span class="ep-gcch">graph.microsoft.us</span></div>
+      <div class="ep-row"><span class="ep-label">Azure AD / Entra Login</span><span class="ep-comm">login.microsoftonline.com</span><span class="ep-gcch">login.microsoftonline.us</span></div>
+      <div class="ep-row"><span class="ep-label">Microsoft Intune (MDM)</span><span class="ep-comm">manage.microsoft.com</span><span class="ep-gcch">manage.microsoft.us</span></div>
+      <div class="ep-row"><span class="ep-label">Exchange Online</span><span class="ep-comm">outlook.office365.com</span><span class="ep-gcch">outlook.office365.us</span></div>
+      <div class="ep-row"><span class="ep-label">SharePoint</span><span class="ep-comm">*.sharepoint.com</span><span class="ep-gcch">*.sharepoint.us</span></div>
+      <div class="ep-row"><span class="ep-label">Teams</span><span class="ep-comm">teams.microsoft.com</span><span class="ep-gcch">gov.teams.microsoft.us</span></div>
+      <div class="ep-row"><span class="ep-label">Azure Resource Manager</span><span class="ep-comm">management.azure.com</span><span class="ep-gcch">management.usgovcloudapi.net</span></div>
+      <div class="ep-row"><span class="ep-label">Azure OpenAI</span><span class="ep-comm">*.openai.azure.com</span><span class="ep-gcch">*.openai.azure.us</span></div>
+    </div>
+
+    <!-- AI / ML -->
+    <div class="section-heading"><h3>AI &amp; Machine Learning</h3></div>
+    <table class="parity-table">
+      <thead><tr><th>Service</th><th>NAICS/Use</th><th>GCC High</th><th>Notes / CMMC Relevance</th></tr></thead>
+      <tbody>
+        <tr><td>Azure OpenAI Service</td><td>AI/LLM</td><td><span class="c-yes">✓ Available</span></td><td>GPT-4o, GPT-4, GPT-3.5 available. Some newer models may lag commercial by weeks. Primary AI workload platform for GCC High. CMMC boundary documentation required in SSP.<div class="note">Endpoint: *.openai.azure.us</div></td></tr>
+        <tr><td>Azure AI Search (Cognitive Search)</td><td>RAG/Vector</td><td><span class="c-yes">✓ Available</span></td><td>Full feature parity including vector search. Primary RAG retrieval layer in GCC High deployments.</td></tr>
+        <tr><td>Azure Machine Learning</td><td>MLOps</td><td><span class="c-yes">✓ Available</span></td><td>Available in Azure Government. Some AutoML and Designer features may have parity gaps. Verify specific capabilities needed.</td></tr>
+        <tr><td>Azure Bot Service</td><td>Chatbot</td><td><span class="c-yes">✓ Available</span></td><td>Full Bot Framework support. Used in production GovCon AI deployments.</td></tr>
+        <tr><td>Azure Cognitive Services (Vision, Speech, Language)</td><td>AI APIs</td><td><span class="c-partial">~ Partial</span></td><td>Core services available; some specialized models and preview features not yet in GCC High. Verify each service individually against Microsoft's service availability matrix.</td></tr>
+        <tr><td>Azure Document Intelligence (Form Recognizer)</td><td>Document AI</td><td><span class="c-partial">~ Partial</span></td><td>Core prebuilt and custom models available. Some features lag commercial by one release cycle.</td></tr>
+        <tr><td>Microsoft Copilot for M365</td><td>AI Assistant</td><td><span class="c-partial">~ In Progress</span></td><td>Rollout to GCC High underway in 2026. Feature availability expanding progressively. Verify current GA status on <a href="gcc-high-roadmap.html" style="color:var(--blue)">Roadmap Tracker</a>.</td></tr>
+        <tr><td>Security Copilot</td><td>SecOps AI</td><td><span class="c-no">✗ Not Available</span></td><td>Commercial only as of May 2026. No committed GCC High date. Do not include in GCC High architecture plans without current verification.</td></tr>
+        <tr><td>Copilot Studio (Power Virtual Agents)</td><td>Bot Builder</td><td><span class="c-no">✗ Not Available</span></td><td>Commercial only. Use Azure Bot Service + Bot Framework SDK for GCC High chatbot development.</td></tr>
+        <tr><td>Azure AI Foundry (formerly AI Studio)</td><td>AI Dev Portal</td><td><span class="c-partial">~ Partial</span></td><td>Some capabilities available via Azure portal; full AI Foundry portal experience lags commercial. Verify current state before project scoping.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- IDENTITY & ACCESS -->
+    <div class="section-heading"><h3>Identity &amp; Access Management</h3></div>
+    <table class="parity-table">
+      <thead><tr><th>Service</th><th>License Tier</th><th>GCC High</th><th>Notes / CMMC Relevance</th></tr></thead>
+      <tbody>
+        <tr><td>Entra ID (Azure AD) P1</td><td>Business Premium / G3</td><td><span class="c-yes">✓ Available</span></td><td>Conditional Access, MFA, SSPR, group-based access. Covers most CMMC L2 IA controls.</td></tr>
+        <tr><td>Entra ID (Azure AD) P2</td><td>G5</td><td><span class="c-yes">✓ Available</span></td><td>Adds PIM (Privileged Identity Management), Identity Protection, Access Reviews. Critical for CMMC L2 audit evidence on AC.2.006 and IA.3.083.</td></tr>
+        <tr><td>Entra External ID (B2B)</td><td>Included</td><td><span class="c-partial">~ Partial</span></td><td>Guest access works but with restrictions. External guests from commercial tenants require explicit federation configuration. CMMC scoping implications for external collaborators.</td></tr>
+        <tr><td>Entra External ID (B2C)</td><td>Separate</td><td><span class="c-no">✗ Not Available</span></td><td>B2C is not available in GCC High. Customer-facing identity scenarios must use alternative approaches. Do not architect B2C dependencies for GCC High workloads.</td></tr>
+        <tr><td>Entra Verified ID</td><td>Preview</td><td><span class="c-no">✗ Not Available</span></td><td>Verifiable credentials feature not available in GCC High as of May 2026.</td></tr>
+        <tr><td>Microsoft Intune</td><td>G3/G5/Addon</td><td><span class="c-yes">✓ Available</span></td><td>Full MDM/MAM capabilities. Uses manage.microsoft.us endpoint. Required for CMMC CM control family on managed devices. Apple ADE/ABM integration supported.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- COMPUTE & CONTAINERS -->
+    <div class="section-heading"><h3>Compute, Containers &amp; Serverless</h3></div>
+    <table class="parity-table">
+      <thead><tr><th>Service</th><th>Type</th><th>GCC High</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Azure Virtual Machines</td><td>IaaS</td><td><span class="c-yes">✓ Available</span></td><td>Full VM series available. Azure Government regions: USGov Virginia, USGov Arizona, USGov Texas.</td></tr>
+        <tr><td>Azure Kubernetes Service (AKS)</td><td>Container Orchestration</td><td><span class="c-yes">✓ Available</span></td><td>Full AKS feature parity. Preferred container platform for GCC High workloads.</td></tr>
+        <tr><td>Azure App Service</td><td>PaaS Web/API</td><td><span class="c-yes">✓ Available</span></td><td>Web apps, API apps, WebJobs. Full feature support.</td></tr>
+        <tr><td>Azure Functions</td><td>Serverless</td><td><span class="c-yes">✓ Available</span></td><td>All runtime stacks supported. Consumption and Premium plans available.</td></tr>
+        <tr><td>Azure Container Apps</td><td>Container PaaS</td><td><span class="c-yes">✓ Available</span></td><td>Available in Azure Government. Verify specific region availability.</td></tr>
+        <tr><td>Azure Container Instances (ACI)</td><td>Container IaaS</td><td><span class="c-yes">✓ Available</span></td><td>Available. Simpler alternative to AKS for single-container workloads.</td></tr>
+        <tr><td>Azure Static Web Apps</td><td>Static Hosting</td><td><span class="c-partial">~ Partial</span></td><td>Available in Azure Government with some feature limitations vs. commercial.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- DEVELOPER TOOLS -->
+    <div class="section-heading"><h3>Developer Tools &amp; DevOps</h3></div>
+    <table class="parity-table">
+      <thead><tr><th>Service</th><th>Type</th><th>GCC High</th><th>Notes / CMMC Relevance</th></tr></thead>
+      <tbody>
+        <tr><td style="color:#DC2626;font-weight:700">Azure DevOps</td><td>DevOps Platform</td><td><span class="c-no">✗ NOT AVAILABLE</span></td><td><strong>Major gap.</strong> Azure DevOps is not natively available in GCC High tenant. This surprises many teams. Do not architect CI/CD pipelines dependent on Azure DevOps for GCC High environments.<div class="note">Alternative: GitHub Enterprise (EMU) with Entra ID GCC High SSO integration</div></td></tr>
+        <tr><td>GitHub Enterprise (EMU)</td><td>Source Control / DevOps</td><td><span class="c-yes">✓ Available</span></td><td>GitHub Enterprise with Enterprise Managed Users supports SAML SSO integration with GCC High Entra ID. Recommended CI/CD and source control path for GCC High CMMC environments. CMMC CM.2.061, CM.2.062.</td></tr>
+        <tr><td>Azure API Management</td><td>API Gateway</td><td><span class="c-yes">✓ Available</span></td><td>Full APIM capability in Azure Government. Useful for managing Azure OpenAI access in GCC High.</td></tr>
+        <tr><td>Azure DevTest Labs</td><td>Dev Environments</td><td><span class="c-yes">✓ Available</span></td><td>Available in Azure Government.</td></tr>
+        <tr><td>Visual Studio App Center</td><td>Mobile DevOps</td><td><span class="c-no">✗ Not Available</span></td><td>Commercial only. Use GitHub Actions for mobile CI/CD in GCC High context.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- STORAGE & DATABASES -->
+    <div class="section-heading"><h3>Storage &amp; Databases</h3></div>
+    <table class="parity-table">
+      <thead><tr><th>Service</th><th>Type</th><th>GCC High</th><th>Notes / CMMC Relevance</th></tr></thead>
+      <tbody>
+        <tr><td>Azure Blob Storage</td><td>Object Storage</td><td><span class="c-yes">✓ Available</span></td><td>Full feature parity. CMMC boundary documentation required if CUI data stored. FIPS 140-2 encryption at rest.</td></tr>
+        <tr><td>Azure Files</td><td>File Shares</td><td><span class="c-yes">✓ Available</span></td><td>SMB and NFS shares available. Common replacement for on-prem file servers in GCC High migrations.</td></tr>
+        <tr><td>Azure Cosmos DB</td><td>NoSQL</td><td><span class="c-yes">✓ Available</span></td><td>Full API support (Core SQL, MongoDB, Gremlin, Table). Used in production GCC High AI deployments (LeoBot architecture).</td></tr>
+        <tr><td>Azure SQL Database</td><td>Relational</td><td><span class="c-yes">✓ Available</span></td><td>Full PaaS SQL including elastic pools, serverless tier, and Hyperscale.</td></tr>
+        <tr><td>Azure PostgreSQL Flexible Server</td><td>Relational</td><td><span class="c-yes">✓ Available</span></td><td>Available in Azure Government.</td></tr>
+        <tr><td>Azure MySQL Flexible Server</td><td>Relational</td><td><span class="c-yes">✓ Available</span></td><td>Available in Azure Government.</td></tr>
+        <tr><td>Azure Data Lake Storage Gen2</td><td>Analytics Storage</td><td><span class="c-yes">✓ Available</span></td><td>Available. Hierarchical namespace feature supported.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- NETWORKING -->
+    <div class="section-heading"><h3>Networking &amp; Security</h3></div>
+    <table class="parity-table">
+      <thead><tr><th>Service</th><th>Type</th><th>GCC High</th><th>Notes / CMMC Relevance</th></tr></thead>
+      <tbody>
+        <tr><td>Azure Virtual Network (VNet)</td><td>Networking</td><td><span class="c-yes">✓ Available</span></td><td>Full VNet capability including peering, service endpoints, and private endpoints. SC control family.</td></tr>
+        <tr><td>Azure VPN Gateway</td><td>VPN</td><td><span class="c-yes">✓ Available</span></td><td>Site-to-site, point-to-site, and VNet-to-VNet. FIPS 140-2 compliant cipher suites.</td></tr>
+        <tr><td>Azure ExpressRoute</td><td>Private Connectivity</td><td><span class="c-yes">✓ Available</span></td><td>Available to Azure Government regions. Required for highest-assurance network connectivity to GCC High.</td></tr>
+        <tr><td>Azure Firewall</td><td>Network Security</td><td><span class="c-yes">✓ Available</span></td><td>Azure Firewall and Firewall Manager available in Azure Government.</td></tr>
+        <tr><td>Azure DDoS Protection</td><td>DDoS</td><td><span class="c-yes">✓ Available</span></td><td>Basic and Standard tiers available.</td></tr>
+        <tr><td>Azure Private Endpoint</td><td>Private Access</td><td><span class="c-yes">✓ Available</span></td><td>Critical for CMMC SC boundary — use private endpoints to keep AI/data services off public internet within GCC High.</td></tr>
+        <tr><td>Azure CDN</td><td>Content Delivery</td><td><span class="c-no">✗ Not Available</span></td><td>Azure CDN is not available in GCC High. Static content delivery requires alternative approaches (Azure Blob static website, GitHub Pages for public content).</td></tr>
+        <tr><td>Azure Front Door</td><td>Global Load Balancer</td><td><span class="c-partial">~ Partial</span></td><td>Available with limitations in Azure Government. Verify specific capability needs.</td></tr>
+        <tr><td>Azure Key Vault</td><td>Secrets Management</td><td><span class="c-yes">✓ Available</span></td><td>Full HSM and software key vault. FIPS 140-2 Level 2 (HSM Level 3). Critical for CMMC SC.3.177 encryption key management.</td></tr>
+        <tr><td>Microsoft Defender for Cloud</td><td>CSPM/CWPP</td><td><span class="c-yes">✓ Available</span></td><td>Full cloud security posture management. Maps directly to CMMC CA and RA control families.</td></tr>
+        <tr><td>Microsoft Sentinel</td><td>SIEM</td><td><span class="c-yes">✓ Available</span></td><td>Full SIEM/SOAR capability. Included in G5. Primary CMMC AU control family evidence platform for GCC High.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- M365 PRODUCTIVITY -->
+    <div class="section-heading"><h3>Microsoft 365 Productivity &amp; Compliance</h3></div>
+    <table class="parity-table">
+      <thead><tr><th>Service</th><th>License</th><th>GCC High</th><th>Notes / CMMC Relevance</th></tr></thead>
+      <tbody>
+        <tr><td>Exchange Online</td><td>All tiers</td><td><span class="c-yes">✓ Available</span></td><td>Full email, calendar, contacts. 50 GB (Business Premium) or 100 GB (G3/G5) mailboxes. ITAR-compliant email.</td></tr>
+        <tr><td>SharePoint Online</td><td>All tiers</td><td><span class="c-yes">✓ Available</span></td><td>Full document management. Use for CMMC document library and SSP hosting. CDN not available — affects page performance.</td></tr>
+        <tr><td>Microsoft Teams</td><td>All tiers</td><td><span class="c-yes">✓ Available</span></td><td>Full collaboration. gov.teams.microsoft.us endpoint. External federation requires configuration. Teams Phone available via Direct Routing. See <a href="gcc-high-licensing.html" style="color:var(--blue)">licensing guide</a> for phone limitations.</td></tr>
+        <tr><td>OneDrive for Business</td><td>All tiers</td><td><span class="c-yes">✓ Available</span></td><td>Full OneDrive capability. iCloud on supervised iOS devices must be disabled — OneDrive is the CUI-compliant file sync alternative.</td></tr>
+        <tr><td>Microsoft 365 Apps (Office)</td><td>All tiers</td><td><span class="c-yes">✓ Available</span></td><td>Word, Excel, PowerPoint, Outlook desktop apps fully available.</td></tr>
+        <tr><td>Microsoft Purview (Compliance)</td><td>G3/G5</td><td><span class="c-yes">✓ Available</span></td><td>DLP, sensitivity labels, eDiscovery Standard (G3), eDiscovery Premium + Insider Risk (G5). Core CMMC MP and CA evidence platform.</td></tr>
+        <tr><td>Microsoft Purview Compliance Manager</td><td>G3/G5</td><td><span class="c-yes">✓ Available</span></td><td>CMMC assessment template maps M365 controls directly. Start here for CMMC L2 assessment.</td></tr>
+        <tr><td>Power Automate (GCC High)</td><td>All tiers</td><td><span class="c-partial">~ Partial</span></td><td>Core workflow automation available. Some connectors available in commercial are absent in GCC High. Verify each connector before workflow design. manage.microsoft.us authentication.</td></tr>
+        <tr><td>Power Apps</td><td>Addon</td><td><span class="c-partial">~ Partial</span></td><td>Available with feature gaps vs. commercial. Some advanced connectors and AI Builder features not yet in GCC High.</td></tr>
+        <tr><td>Power BI</td><td>Addon</td><td><span class="c-partial">~ Partial</span></td><td>Power BI Pro and Premium available in GCC High. Some advanced features (e.g., certain AI visuals) lag commercial.</td></tr>
+        <tr><td>Microsoft Stream</td><td>G3/G5</td><td><span class="c-yes">✓ Available</span></td><td>SharePoint-based Stream available. The defensible choice for CUI-adjacent video in GovCon — not commercial video platforms.</td></tr>
+        <tr><td>Microsoft Viva</td><td>Addon</td><td><span class="c-partial">~ Partial</span></td><td>Some Viva modules available; others commercial-only. Verify individual module availability.</td></tr>
+        <tr><td>Microsoft Copilot for M365</td><td>Addon</td><td><span class="c-partial">~ In Progress</span></td><td>Progressive rollout to GCC High throughout 2026. Check <a href="gcc-high-roadmap.html" style="color:var(--blue)">Roadmap Tracker</a> for current status.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- INTEGRATION -->
+    <div class="section-heading"><h3>Integration &amp; Messaging</h3></div>
+    <table class="parity-table">
+      <thead><tr><th>Service</th><th>Type</th><th>GCC High</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Azure Logic Apps</td><td>Workflow Automation</td><td><span class="c-yes">✓ Available</span></td><td>Standard and Consumption tiers available. Government cloud connectors differ from commercial — verify connector availability.</td></tr>
+        <tr><td>Azure Service Bus</td><td>Messaging</td><td><span class="c-yes">✓ Available</span></td><td>Full messaging capability including topics, subscriptions, and queues.</td></tr>
+        <tr><td>Azure Event Grid</td><td>Event Routing</td><td><span class="c-yes">✓ Available</span></td><td>Available in Azure Government.</td></tr>
+        <tr><td>Azure Event Hubs</td><td>Data Streaming</td><td><span class="c-yes">✓ Available</span></td><td>Available including Kafka endpoint support.</td></tr>
+        <tr><td>Azure API Management</td><td>API Gateway</td><td><span class="c-yes">✓ Available</span></td><td>Full APIM capability. Common pattern: APIM in front of Azure OpenAI for rate limiting, logging, and access control in GCC High.</td></tr>
+      </tbody>
+    </table>
+
+    <!-- MANAGEMENT -->
+    <div class="section-heading"><h3>Management &amp; Governance</h3></div>
+    <table class="parity-table">
+      <thead><tr><th>Service</th><th>Type</th><th>GCC High</th><th>Notes / CMMC Relevance</th></tr></thead>
+      <tbody>
+        <tr><td>Azure Monitor / Log Analytics</td><td>Monitoring</td><td><span class="c-yes">✓ Available</span></td><td>Full monitoring including Application Insights. Central audit log aggregation for CMMC AU controls.</td></tr>
+        <tr><td>Azure Policy</td><td>Governance</td><td><span class="c-yes">✓ Available</span></td><td>Full policy engine. Use to enforce CMMC-compliant configurations across Azure Government subscriptions. CM control family.</td></tr>
+        <tr><td>Azure Blueprints</td><td>Environment Setup</td><td><span class="c-yes">✓ Available</span></td><td>Available in Azure Government. Useful for repeatable CMMC-baseline environment deployment.</td></tr>
+        <tr><td>Azure Cost Management</td><td>FinOps</td><td><span class="c-yes">✓ Available</span></td><td>Full cost visibility and budgeting for Azure Government subscriptions.</td></tr>
+        <tr><td>Azure Advisor</td><td>Recommendations</td><td><span class="c-yes">✓ Available</span></td><td>Available with some recommendation categories not yet in Government cloud.</td></tr>
+        <tr><td>Microsoft Defender for Endpoint</td><td>EDR</td><td><span class="c-yes">✓ Available</span></td><td>Full EDR including P2 (included in G5 or as addon). Feeds into Sentinel. CMMC SI and IR control families.</td></tr>
+        <tr><td>Microsoft Defender for Identity</td><td>Identity Threat</td><td><span class="c-yes">✓ Available</span></td><td>Included in G5. Monitors AD for identity-based attacks. CMMC IA and AU.</td></tr>
+        <tr><td>Microsoft Defender Vulnerability Management</td><td>Vuln Mgmt</td><td><span class="c-yes">✓ Available</span></td><td>Integrated vulnerability management. CMMC RA.2.141, RA.2.142.</td></tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:var(--space-5);padding:var(--space-4);background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius)">
+      <h4 style="margin-bottom:8px">How to Stay Current</h4>
+      <p style="font-size:0.875rem;color:var(--text-muted);margin:0">This parity map is maintained based on Microsoft documentation and production GCC High deployments. For real-time feature availability, use the <a href="gcc-high-roadmap.html" style="color:var(--blue)">GCC High Roadmap Tracker</a> (updated daily). For Microsoft's authoritative service description, see the <a href="https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod" target="_blank" rel="noopener" style="color:var(--blue)">GCC High and DoD service description</a>. If you're making architecture or licensing decisions based on specific service availability, <a href="contact.html" style="color:var(--blue)">schedule a review</a> before committing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section--sm section--dark">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-3)">
+    <div>
+      <h3 style="color:var(--white);margin-bottom:4px">Building in GCC High and Need Architecture Review?</h3>
+      <p style="color:rgba(255,255,255,0.6);margin:0;font-size:0.9rem">We've deployed production AI in GCC High. We know what's available and what the SSP needs to say.</p>
+    </div>
+    <a href="contact.html" class="btn btn--gold">Schedule a Call</a>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><div class="logo-name">Fulcrum Advisory</div><span class="logo-tag">Defense · Cybersecurity · AI</span><p>Cleared GovCon advisory for defense contractors.</p><div class="footer-contact"><a href="mailto:info@fulcrumadvisory.us"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@fulcrumadvisory.us</a></div></div>
+<div class="footer-col"><h5>GCC High</h5><ul><li><a href="gcc-high-parity.html">Azure Parity Map</a></li><li><a href="gcc-high-licensing.html">Licensing Guide 2026</a></li><li><a href="gcc-high-roadmap.html">Roadmap Tracker</a></li><li><a href="services/gcch-platforms.html">GCC High Platforms</a></li></ul></div>
+<div class="footer-col"><h5>Services</h5><ul><li><a href="services/ai-govcon.html">AI in GCC High</a></li><li><a href="services/cmmc-compliance.html">CMMC Compliance</a></li><li><a href="services/gcch-platforms.html">GCC High Platforms</a></li><li><a href="services/mdm-apple.html">MDM Apple/iOS</a></li></ul></div>
+<div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="resources.html">Resources</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 Fulcrum Advisory. All rights reserved.</p><div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.xml">Sitemap</a></div></div></div></footer>
+<script>const nav=document.getElementById('siteNav'),toggle=document.getElementById('navToggle'),mobile=document.getElementById('navMobile');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));toggle.addEventListener('click',()=>mobile.classList.toggle('open'));mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.remove('open')));</script>
+</body></html>

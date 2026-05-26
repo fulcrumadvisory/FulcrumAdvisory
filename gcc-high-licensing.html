@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GCC High Licensing Guide 2026 | Fulcrum Advisory</title>
+  <meta name="description" content="Complete GCC High licensing guide for defense contractors in 2026. Business Premium, G3, G5, E7 gap analysis, Teams Gov, CMMC compliance mapping, and procurement pathway." />
+  <meta name="keywords" content="GCC High licensing, Microsoft 365 G3 G5 government, GCC High Business Premium, Teams GCC High, CMMC licensing, E7 GCC High, Microsoft 365 government pricing 2026" />
+  <meta name="author" content="Fulcrum Advisory" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.fulcrumadvisory.us/gcc-high-licensing.html" />
+  <meta property="og:title" content="GCC High Licensing Guide 2026 | Fulcrum Advisory" />
+  <meta property="og:description" content="The definitive GCC High licensing guide for defense contractors — SKU comparison, CMMC mapping, E7 gap analysis, Teams Gov, and procurement pathway." />
+  <meta property="og:url" content="https://www.fulcrumadvisory.us/gcc-high-licensing.html" />
+  <meta property="og:site_name" content="Fulcrum Advisory" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article",
+   "headline":"GCC High Licensing Guide for Defense Contractors 2026",
+   "description":"Complete licensing guide covering Business Premium, G3, G5, E7 gap, Teams Gov, and CMMC compliance mapping for GCC High tenants.",
+   "datePublished":"2026-01-15","dateModified":"2026-05-25",
+   "author":{"@type":"Organization","name":"Fulcrum Advisory","url":"https://www.fulcrumadvisory.us"},
+   "publisher":{"@type":"Organization","name":"Fulcrum Advisory"}}
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    .lic-table { width:100%; border-collapse:collapse; font-size:0.85rem; margin:var(--space-4) 0; }
+    .lic-table th { background:var(--navy); color:var(--white); padding:10px 14px; text-align:left;
+                    font-family:var(--font-sans); font-size:0.72rem; font-weight:700;
+                    letter-spacing:0.08em; text-transform:uppercase; }
+    .lic-table td { padding:10px 14px; border-bottom:1px solid var(--border);
+                    color:var(--text-mid); vertical-align:top; }
+    .lic-table tr:last-child td { border-bottom:none; }
+    .lic-table tr:nth-child(even) td { background:var(--off-white); }
+    .lic-table td:first-child { font-weight:700; color:var(--navy); white-space:nowrap; }
+    .check { color:#059669; font-weight:700; }
+    .cross { color:#DC2626; }
+    .partial { color:#D97706; }
+    .sku-card { background:var(--white); border:1px solid var(--border);
+                border-radius:var(--radius); padding:var(--space-4);
+                border-top:3px solid var(--border); transition:border-top-color 0.2s; }
+    .sku-card:hover { border-top-color:var(--gold); box-shadow:var(--shadow-lg); }
+    .sku-card.recommended { border-top-color:var(--gold); }
+    .sku-badge { font-size:0.65rem; font-weight:700; letter-spacing:0.12em;
+                 text-transform:uppercase; padding:3px 8px; border-radius:2px;
+                 display:inline-block; margin-bottom:var(--space-2); }
+    .badge-new   { background:#ECFDF5; color:#059669; border:1px solid #A7F3D0; }
+    .badge-rec   { background:var(--gold-pale); color:var(--gold); border:1px solid rgba(200,150,46,0.3); }
+    .badge-top   { background:var(--navy); color:var(--white); }
+    .badge-warn  { background:#FEF3C7; color:#92400E; border:1px solid #FCD34D; }
+    .price-big   { font-family:var(--font-serif); font-size:2rem; font-weight:700;
+                   color:var(--navy); line-height:1; }
+    .price-per   { font-size:0.75rem; color:var(--text-muted); }
+    .alert-box   { background:var(--gold-pale); border-left:4px solid var(--gold);
+                   padding:var(--space-3); border-radius:0 var(--radius) var(--radius) 0;
+                   margin:var(--space-4) 0; }
+    .alert-box.danger { background:#FEF2F2; border-left-color:#DC2626; }
+    .alert-box h4 { color:var(--navy); margin-bottom:6px; font-size:0.95rem; }
+    .alert-box p  { margin:0; font-size:0.875rem; color:var(--text-mid); }
+    .step-row { display:flex; gap:var(--space-3); padding:var(--space-3) 0;
+                border-bottom:1px solid var(--border); align-items:flex-start; }
+    .step-num { font-family:var(--font-serif); font-size:1.75rem; font-weight:700;
+                color:var(--gold); line-height:1; flex-shrink:0; width:36px; }
+    .updated-tag { display:inline-flex; align-items:center; gap:6px;
+                   font-size:0.72rem; font-weight:600; color:var(--text-muted);
+                   background:var(--off-white); border:1px solid var(--border);
+                   padding:3px 10px; border-radius:var(--radius-sm); }
+    .updated-tag span { width:7px; height:7px; background:#059669;
+                        border-radius:50%; display:inline-block; }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-name">Fulcrum Advisory</span>
+      <span class="logo-tag">Defense · Cybersecurity · AI</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn--gold btn--sm nav-cta">Schedule a Call</a>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Home</a><a href="services.html">Services</a>
+  <a href="about.html">About</a><a href="insights.html">Insights</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn--gold" style="margin-top:16px">Schedule a Call</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span>
+      <a href="services.html">Services</a><span class="sep">/</span>
+      <a href="services/gcch-platforms.html">GCC High Platforms</a><span class="sep">/</span>
+      <span>Licensing Guide</span>
+    </nav>
+    <div style="display:flex;align-items:center;gap:var(--space-2);margin-top:var(--space-2)">
+      <span class="updated-tag"><span></span> Updated May 2026</span>
+      <span class="tag tag--gold" style="position:relative">2026 Pricing</span>
+    </div>
+    <h1 style="margin-top:var(--space-2)">GCC High Licensing Guide for Defense Contractors</h1>
+    <p class="page-header-sub">Business Premium · G3 · G5 · E7 Gap · Teams Gov · CMMC Compliance Mapping · Procurement Pathway</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="section--sm">
+  <div class="container container--narrow">
+    <div class="alert-box danger">
+      <h4>⚠ E7 Upsell Alert — Read This First</h4>
+      <p>Microsoft account teams are actively pushing commercial E5 customers toward the new E7 SKU, which bundles M365 Copilot, advanced AI security, and enhanced compliance. <strong>As of 2026, there is no government-equivalent G7 in GCC High.</strong> Any pricing comparison your Microsoft rep makes using E7 commercial value does not apply to your GCC High tenant. Do not make licensing decisions based on commercial E7 benchmarks until a GCC High equivalent exists on the roadmap.</p>
+    </div>
+    <p>GCC High licensing is one of the most commonly mishandled decisions in the defense industrial base. The SKU names look familiar, the pricing conversations happen in commercial frameworks, and most Microsoft partners are not GCC High specialists. The result: organizations either overspend on licenses they don't need, underbuy and fail CMMC audits, or get trapped in a commercial tenant that can't support their compliance requirements.</p>
+    <p>This guide reflects 2026 pricing and SKU availability. Prices shown are list prices through authorized resellers — actual pricing depends on Enterprise Agreement terms, commitment length, and AOS-G or LSP partner rates.</p>
+  </div>
+</section>
+
+<!-- SKU COMPARISON -->
+<section class="section section--gray">
+  <div class="container">
+    <span class="eyebrow">SKU Comparison</span>
+    <h2 style="margin-bottom:var(--space-2)">GCC High License Tiers — 2026</h2>
+    <p class="section-intro" style="margin-bottom:var(--space-5)">Three tiers are available in GCC High. The right choice depends on user count, CMMC level, and which capabilities you need included vs. purchased as add-ons.</p>
+    <div class="grid-3" style="gap:var(--space-3);align-items:start">
+
+      <!-- Business Premium -->
+      <div class="sku-card">
+        <span class="sku-badge badge-new">New Nov 2025</span>
+        <h3 style="margin-bottom:4px">Business Premium</h3>
+        <div style="display:flex;align-items:baseline;gap:6px;margin:var(--space-2) 0">
+          <span class="price-big">$36</span>
+          <span class="price-per">/user/month (list)</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:var(--space-3)">Max <strong>300 users</strong> · SMB-focused · Launched one week before CMMC Phase 1</p>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:var(--space-3)">
+          <div style="font-size:0.82rem"><span class="check">✓</span> Microsoft 365 Apps (Word, Excel, PowerPoint, Outlook)</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Exchange Online (50 GB mailbox)</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> SharePoint, OneDrive, Teams in GCC High</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Defender for Business</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Intune device management</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Azure AD P1 (Entra ID P1)</div>
+          <div style="font-size:0.82rem"><span class="cross">✗</span> Defender for Identity (P2)</div>
+          <div style="font-size:0.82rem"><span class="cross">✗</span> Microsoft Purview (advanced)</div>
+          <div style="font-size:0.82rem"><span class="cross">✗</span> Auto-expanding archive</div>
+          <div style="font-size:0.82rem"><span class="cross">✗</span> More than 300 users</div>
+        </div>
+        <div style="background:var(--off-white);padding:12px;border-radius:var(--radius-sm);font-size:0.8rem">
+          <strong>CMMC L2:</strong> Requires add-on (+$24/user/month) → effective cost <strong>$60/user/month</strong><br/>
+          <strong>Best for:</strong> Small DIB orgs &lt;300 seats, CMMC L1 or L2 with add-on
+        </div>
+      </div>
+
+      <!-- G3 -->
+      <div class="sku-card">
+        <span class="sku-badge" style="background:var(--gray-light);color:var(--text-mid);border:1px solid var(--border)">Enterprise</span>
+        <h3 style="margin-bottom:4px">Microsoft 365 G3</h3>
+        <div style="display:flex;align-items:baseline;gap:6px;margin:var(--space-2) 0">
+          <span class="price-big">$60</span>
+          <span class="price-per">/user/month (list)</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:var(--space-3)">Unlimited users · Enterprise · Standard enterprise starting point</p>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:var(--space-3)">
+          <div style="font-size:0.82rem"><span class="check">✓</span> Everything in Business Premium</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> 100 GB mailbox + auto-expanding archive</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Microsoft Purview compliance basics</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> DLP policies</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> eDiscovery (Standard)</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Unlimited users</div>
+          <div style="font-size:0.82rem"><span class="cross">✗</span> Azure AD P2 / Defender for Identity</div>
+          <div style="font-size:0.82rem"><span class="cross">✗</span> Advanced SIEM/SOAR</div>
+          <div style="font-size:0.82rem"><span class="cross">✗</span> Microsoft Copilot (not yet in GCCH)</div>
+        </div>
+        <div style="background:var(--off-white);padding:12px;border-radius:var(--radius-sm);font-size:0.8rem">
+          <strong>CMMC L2:</strong> Requires add-on (+$24/user/month) → effective cost <strong>$84/user/month</strong><br/>
+          <strong>Best for:</strong> Organizations 300+ seats needing enterprise features without full G5 spend
+        </div>
+      </div>
+
+      <!-- G5 -->
+      <div class="sku-card recommended">
+        <span class="sku-badge badge-rec">CMMC L2 Complete</span>
+        <h3 style="margin-bottom:4px">Microsoft 365 G5</h3>
+        <div style="display:flex;align-items:baseline;gap:6px;margin:var(--space-2) 0">
+          <span class="price-big">$93</span>
+          <span class="price-per">/user/month (list)</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:var(--space-3)">Unlimited users · Premium · All CMMC L2 controls included, no add-on required</p>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:var(--space-3)">
+          <div style="font-size:0.82rem"><span class="check">✓</span> Everything in G3</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Azure AD P2 (Entra ID P2)</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Defender for Identity</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Defender for Endpoint P2</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Microsoft Sentinel (SIEM)</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Purview eDiscovery Premium</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Insider Risk Management</div>
+          <div style="font-size:0.82rem"><span class="check">✓</span> Communication Compliance</div>
+          <div style="font-size:0.82rem"><span class="partial">~</span> M365 Copilot (GCC High rollout in progress)</div>
+        </div>
+        <div style="background:var(--gold-pale);padding:12px;border-radius:var(--radius-sm);font-size:0.8rem;border:1px solid rgba(200,150,46,0.2)">
+          <strong>CMMC L2:</strong> No add-on required — all controls included<br/>
+          <strong>Best for:</strong> Organizations pursuing CMMC L2 C3PAO assessment, ITAR workloads, or L3 aspirations
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- E7 GAP ANALYSIS -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="gap:var(--space-6);align-items:start">
+      <div>
+        <span class="eyebrow">Commercial vs. Government Stack</span>
+        <h2>The E7 Gap: What Your Microsoft Rep Won't Tell You</h2>
+        <span class="rule-gold"></span>
+        <p>The commercial M365 stack now runs E1 → E3 → E5 → <strong>E7</strong>. E7 bundles M365 Copilot, Security Copilot, and advanced compliance capabilities that were previously sold as expensive add-ons above E5. Microsoft account teams are using E7 value to justify pricing conversations at renewal.</p>
+        <p>The GCC High stack remains <strong>G3 → G5</strong>. There is no G7. Several of the capabilities bundled in commercial E7 are either unavailable in GCC High, on the roadmap without a committed date, or available only as separate add-ons at different pricing.</p>
+        <p>This creates a specific risk: if your licensing negotiation is being benchmarked against commercial E7 value, you are paying for capabilities that do not exist in your environment.</p>
+        <div class="alert-box" style="margin-top:var(--space-3)">
+          <h4>The Right Response to an E7 Conversation</h4>
+          <p>Request the GCC High-specific product roadmap for each capability your Microsoft rep is using to justify E7 value. Ask for committed GA dates in GCC High — not commercial dates. Until those dates exist, E7 value is a commercial metric, not a GCC High metric.</p>
+        </div>
+      </div>
+      <div>
+        <table class="lic-table">
+          <thead>
+            <tr><th>Capability</th><th>Commercial E7</th><th>GCC High G5</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>M365 Copilot (Word/Excel/PPT)</td><td class="check">✓ Included</td><td class="partial">~ In progress 2026</td></tr>
+            <tr><td>Security Copilot</td><td class="check">✓ Included</td><td class="cross">✗ Not available</td></tr>
+            <tr><td>Defender XDR</td><td class="check">✓ Included</td><td class="check">✓ Included</td></tr>
+            <tr><td>Sentinel SIEM</td><td class="check">✓ Included</td><td class="check">✓ Included</td></tr>
+            <tr><td>Purview eDiscovery Premium</td><td class="check">✓ Included</td><td class="check">✓ Included</td></tr>
+            <tr><td>Insider Risk Management</td><td class="check">✓ Included</td><td class="check">✓ Included</td></tr>
+            <tr><td>Communication Compliance</td><td class="check">✓ Included</td><td class="check">✓ Included</td></tr>
+            <tr><td>AI-powered security analytics</td><td class="check">✓ Included</td><td class="partial">~ Partial / roadmap</td></tr>
+            <tr><td>Advanced DLP with AI</td><td class="check">✓ Included</td><td class="partial">~ Limited</td></tr>
+            <tr><td>Copilot Studio (custom agents)</td><td class="check">✓ Included</td><td class="cross">✗ Not available</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:8px">✓ Available &nbsp; ~ Partial/in progress &nbsp; ✗ Not available as of May 2026. Verify current availability on the <a href="gcc-high-roadmap.html" style="color:var(--blue)">GCC High Roadmap tracker</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAMS GOV -->
+<section class="section section--gray">
+  <div class="container">
+    <span class="eyebrow">Teams in GCC High</span>
+    <h2 style="margin-bottom:var(--space-5)">Teams Gov: What's Different and What to Watch</h2>
+    <div class="grid-2" style="gap:var(--space-5)">
+      <div>
+        <h3 style="margin-bottom:var(--space-2)">Teams in GCC High Is Not the Same Product</h3>
+        <p>Microsoft Teams in GCC High runs on Azure Government infrastructure with different endpoints, different Graph API behavior, and features that lag commercial Teams by weeks to months. For organizations migrating from commercial to GCC High, this gap creates unexpected friction.</p>
+        <h4 style="margin:var(--space-3) 0 var(--space-1)">Key Behavioral Differences</h4>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:0.85rem"><strong>Federation:</strong> External federation with commercial Teams tenants works, but requires explicit configuration. Federation with personal accounts (Skype consumer) is not supported.</div>
+          <div style="padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:0.85rem"><strong>Teams Phone (PSTN):</strong> GCC High is required for any Teams Phone deployment in ITAR/CUI environments. GCC (standard) is insufficient. Calling Plan availability differs from commercial — verify your region.</div>
+          <div style="padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:0.85rem"><strong>Teams Rooms:</strong> Certified devices for GCC High have a different compatibility matrix than commercial. Not all commercial-certified hardware is GCC High certified.</div>
+          <div style="padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:0.85rem"><strong>Graph API Endpoints:</strong> All integrations using Microsoft Graph must use the <code>graph.microsoft.us</code> endpoint, not the commercial <code>graph.microsoft.com</code>. Commercial integrations will silently fail or route to the wrong tenant.</div>
+          <div style="padding:10px 14px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:0.85rem"><strong>Third-Party Apps:</strong> Teams app store in GCC High has a significantly smaller catalog than commercial. Many commercial ISV integrations are not available — including many compliance tools that are frequently cited in CMMC discussions.</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:var(--space-2)">Teams Licensing in GCC High</h3>
+        <p>Teams is included in Business Premium, G3, and G5. There is no standalone Teams SKU in GCC High equivalent to commercial Teams Essentials. The European EEA unbundling (Teams sold separately from M365 suites) does not apply to GCC High.</p>
+        <h4 style="margin:var(--space-3) 0 var(--space-1)">Teams Phone Add-On Licensing</h4>
+        <table class="lic-table">
+          <thead><tr><th>Add-On</th><th>GCC High Available</th></tr></thead>
+          <tbody>
+            <tr><td>Teams Phone Standard</td><td class="check">✓ Yes</td></tr>
+            <tr><td>Domestic Calling Plan</td><td class="partial">~ Region-limited</td></tr>
+            <tr><td>International Calling Plan</td><td class="cross">✗ Not available</td></tr>
+            <tr><td>Operator Connect</td><td class="partial">~ Limited carriers</td></tr>
+            <tr><td>Direct Routing (SBC)</td><td class="check">✓ Yes — recommended path</td></tr>
+            <tr><td>Teams Rooms Pro</td><td class="partial">~ Verify device compatibility</td></tr>
+            <tr><td>Audio Conferencing</td><td class="check">✓ Yes</td></tr>
+          </tbody>
+        </table>
+        <div class="alert-box" style="margin-top:var(--space-3)">
+          <h4>ITAR/CUI Voice Compliance</h4>
+          <p>If your organization handles CUI or ITAR-controlled data and uses Teams Phone, GCC High is the only Microsoft environment that contractually supports ITAR-aligned voice compliance. GCC (standard) explicitly does not provide this assurance. Using GCC for voice in a CUI environment is a compliance gap — even if the calls appear to work normally.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CMMC MAPPING -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">CMMC Compliance Mapping</span>
+    <h2 style="margin-bottom:var(--space-4)">Which License Gets You to CMMC Level 2?</h2>
+    <table class="lic-table">
+      <thead>
+        <tr>
+          <th>NIST 800-171 Control Family</th>
+          <th>Business Premium</th>
+          <th>G3 + Add-On</th>
+          <th>G5 (Recommended)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>AC — Access Control</td><td class="partial">~ Partial (Entra P1)</td><td class="check">✓ With add-on</td><td class="check">✓ Full (Entra P2)</td></tr>
+        <tr><td>AU — Audit & Accountability</td><td class="partial">~ Limited logging</td><td class="check">✓ With add-on</td><td class="check">✓ Unified audit log + Sentinel</td></tr>
+        <tr><td>CM — Configuration Mgmt</td><td class="check">✓ Intune included</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>IA — Identification & Auth</td><td class="check">✓ MFA + Conditional Access</td><td class="check">✓</td><td class="check">✓ + Passwordless + FIDO2</td></tr>
+        <tr><td>IR — Incident Response</td><td class="partial">~ Basic</td><td class="check">✓ With add-on</td><td class="check">✓ Sentinel + Defender XDR</td></tr>
+        <tr><td>MA — Maintenance</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>MP — Media Protection</td><td class="partial">~ Limited DLP</td><td class="check">✓ With add-on</td><td class="check">✓ Advanced Purview DLP</td></tr>
+        <tr><td>PE — Physical Protection</td><td colspan="3" style="color:var(--text-muted);font-style:italic">Organizational responsibility — not addressed by licensing</td></tr>
+        <tr><td>PS — Personnel Security</td><td colspan="3" style="color:var(--text-muted);font-style:italic">Organizational responsibility — not addressed by licensing</td></tr>
+        <tr><td>RA — Risk Assessment</td><td class="partial">~ Defender for Business</td><td class="check">✓ With add-on</td><td class="check">✓ Defender Vulnerability Mgmt</td></tr>
+        <tr><td>CA — Security Assessment</td><td class="partial">~ Limited</td><td class="check">✓ With add-on</td><td class="check">✓ Compliance Manager + Purview</td></tr>
+        <tr><td>SC — System & Comms Protection</td><td class="check">✓ Basic</td><td class="check">✓</td><td class="check">✓ + Network isolation controls</td></tr>
+        <tr><td>SI — System & Info Integrity</td><td class="check">✓ Defender for Business</td><td class="check">✓</td><td class="check">✓ Defender XDR + Sentinel SIEM</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:var(--space-2)">This mapping reflects M365 platform capabilities only. CMMC compliance requires organizational controls, SSP documentation, and process evidence beyond what licensing provides. A GCC High tenant is a necessary but not sufficient condition for CMMC Level 2 certification.</p>
+  </div>
+</section>
+
+<!-- PROCUREMENT PATHWAY -->
+<section class="section section--gray">
+  <div class="container">
+    <span class="eyebrow">How to Buy</span>
+    <h2 style="margin-bottom:var(--space-5)">GCC High Procurement Pathway</h2>
+    <div class="grid-2" style="gap:var(--space-5);align-items:start">
+      <div>
+        <div class="step-row">
+          <span class="step-num">01</span>
+          <div>
+            <h4>Verify Eligibility</h4>
+            <p style="font-size:0.875rem">Submit an eligibility validation request to Microsoft. You need a CAGE code or documentation proving you handle government-controlled data (CUI, ITAR, or federal contract work). This is a gated process — you cannot simply upgrade from a commercial tenant.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <span class="step-num">02</span>
+          <div>
+            <h4>Choose Your Procurement Path</h4>
+            <p style="font-size:0.875rem"><strong>Under 500 seats:</strong> Work with an AOS-G authorized partner (Agreement for Online Services – Government). You cannot purchase GCC High directly from Microsoft at this volume.</p>
+            <p style="font-size:0.875rem"><strong>500+ seats:</strong> Enterprise Agreement (EA) through a Licensing Solution Provider (LSP). All major LSPs are authorized for GCC High EA.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <span class="step-num">03</span>
+          <div>
+            <h4>Size Your License Mix</h4>
+            <p style="font-size:0.875rem">Not every user needs the same license. Frontline workers, shared devices, and limited-function accounts may qualify for F1/F3 Frontline licenses at significantly lower cost. A proper license optimization review before signing an EA can save 15–30% on total annual spend.</p>
+          </div>
+        </div>
+        <div class="step-row">
+          <span class="step-num">04</span>
+          <div>
+            <h4>Plan the Migration</h4>
+            <p style="font-size:0.875rem">Commercial → GCC High migration is not a tenant upgrade — it is a migration project. Mail, SharePoint data, Teams configurations, and third-party integrations all require remapping. Graph API endpoints change. Every integration your team has built against <code>graph.microsoft.com</code> needs to be updated to <code>graph.microsoft.us</code>.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--navy);border-radius:var(--radius);padding:var(--space-4)">
+          <span class="eyebrow eyebrow--light">AOS-G Partners</span>
+          <h3 style="color:var(--white);margin-bottom:var(--space-3)">Authorized GCC High Resellers (Under 500 Seats)</h3>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.875rem;margin-bottom:var(--space-3)">Microsoft's authorized AOS-G partner list includes:</p>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="font-family:var(--font-mono);font-size:0.78rem;color:var(--gold)">Planet Technologies</div>
+            <div style="font-family:var(--font-mono);font-size:0.78rem;color:var(--gold)">KAMIND IT</div>
+            <div style="font-family:var(--font-mono);font-size:0.78rem;color:var(--gold)">KTL Solutions</div>
+            <div style="font-family:var(--font-mono);font-size:0.78rem;color:var(--gold)">Agile IT</div>
+            <div style="font-family:var(--font-mono);font-size:0.78rem;color:var(--gold)">Applied Information Sciences</div>
+            <div style="font-family:var(--font-mono);font-size:0.78rem;color:rgba(200,150,46,0.6)">...and others per Microsoft's current list</div>
+          </div>
+          <p style="color:rgba(255,255,255,0.5);font-size:0.78rem;margin-top:var(--space-3)">Partner list is maintained by Microsoft and subject to change. Always verify current AOS-G authorization directly with Microsoft before engagement.</p>
+        </div>
+        <div class="alert-box" style="margin-top:var(--space-3)">
+          <h4>Fulcrum Advisory Can Help</h4>
+          <p>GCC High licensing decisions intersect directly with your CMMC scope, SSP documentation, and compliance posture. Fulcrum Advisory helps contractors make the right licensing decision the first time — then documents it properly in the SSP so it supports your audit, not complicates it.</p>
+          <a href="contact.html" class="btn btn--navy btn--sm" style="margin-top:var(--space-2);display:inline-block">Schedule a Licensing Review</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="section section--dark">
+  <div class="container" style="text-align:center;max-width:640px">
+    <span class="eyebrow eyebrow--light">GCC High Advisory</span>
+    <h2 style="color:var(--white);margin:8px 0 var(--space-2)">Not Sure Which License Is Right for Your Environment?</h2>
+    <p style="color:rgba(255,255,255,0.6);margin-bottom:var(--space-4)">Fulcrum Advisory has deployed production AI in GCC High under live CMMC scrutiny. We can tell you exactly which SKU your compliance posture requires — and what add-ons you actually need vs. what you're being sold.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn btn--gold btn--lg">Schedule a Review</a>
+      <a href="services/gcch-platforms.html" class="btn btn--outline-white btn--lg">GCC High Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="logo-name">Fulcrum Advisory</div><span class="logo-tag">Defense · Cybersecurity · AI</span>
+    <p>Cleared GovCon advisory for defense contractors navigating FOCI, CMMC, and the AI compliance landscape.</p>
+    <div class="footer-contact"><a href="mailto:info@fulcrumadvisory.us">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      info@fulcrumadvisory.us</a></div></div>
+  <div class="footer-col"><h5>Services</h5><ul>
+    <li><a href="services/foci-advisory.html">FOCI Advisory</a></li>
+    <li><a href="services/cmmc-compliance.html">CMMC Compliance</a></li>
+    <li><a href="services/ai-govcon.html">AI in GCC High</a></li>
+    <li><a href="services/gcch-platforms.html">GCC High Platforms</a></li>
+    <li><a href="services/vciso-advisory.html">Fractional vCISO</a></li></ul></div>
+  <div class="footer-col"><h5>Resources</h5><ul>
+    <li><a href="gcc-high-licensing.html">GCC High Licensing Guide</a></li>
+    <li><a href="gcc-high-roadmap.html">GCC High Roadmap</a></li>
+    <li><a href="regulatory-watch.html">Regulatory Watch</a></li>
+    <li><a href="insights.html">All Insights</a></li></ul></div>
+  <div class="footer-col"><h5>Company</h5><ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contract-vehicles.html">Contract Vehicles</a></li>
+    <li><a href="privacy.html">Privacy</a></li></ul></div>
+</div>
+<div class="footer-bottom">
+  <p>© 2026 Fulcrum Advisory. All rights reserved.</p>
+  <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="sitemap.xml">Sitemap</a></div>
+</div></div></footer>
+
+<script>
+  const nav=document.getElementById('siteNav'),toggle=document.getElementById('navToggle'),mobile=document.getElementById('navMobile');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+  toggle.addEventListener('click',()=>mobile.classList.toggle('open'));
+  mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.remove('open')));
+</script>
+</body></html>

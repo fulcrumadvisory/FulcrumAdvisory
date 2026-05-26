@@ -1,0 +1,170 @@
+name: Fetch GCC High Roadmap & Regulatory Feeds
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # Daily 06:00 UTC / 02:00 ET
+  workflow_dispatch:        # Allow manual trigger from Actions tab
+
+jobs:
+  fetch-feeds:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests feedparser
+
+      # ── GCC High Roadmap ─────────────────────────────────────────────────
+      - name: Fetch M365 GCC High Roadmap
+        run: |
+          python3 - << 'PYEOF'
+          import requests, json
+          from datetime import datetime, timezone
+
+          url = "https://www.microsoft.com/releasecommunications/api/v1/m365"
+          try:
+              r = requests.get(url, timeout=30,
+                  headers={"User-Agent": "FulcrumAdvisory-FeedBot/1.0"})
+              r.raise_for_status()
+              data = r.json()
+          except Exception as e:
+              print(f"Primary API failed ({e}), using RSS fallback")
+              import feedparser
+              feed = feedparser.parse(
+                  "https://www.microsoft.com/releasecommunications/api/v2/M365/rss")
+              data = [{"id": e.get("id",""), "title": e.get("title",""),
+                       "status":"", "tags":[], "description": e.get("summary","")[:400],
+                       "publicDisclosureAvailabilityDate": e.get("published","")}
+                      for e in feed.entries[:150]]
+
+          keywords = ["gcc high","gcc-high","gcch","gcc h","sovereign","government high"]
+          items = []
+          for item in data:
+              tags    = " ".join(
+                  (t.get("tagName","") if isinstance(t,dict) else str(t)).lower()
+                  for t in (item.get("tags") or []))
+              title   = item.get("title","").lower()
+              desc    = (item.get("description","") or "").lower()
+              if any(kw in tags or kw in title or kw in desc for kw in keywords):
+                  items.append({
+                      "id":     str(item.get("id","")),
+                      "title":  item.get("title",""),
+                      "status": item.get("status", item.get("deliveryStatus","")),
+                      "date":   item.get("publicDisclosureAvailabilityDate",
+                                         item.get("modified","")),
+                      "link":   f"https://www.microsoft.com/microsoft-365/roadmap?id={item.get('id','')}",
+                      "description": (item.get("description","") or "")[:280]
+                  })
+
+          items.sort(key=lambda x: x.get("date",""), reverse=True)
+          out = {"updated": datetime.now(timezone.utc).isoformat(),
+                 "count": len(items[:25]), "items": items[:25]}
+          with open("assets/gcc-high-updates.json","w") as f:
+              json.dump(out, f, indent=2)
+          print(f"GCC High: saved {out['count']} items")
+          PYEOF
+
+      # ── Federal Register: DFARS / CMMC / FOCI ───────────────────────────
+      - name: Fetch Federal Register Regulatory Updates
+        run: |
+          python3 - << 'PYEOF'
+          import requests, json
+          from datetime import datetime, timezone
+
+          searches = [
+              "CMMC cybersecurity maturity model",
+              "FOCI foreign ownership control influence",
+              "NIST 800-171 defense contractor",
+              "DFARS cybersecurity",
+          ]
+          items, seen = [], set()
+          for term in searches:
+              try:
+                  url = (
+                      "https://www.federalregister.gov/api/v1/documents.json"
+                      f"?conditions[term]={requests.utils.quote(term)}"
+                      "&conditions[agencies][]=defense-acquisition-regulations-system"
+                      "&conditions[type][]=RULE&conditions[type][]=PRORULE&conditions[type][]=NOTICE"
+                      "&per_page=8&order=newest"
+                  )
+                  docs = requests.get(url, timeout=20).json().get("results",[])
+                  for d in docs:
+                      did = d.get("document_number","")
+                      if did and did not in seen:
+                          seen.add(did)
+                          items.append({
+                              "id":       did,
+                              "title":    d.get("title",""),
+                              "date":     d.get("publication_date",""),
+                              "type":     d.get("type",""),
+                              "abstract": (d.get("abstract","") or "")[:350],
+                              "link":     d.get("html_url",""),
+                              "citation": d.get("citation","")
+                          })
+              except Exception as e:
+                  print(f"FR search error: {e}")
+
+          items.sort(key=lambda x: x.get("date",""), reverse=True)
+          out = {"updated": datetime.now(timezone.utc).isoformat(),
+                 "count": len(items[:15]), "items": items[:15]}
+          with open("assets/regulatory-updates.json","w") as f:
+              json.dump(out, f, indent=2)
+          print(f"Regulatory: saved {out['count']} items")
+          PYEOF
+
+      # ── Agency News: DCSA / DoD CIO / NIST ──────────────────────────────
+      - name: Fetch Agency News Feeds
+        run: |
+          python3 - << 'PYEOF'
+          import feedparser, json
+          from datetime import datetime, timezone
+
+          feeds = [
+              {"name":"DoD CIO",   "url":"https://dodcio.defense.gov/feed/"},
+              {"name":"DCSA",      "url":"https://www.dcsa.mil/feed/"},
+              {"name":"NIST CSRC", "url":"https://csrc.nist.gov/publications/rss"},
+          ]
+          keywords = ["cmmc","foci","800-171","800-172","gcc","cybersecurity",
+                      "defense contractor","cui","dfars","nispom","cleared","itar"]
+          items = []
+          for f in feeds:
+              try:
+                  feed = feedparser.parse(f["url"])
+                  for e in feed.entries[:40]:
+                      t = e.get("title","").lower()
+                      s = e.get("summary","").lower()
+                      if any(kw in t or kw in s for kw in keywords):
+                          items.append({
+                              "source":  f["name"],
+                              "title":   e.get("title",""),
+                              "date":    e.get("published", e.get("updated","")),
+                              "link":    e.get("link",""),
+                              "summary": (e.get("summary",""))[:280]
+                          })
+              except Exception as ex:
+                  print(f"Feed error {f['name']}: {ex}")
+
+          out = {"updated": datetime.now(timezone.utc).isoformat(),
+                 "count": len(items[:12]), "items": items[:12]}
+          with open("assets/agency-news.json","w") as f:
+              json.dump(out, f, indent=2)
+          print(f"Agency news: saved {out['count']} items")
+          PYEOF
+
+      # ── Commit results ───────────────────────────────────────────────────
+      - name: Commit feed data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/gcc-high-updates.json \
+                  assets/regulatory-updates.json \
+                  assets/agency-news.json
+          git diff --staged --quiet || \
+            git commit -m "chore: feed refresh $(date -u +%Y-%m-%d)"
+          git push

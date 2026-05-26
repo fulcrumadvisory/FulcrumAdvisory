@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Resources for Defense Contractors | Fulcrum Advisory</title>
+  <meta name="description" content="Official government resources, downloadable guides, and reference tools for defense contractors navigating FOCI, CMMC, DFARS, and GCC High compliance." />
+  <meta name="keywords" content="CMMC resources, DCSA FOCI, DFARS reference, NIST 800-171 download, defense contractor compliance tools, FAR DFARS, CMMC AB, GCC High resources" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.fulcrumadvisory.us/resources.html" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    .resource-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:var(--space-3);transition:all 0.2s;display:flex;flex-direction:column}
+    .resource-card:hover{box-shadow:var(--shadow);border-color:var(--gray)}
+    .resource-icon{width:40px;height:40px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-2);flex-shrink:0}
+    .icon-gov{background:#EFF6FF;color:var(--blue)}
+    .icon-dl{background:var(--gold-pale);color:var(--gold)}
+    .icon-tool{background:#ECFDF5;color:#059669}
+    .resource-title{font-size:0.9rem;font-weight:700;color:var(--navy);margin-bottom:4px;line-height:1.3}
+    .resource-desc{font-size:0.8rem;color:var(--text-muted);line-height:1.55;flex:1}
+    .resource-link{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:4px;margin-top:var(--space-2);transition:gap 0.15s}
+    .resource-link:hover{gap:8px;color:var(--navy)}
+    .category-label{font-family:var(--font-sans);font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);background:var(--gold-pale);border:1px solid rgba(200,150,46,0.25);padding:2px 8px;border-radius:2px;display:inline-block;margin-bottom:var(--space-3)}
+
+    /* Gate modal */
+    .gate-overlay{position:fixed;inset:0;background:rgba(10,22,40,0.85);z-index:2000;display:none;align-items:center;justify-content:center;padding:var(--space-4)}
+    .gate-overlay.open{display:flex}
+    .gate-modal{background:var(--white);border-radius:var(--radius-lg);padding:var(--space-5);max-width:480px;width:100%;position:relative;box-shadow:var(--shadow-xl)}
+    .gate-modal h3{color:var(--navy);margin-bottom:8px}
+    .gate-modal p{font-size:0.875rem;color:var(--text-muted);margin-bottom:var(--space-3)}
+    .gate-close{position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:1.2rem;line-height:1}
+    .gate-success{display:none;text-align:center;padding:var(--space-3) 0}
+    .gate-success h3{color:#059669}
+    .dl-btn{display:inline-flex;align-items:center;gap:8px;margin-top:var(--space-2)}
+  </style>
+</head>
+<body>
+
+<!-- Gate Modal -->
+<div class="gate-overlay" id="gateOverlay">
+  <div class="gate-modal">
+    <button class="gate-close" id="gateClose" aria-label="Close">✕</button>
+    <div id="gateForm">
+      <span class="eyebrow">Free Download</span>
+      <h3 id="gateTitle" style="margin-top:6px">Download Resource</h3>
+      <p id="gateDesc">Enter your details to access this resource. No spam — just relevant GovCon compliance content.</p>
+      <!-- ================================================================
+           FORM HANDLER: Wire to same solution as Paradise / contact form
+           Form should POST, then on success call window.gateSuccess(url)
+           ================================================================ -->
+      <div class="form-group"><label for="gateName">Full Name</label>
+        <input type="text" id="gateName" placeholder="Jane Smith" required /></div>
+      <div class="form-group"><label for="gateCompany">Company</label>
+        <input type="text" id="gateCompany" placeholder="ACME Defense LLC" required /></div>
+      <div class="form-group"><label for="gateEmail">Work Email</label>
+        <input type="email" id="gateEmail" placeholder="you@company.com" required /></div>
+      <div class="form-group"><label for="gateRole">Your Role</label>
+        <select id="gateRole">
+          <option value="">Select…</option>
+          <option>IT Director / CISO</option>
+          <option>Program Manager / BD</option>
+          <option>Owner / Executive</option>
+          <option>Compliance Officer</option>
+          <option>Consultant / Advisor</option>
+          <option>Other</option>
+        </select></div>
+      <button class="btn btn--gold" style="width:100%;margin-top:4px" id="gateSubmit">Access Download</button>
+      <p style="font-size:0.72rem;color:var(--text-muted);margin-top:10px;text-align:center">Your information is used only to send you relevant content. Unsubscribe anytime.</p>
+    </div>
+    <div class="gate-success" id="gateSuccess">
+      <div style="font-size:2rem;margin-bottom:12px">✓</div>
+      <h3>You're all set</h3>
+      <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:var(--space-3)">Your download is ready. A copy will also be sent to your email.</p>
+      <a id="gateDownloadLink" href="#" class="btn btn--gold dl-btn" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Now
+      </a>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="logo-name">Fulcrum Advisory</span><span class="logo-tag">Defense · Cybersecurity · AI</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="services.html">Services</a>
+      <a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+    </div>
+    <a href="contact.html" class="btn btn--gold btn--sm nav-cta">Schedule a Call</a>
+    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Home</a><a href="services.html">Services</a>
+  <a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn--gold" style="margin-top:16px">Schedule a Call</a>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Resources</span></nav>
+    <h1 style="margin-top:var(--space-2)">Resources for Defense Contractors</h1>
+    <p class="page-header-sub">Official government references, downloadable guides, and curated tools for FOCI, CMMC, DFARS, and GCC High compliance programs.</p>
+  </div>
+</div>
+
+<!-- DOWNLOADABLE GUIDES -->
+<section class="section">
+  <div class="container">
+    <span class="category-label">Downloadable Guides</span>
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:var(--space-4)">
+      <h2>Fulcrum Advisory Reference Materials</h2>
+      <p style="font-size:0.82rem;color:var(--text-muted);max-width:400px">Practitioner-written guides based on real GovCon environments. Enter your work email to access.</p>
+    </div>
+    <div class="grid-3" style="gap:var(--space-3)">
+
+      <div class="resource-card">
+        <div class="resource-icon icon-dl">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="resource-title">Fulcrum Advisory Capability Statement</div>
+        <p class="resource-desc">One-page GovCon capability statement with NAICS codes, core competencies, past performance, and contract vehicle status.</p>
+        <button class="resource-link" onclick="openGate('assets/Fulcrum-Advisory-Capability-Statement.pdf','Capability Statement','Download our one-page capability statement for procurement officers and teaming partners.')">
+          Download PDF →
+        </button>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon icon-dl">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="resource-title">FOCI Readiness Checklist</div>
+        <p class="resource-desc">Pre-assessment checklist covering ownership structure, SF 328 triggers, DCSA documentation requirements, and 90-day timeline planning. For contractors newly subject to FOCI obligations.</p>
+        <button class="resource-link" onclick="openGate('assets/Fulcrum-FOCI-Readiness-Checklist.pdf','FOCI Readiness Checklist','A practitioner-built checklist for contractors facing FOCI disclosure requirements.')">
+          Download PDF →
+        </button>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon icon-dl">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/><path d="M13 13h9v9"/></svg>
+        </div>
+        <div class="resource-title">GCC High vs. Commercial Azure: Service Parity Matrix</div>
+        <p class="resource-desc">Side-by-side mapping of Azure service availability in GCC High vs. commercial. Covers AI/ML, networking, developer tools, and compliance services relevant to CMMC deployments.</p>
+        <a href="gcc-high-parity.html" class="resource-link">View Online →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon icon-dl">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="resource-title">CMMC Level 2 Gap Assessment Starter Template</div>
+        <p class="resource-desc">A structured template to begin your NIST SP 800-171 Rev 3 gap assessment. 14 control families, scoring fields, and POA&M tracking columns. Not a substitute for a professional assessment.</p>
+        <button class="resource-link" onclick="openGate('assets/Fulcrum-CMMC-L2-Gap-Template.xlsx','CMMC L2 Gap Assessment Template','A starter template for NIST SP 800-171 Rev 3 gap assessments. Enter your work email to download.')">
+          Download Template →
+        </button>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon icon-dl">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="resource-title">GCC High Licensing Decision Guide 2026</div>
+        <p class="resource-desc">Business Premium vs. G3 vs. G5 — which license meets your CMMC level, user count, and budget. Includes the E7 commercial gap analysis and AOS-G procurement pathway.</p>
+        <a href="gcc-high-licensing.html" class="resource-link">View Online →</a>
+      </div>
+
+      <div class="resource-card">
+        <div class="resource-icon icon-dl">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+        </div>
+        <div class="resource-title">AI in GCC High: SSP Amendment Guide</div>
+        <p class="resource-desc">What your System Security Plan must say when you add an AI workload to your CMMC boundary. Data flow requirements, SSP section templates, and auditor-facing documentation checklist.</p>
+        <button class="resource-link" onclick="openGate('assets/Fulcrum-AI-SSP-Amendment-Guide.pdf','AI in GCC High SSP Amendment Guide','What your SSP must say when you add AI to your CMMC boundary.')">
+          Download PDF →
+        </button>
+      </div>
+
+    </div>
+    <p style="font-size:0.78rem;color:var(--text-muted);margin-top:var(--space-3)">
+      <em>Templates marked PDF/XLSX are in development and will be available Q3 2025. Online resources are live now.</em>
+    </p>
+  </div>
+</section>
+
+<!-- OFFICIAL GOVERNMENT SOURCES -->
+<section class="section section--gray">
+  <div class="container">
+    <span class="category-label">Official Government Sources</span>
+    <h2 style="margin-bottom:var(--space-5)">Primary Reference Sources</h2>
+
+    <!-- FOCI / Security -->
+    <h3 style="margin-bottom:var(--space-3);color:var(--navy)">FOCI & Industrial Security</h3>
+    <div class="grid-4" style="gap:var(--space-2);margin-bottom:var(--space-5)">
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="resource-title">DCSA — Defense Counterintelligence and Security Agency</div>
+        <p class="resource-desc">Primary FOCI regulatory authority. FSO resources, SF 328 guidance, mitigation agreement templates, and facility clearance information.</p>
+        <a href="https://www.dcsa.mil" target="_blank" rel="noopener" class="resource-link">dcsa.mil ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div class="resource-title">NISPOM — National Industrial Security Program Operating Manual</div>
+        <p class="resource-desc">32 CFR Part 117 — the operational manual governing classified information in contractor facilities. Required reading for FSOs and cleared employees.</p>
+        <a href="https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-D/part-117" target="_blank" rel="noopener" class="resource-link">32 CFR Part 117 ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <div class="resource-title">DISS — Defense Information System for Security</div>
+        <p class="resource-desc">Personnel security clearance management system. Used by FSOs to submit requests, manage visit authorizations, and track clearance status.</p>
+        <a href="https://www.dcsa.mil/is/diss/" target="_blank" rel="noopener" class="resource-link">DISS Portal ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <div class="resource-title">CAGE Code Lookup — DLA</div>
+        <p class="resource-desc">Defense Logistics Agency CAGE code lookup. Verify contractor CAGE codes, entity data, and facility information for contracting and teaming due diligence.</p>
+        <a href="https://cage.dla.mil" target="_blank" rel="noopener" class="resource-link">cage.dla.mil ↗</a>
+      </div>
+    </div>
+
+    <!-- CMMC -->
+    <h3 style="margin-bottom:var(--space-3);color:var(--navy)">CMMC & Cybersecurity Compliance</h3>
+    <div class="grid-4" style="gap:var(--space-2);margin-bottom:var(--space-5)">
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="resource-title">CMMC AB — Cyber AB</div>
+        <p class="resource-desc">The CMMC Accreditation Body. Find C3PAOs, Registered Practitioners, and Certified Assessors. Verify CMMC certification status of potential partners.</p>
+        <a href="https://cyberab.org" target="_blank" rel="noopener" class="resource-link">cyberab.org ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <div class="resource-title">DoD CIO — CMMC Program Office</div>
+        <p class="resource-desc">Official CMMC program information, implementation timeline, FAQs, and DoD policy memoranda. Primary source for CMMC Phase rollout updates.</p>
+        <a href="https://dodcio.defense.gov/CMMC/" target="_blank" rel="noopener" class="resource-link">dodcio.defense.gov ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+        <div class="resource-title">NIST CSRC — SP 800-171 Rev 3</div>
+        <p class="resource-desc">NIST Special Publication 800-171 Rev 3 — the 110 security requirements for protecting CUI. The technical foundation of CMMC Level 2. Also find SP 800-172 for enhanced requirements.</p>
+        <a href="https://csrc.nist.gov/publications/detail/sp/800-171/rev-3/final" target="_blank" rel="noopener" class="resource-link">NIST CSRC ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="resource-title">SPRS — Supplier Performance Risk System</div>
+        <p class="resource-desc">DoD system where contractors submit their NIST SP 800-171 self-assessment scores. Contracting officers check SPRS before award. CMMC affirmations are also recorded here.</p>
+        <a href="https://www.sprs.csd.disa.mil" target="_blank" rel="noopener" class="resource-link">sprs.csd.disa.mil ↗</a>
+      </div>
+    </div>
+
+    <!-- FAR/DFAR -->
+    <h3 style="margin-bottom:var(--space-3);color:var(--navy)">Acquisition Regulations</h3>
+    <div class="grid-4" style="gap:var(--space-2);margin-bottom:var(--space-5)">
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div class="resource-title">FAR — Federal Acquisition Regulation</div>
+        <p class="resource-desc">The primary set of rules governing federal acquisitions. Acquisition.gov hosts the authoritative, regularly updated text. Essential for understanding contract terms and flow-downs.</p>
+        <a href="https://www.acquisition.gov/far" target="_blank" rel="noopener" class="resource-link">acquisition.gov/far ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="resource-title">DFARS — Defense Federal Acquisition Regulation Supplement</div>
+        <p class="resource-desc">DoD-specific acquisition rules supplementing FAR. Includes DFARS 252.204-7012 (cybersecurity), DFARS 252.204-7021 (CMMC), and FOCI-related clauses. Updated for CMMC Phase 1 (Nov 2025).</p>
+        <a href="https://www.acquisition.gov/dfars" target="_blank" rel="noopener" class="resource-link">acquisition.gov/dfars ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="resource-title">SAM.gov — System for Award Management</div>
+        <p class="resource-desc">Federal contractor registration, opportunity search, and award data. Active SAM.gov registration is required for all federal contracting. Search contractors, view past awards, and verify socioeconomic status.</p>
+        <a href="https://sam.gov" target="_blank" rel="noopener" class="resource-link">sam.gov ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+        <div class="resource-title">Federal Register — DFARS/CMMC Tracking</div>
+        <p class="resource-desc">Subscribe to Federal Register RSS feeds for real-time DFARS and CMMC rule updates. Filter by Defense Acquisition Regulations System agency. Free email subscription available.</p>
+        <a href="https://www.federalregister.gov/agencies/defense-acquisition-regulations-system" target="_blank" rel="noopener" class="resource-link">federalregister.gov ↗</a>
+      </div>
+    </div>
+
+    <!-- GCC High -->
+    <h3 style="margin-bottom:var(--space-3);color:var(--navy)">GCC High & Cloud Compliance</h3>
+    <div class="grid-4" style="gap:var(--space-2)">
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <div class="resource-title">Microsoft GCC High Feature Availability</div>
+        <p class="resource-desc">Official Microsoft documentation of which M365 and Azure features are available in GCC High vs. commercial. The authoritative source — check before any licensing or architecture decision.</p>
+        <a href="https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc-high-and-dod" target="_blank" rel="noopener" class="resource-link">Microsoft Learn ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/><path d="M13 13h9v9"/></svg></div>
+        <div class="resource-title">Microsoft 365 Roadmap — GCC High Filter</div>
+        <p class="resource-desc">Filter the official M365 roadmap by GCC High to see what's in development, rolling out, and generally available in your sovereign cloud tenant. Updated in real time by Microsoft.</p>
+        <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=GCC%20High" target="_blank" rel="noopener" class="resource-link">M365 Roadmap ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="resource-title">FedRAMP Marketplace</div>
+        <p class="resource-desc">Authoritative list of cloud services with FedRAMP authorization. Verify that any cloud service in your CMMC boundary has FedRAMP Moderate or High authorization before including it in your SSP.</p>
+        <a href="https://marketplace.fedramp.gov" target="_blank" rel="noopener" class="resource-link">marketplace.fedramp.gov ↗</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon icon-gov"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg></div>
+        <div class="resource-title">DoD CUI Registry</div>
+        <p class="resource-desc">The authoritative registry defining what constitutes Controlled Unclassified Information. Use this to determine CUI categories that apply to your contracts before scoping your CMMC boundary.</p>
+        <a href="https://www.archives.gov/cui/registry/category-list" target="_blank" rel="noopener" class="resource-link">archives.gov/cui ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE TOOLS -->
+<section class="section">
+  <div class="container">
+    <span class="category-label">Live Tools on This Site</span>
+    <h2 style="margin-bottom:var(--space-4)">Fulcrum Advisory Live Resources</h2>
+    <div class="grid-3" style="gap:var(--space-3)">
+      <a href="gcc-high-roadmap.html" style="text-decoration:none">
+        <div class="resource-card" style="border-top:3px solid var(--gold)">
+          <div class="resource-icon icon-tool"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="resource-title">GCC High Roadmap Tracker</div>
+          <p class="resource-desc">Live feed of Microsoft 365 features in development and rolling out for GCC High. Updated daily via the Microsoft Roadmap API. Filterable by status.</p>
+          <span class="resource-link">Open Tracker →</span>
+        </div>
+      </a>
+      <a href="regulatory-watch.html" style="text-decoration:none">
+        <div class="resource-card" style="border-top:3px solid var(--gold)">
+          <div class="resource-icon icon-tool"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+          <div class="resource-title">Regulatory Watch</div>
+          <p class="resource-desc">Live DFARS, CMMC, FOCI, and NIST regulatory updates sourced daily from the Federal Register, DCSA, DoD CIO, and NIST CSRC. Filtered for the defense industrial base.</p>
+          <span class="resource-link">Open Watch →</span>
+        </div>
+      </a>
+      <a href="gcc-high-parity.html" style="text-decoration:none">
+        <div class="resource-card" style="border-top:3px solid var(--gold)">
+          <div class="resource-icon icon-tool"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/></svg></div>
+          <div class="resource-title">GCC High / Azure Parity Map</div>
+          <p class="resource-desc">Service-by-service comparison of Azure capabilities available in GCC High vs. commercial. AI/ML, developer tools, networking, and compliance services — with CMMC relevance notes.</p>
+          <span class="resource-link">Open Map →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section--sm section--dark">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-3)">
+    <div>
+      <h3 style="color:var(--white);margin-bottom:4px">Need More Than a Checklist?</h3>
+      <p style="color:rgba(255,255,255,0.6);margin:0;font-size:0.9rem">Templates get you started. A practitioner gets you through the audit.</p>
+    </div>
+    <a href="contact.html" class="btn btn--gold">Schedule a Call</a>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="logo-name">Fulcrum Advisory</div><span class="logo-tag">Defense · Cybersecurity · AI</span>
+    <p>Cleared GovCon advisory for defense contractors navigating FOCI, CMMC, and the AI compliance landscape.</p>
+    <div class="footer-contact"><a href="mailto:info@fulcrumadvisory.us">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      info@fulcrumadvisory.us</a></div></div>
+  <div class="footer-col"><h5>Resources</h5><ul>
+    <li><a href="resources.html">All Resources</a></li>
+    <li><a href="gcc-high-licensing.html">GCC High Licensing</a></li>
+    <li><a href="gcc-high-roadmap.html">Roadmap Tracker</a></li>
+    <li><a href="regulatory-watch.html">Regulatory Watch</a></li></ul></div>
+  <div class="footer-col"><h5>Services</h5><ul>
+    <li><a href="services/foci-advisory.html">FOCI Advisory</a></li>
+    <li><a href="services/cmmc-compliance.html">CMMC Compliance</a></li>
+    <li><a href="services/ai-govcon.html">AI in GCC High</a></li>
+    <li><a href="services/gcch-platforms.html">GCC High Platforms</a></li></ul></div>
+  <div class="footer-col"><h5>Company</h5><ul>
+    <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="contract-vehicles.html">Contract Vehicles</a></li>
+    <li><a href="privacy.html">Privacy</a></li></ul></div>
+</div>
+<div class="footer-bottom"><p>© 2026 Fulcrum Advisory. All rights reserved.</p>
+<div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+</div></div></footer>
+
+<script>
+const nav=document.getElementById('siteNav'),toggle=document.getElementById('navToggle'),mobile=document.getElementById('navMobile');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+toggle.addEventListener('click',()=>mobile.classList.toggle('open'));
+mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.remove('open')));
+
+// Gate system
+let gateTargetUrl = '';
+
+function openGate(url, title, desc) {
+  gateTargetUrl = url;
+  document.getElementById('gateTitle').textContent = title;
+  document.getElementById('gateDesc').textContent = desc;
+  document.getElementById('gateForm').style.display = '';
+  document.getElementById('gateSuccess').style.display = 'none';
+  document.getElementById('gateOverlay').classList.add('open');
+  document.getElementById('gateName').focus();
+}
+
+document.getElementById('gateClose').addEventListener('click', () => {
+  document.getElementById('gateOverlay').classList.remove('open');
+});
+
+document.getElementById('gateOverlay').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('gateOverlay'))
+    document.getElementById('gateOverlay').classList.remove('open');
+});
+
+document.getElementById('gateSubmit').addEventListener('click', async () => {
+  const name  = document.getElementById('gateName').value.trim();
+  const email = document.getElementById('gateEmail').value.trim();
+  const co    = document.getElementById('gateCompany').value.trim();
+  const role  = document.getElementById('gateRole').value;
+
+  if (!name || !email) {
+    alert('Please enter your name and work email.');
+    return;
+  }
+
+  const btn = document.getElementById('gateSubmit');
+  btn.textContent = 'Processing…';
+  btn.disabled = true;
+
+  // ================================================================
+  // FORM HANDLER: Replace with same solution as Paradise / contact
+  // POST to your handler URL, then call gateSuccess() on completion
+  // Example with Formspree:
+  // const res = await fetch('https://formspree.io/f/YOUR_ID', {
+  //   method:'POST', headers:{'Content-Type':'application/json'},
+  //   body: JSON.stringify({name, email, company:co, role,
+  //                         resource: gateTargetUrl, _subject:'Resource Download'})
+  // });
+  // if (res.ok) gateSuccess(); else alert('Something went wrong. Please try again.');
+  //
+  // TEMPORARY: Reveal download immediately (replace when handler is live)
+  setTimeout(() => gateSuccess(), 800);
+  // ================================================================
+});
+
+function gateSuccess() {
+  document.getElementById('gateForm').style.display = 'none';
+  document.getElementById('gateDownloadLink').href = gateTargetUrl;
+  document.getElementById('gateSuccess').style.display = 'block';
+}
+</script>
+</body></html>

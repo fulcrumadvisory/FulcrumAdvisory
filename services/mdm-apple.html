@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>MDM — Apple/iOS (GCC High) | Fulcrum Advisory</title>
+  <meta name="description" content="Apple Business Manager and Microsoft Intune MDM deployment for GCC High tenants. CMMC-aligned iOS device management, ADE zero-touch enrollment, supervised mode, and FIPS app validation for defense contractors." />
+  <meta name="keywords" content="Apple MDM GCC High, Microsoft Intune GCC High iOS, Apple Business Manager defense contractor, CMMC mobile device management, MDM Apple CMMC, ADE defense contractor, iOS supervised mode CMMC" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.fulcrumadvisory.us/services/mdm-apple.html" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"MDM — Apple/iOS Device Management (GCC High)","provider":{"@type":"ProfessionalService","name":"Fulcrum Advisory","url":"https://www.fulcrumadvisory.us"},"description":"Apple Business Manager + Microsoft Intune MDM deployment in GCC High for defense contractors. CMMC-aligned iOS device management including ADE, supervised mode, FIPS app validation, and SSP documentation.","areaServed":"United States","audience":{"@type":"Audience","audienceType":"Defense Contractors"}}</script>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <style>
+    .arch-box{background:var(--navy);border-radius:var(--radius);padding:var(--space-4);font-family:var(--font-mono);font-size:0.78rem;color:rgba(255,255,255,0.75);line-height:1.8}
+    .arch-box .layer{color:var(--gold);font-weight:700}
+    .arch-box .arrow{color:rgba(255,255,255,0.3)}
+    .warn-box{background:#FEF2F2;border-left:4px solid #DC2626;padding:var(--space-3);border-radius:0 var(--radius) var(--radius) 0;margin:var(--space-4) 0}
+    .warn-box h4{color:#991B1B;margin-bottom:6px}
+    .warn-box p{font-size:0.875rem;color:#7F1D1D;margin:0}
+  </style>
+</head>
+<body>
+<nav class="site-nav" id="siteNav"><div class="nav-inner"><a href="../index.html" class="nav-logo"><span class="logo-name">Fulcrum Advisory</span><span class="logo-tag">Defense · Cybersecurity · AI</span></a><div class="nav-links"><a href="../index.html">Home</a><a href="../services.html" class="active">Services</a><a href="../about.html">About</a><a href="../insights.html">Insights</a><a href="../contact.html">Contact</a></div><a href="../contact.html" class="btn btn--gold btn--sm nav-cta">Schedule a Call</a><button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button></div></nav>
+<div class="nav-mobile" id="navMobile"><a href="../index.html">Home</a><a href="../services.html">Services</a><a href="../about.html">About</a><a href="../insights.html">Insights</a><a href="../contact.html">Contact</a><a href="../contact.html" class="btn btn--gold" style="margin-top:16px">Schedule a Call</a></div>
+
+<div class="page-header">
+  <div class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a><span class="sep">/</span><a href="../services.html">Services</a><span class="sep">/</span><a href="gcch-platforms.html">GCC High Platforms</a><span class="sep">/</span><span>MDM — Apple/iOS</span></nav>
+    <h1 style="margin-top:var(--space-2)">MDM — Apple/iOS (GCC High)</h1>
+    <p class="page-header-sub">Apple Business Manager + Microsoft Intune deployed in your GCC High tenant — with CMMC-aligned policies, supervised mode, and SSP documentation that survives an audit.</p>
+  </div>
+</div>
+
+<section class="section"><div class="container">
+  <div class="grid-2" style="gap:var(--space-6);align-items:start">
+    <div>
+      <span class="eyebrow">The Problem</span>
+      <h2>Most Defense Contractors Have an iOS Problem They Don't Know About</h2>
+      <span class="rule-gold"></span>
+      <p>The most common scenario we see: iOS devices in use across the organization, enrolled in commercial Intune (not GCC High Intune), with iCloud backup enabled, personal Apple IDs on corporate devices, and zero connection to the CMMC SSP.</p>
+      <p>This isn't a minor gap. Mobile devices that access GCC High resources — email, Teams, SharePoint — are system components in your CMMC boundary. If those devices aren't managed by your GCC High MDM instance, you have an access control and configuration management finding waiting to happen.</p>
+      <p>Almost nobody has done Apple Business Manager + ADE + GCC High Intune + CMMC documentation correctly on the first attempt. The MDM endpoints are different. The Apple ID model changes. The Conditional Access policies require specific configuration. And the SSP section most teams write for mobile devices doesn't reflect what's actually deployed.</p>
+
+      <div class="warn-box">
+        <h4>⚠ Critical Technical Distinction</h4>
+        <p>GCC High Intune uses <code>manage.microsoft.us</code> endpoints — not <code>manage.microsoft.com</code>. Every MDM profile, ABM integration, and device compliance policy must target the sovereign cloud endpoint. Profiles built for commercial Intune and migrated to GCC High tenants frequently fail silently.</p>
+      </div>
+    </div>
+    <div>
+      <div class="arch-box">
+        <div class="layer">GCC High Compliance Architecture — Apple Devices</div>
+        <br/>
+        <span class="arrow">┌──────────────────────────────────────┐</span><br/>
+        <span class="arrow">│</span> <span style="color:#86EFAC">Apple Business Manager (ABM)</span>         <span class="arrow">│</span><br/>
+        <span class="arrow">│</span>  Managed Apple IDs via Entra ID       <span class="arrow">│</span><br/>
+        <span class="arrow">│</span>  ADE zero-touch enrollment             <span class="arrow">│</span><br/>
+        <span class="arrow">│</span>  iCloud disabled on supervised devices <span class="arrow">│</span><br/>
+        <span class="arrow">└────────────────┬─────────────────────┘</span><br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">│</span><br/>
+        <span class="arrow">┌────────────────▼─────────────────────┐</span><br/>
+        <span class="arrow">│</span> <span style="color:#86EFAC">GCC High Intune</span> (manage.microsoft.us) <span class="arrow">│</span><br/>
+        <span class="arrow">│</span>  Device compliance policies            <span class="arrow">│</span><br/>
+        <span class="arrow">│</span>  Configuration profiles                <span class="arrow">│</span><br/>
+        <span class="arrow">│</span>  App deployment (Managed App Config)   <span class="arrow">│</span><br/>
+        <span class="arrow">│</span>  FIPS app validation per-device        <span class="arrow">│</span><br/>
+        <span class="arrow">└────────────────┬─────────────────────┘</span><br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">│</span><br/>
+        <span class="arrow">┌────────────────▼─────────────────────┐</span><br/>
+        <span class="arrow">│</span> <span style="color:#86EFAC">GCC High Entra ID</span>                    <span class="arrow">│</span><br/>
+        <span class="arrow">│</span>  Conditional Access — iOS compliance   <span class="arrow">│</span><br/>
+        <span class="arrow">│</span>  CMMC AC/IA/CM controls enforced       <span class="arrow">│</span><br/>
+        <span class="arrow">└──────────────────────────────────────┘</span><br/>
+        <br/>
+        <span style="color:rgba(255,255,255,0.4);font-size:0.7rem">All traffic: manage.microsoft.us (not .com)</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section section--gray"><div class="container">
+  <span class="eyebrow">What We Deliver</span>
+  <h2>8 Capabilities</h2>
+  <div class="grid-2" style="gap:var(--space-5);margin-top:var(--space-4)">
+    <div class="expertise-list">
+      <div class="expertise-item"><span class="ei-number">01</span><div>
+        <h4>Apple Business Manager (ABM) Setup</h4>
+        <p>Configure ABM organization, link to GCC High Entra ID for Managed Apple ID provisioning, and establish device enrollment program integration with GCC High Intune.</p>
+      </div></div>
+      <div class="expertise-item"><span class="ei-number">02</span><div>
+        <h4>Automated Device Enrollment (ADE)</h4>
+        <p>Zero-touch enrollment configuration — devices ship directly to users and auto-enroll in GCC High Intune at first power-on. No manual enrollment, no user-initiated MDM profile installation.</p>
+      </div></div>
+      <div class="expertise-item"><span class="ei-number">03</span><div>
+        <h4>Supervised Mode Configuration</h4>
+        <p>Enable iOS supervised mode on corporate devices. Supervised mode unlocks additional management capabilities required for CMMC compliance — including iCloud backup prohibition, app whitelist enforcement, and screen time controls.</p>
+      </div></div>
+      <div class="expertise-item"><span class="ei-number">04</span><div>
+        <h4>CMMC Compliance Policies</h4>
+        <p>Device compliance policies mapped to NIST 800-171 controls: OS version minimum enforcement, passcode complexity, encryption at rest verification, jailbreak detection, and screen lock timeout. AC.1.001, AC.2.006, CM.2.061, CM.2.062, IA.1.076, SC.3.177.</p>
+      </div></div>
+    </div>
+    <div class="expertise-list">
+      <div class="expertise-item"><span class="ei-number">05</span><div>
+        <h4>FIPS 140-2 App Validation</h4>
+        <p>Evaluate which iOS apps used in your environment meet CMMC encryption requirements. iOS uses FIPS-validated encryption at the OS level — but app-level cryptographic modules vary. Produce a validated app inventory for your SSP.</p>
+      </div></div>
+      <div class="expertise-item"><span class="ei-number">06</span><div>
+        <h4>Conditional Access — iOS</h4>
+        <p>Configure Conditional Access policies in GCC High Entra ID to require device compliance before allowing iOS devices to access GCC High resources (Exchange, SharePoint, Teams, Azure). Non-compliant devices are blocked at the identity layer.</p>
+      </div></div>
+      <div class="expertise-item"><span class="ei-number">07</span><div>
+        <h4>App Deployment (Managed App Config)</h4>
+        <p>Deploy and configure apps through GCC High Intune using Managed App Configuration — pre-configure Microsoft 365 apps, VPN clients, and security tools without user input. App protection policies enforce data separation on BYOD devices where applicable.</p>
+      </div></div>
+      <div class="expertise-item"><span class="ei-number">08</span><div>
+        <h4>SSP Documentation</h4>
+        <p>Document mobile device management as a system component in your CMMC SSP — including system boundary, data flows, implemented controls, inherited controls, and access control configuration. The documentation CMMC assessors will actually evaluate.</p>
+      </div></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container container--narrow">
+  <span class="eyebrow">FAQ</span>
+  <h2>Common Questions</h2>
+  <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-4)">
+    <div style="padding:var(--space-3);border-left:3px solid var(--gold);background:var(--off-white)">
+      <h4 style="margin-bottom:8px">We use JAMF — does that work in GCC High?</h4>
+      <p style="font-size:0.875rem;margin:0;color:var(--text-mid)">JAMF is a valid alternative for Apple-heavy environments. JAMF Pro integrates with GCC High Entra ID via SCIM for identity management. Fulcrum Advisory can advise on JAMF vs. Intune for your specific environment and document either solution for CMMC. JAMF also works alongside Intune in co-management scenarios.</p>
+    </div>
+    <div style="padding:var(--space-3);border-left:3px solid var(--gold);background:var(--off-white)">
+      <h4 style="margin-bottom:8px">Does iOS meet CMMC encryption requirements?</h4>
+      <p style="font-size:0.875rem;margin:0;color:var(--text-mid)">iOS uses FIPS 140-2 validated encryption at the OS level — the hardware encryption engine is FIPS validated. The risk is at the app layer: not all apps use FIPS-validated cryptographic modules for data they store or transmit. App-level validation is part of the MDM advisory scope. Your SSP must address both OS-level and app-level encryption.</p>
+    </div>
+    <div style="padding:var(--space-3);border-left:3px solid var(--gold);background:var(--off-white)">
+      <h4 style="margin-bottom:8px">What about BYOD on iOS?</h4>
+      <p style="font-size:0.875rem;margin:0;color:var(--text-mid)">BYOD creates a CMMC scoping problem. You cannot fully enforce CMMC compliance policies on personally-owned devices without enrollment. The preferred CMMC posture is corporate-owned, supervised iOS devices. If BYOD is operationally required, Intune app protection policies can enforce data separation — but the access control and configuration management evidence is weaker than for supervised corporate devices. We document the trade-offs clearly so your CMMC program decisions are informed.</p>
+    </div>
+    <div style="padding:var(--space-3);border-left:3px solid var(--gold);background:var(--off-white)">
+      <h4 style="margin-bottom:8px">Can employees still use iCloud on corporate devices?</h4>
+      <p style="font-size:0.875rem;margin:0;color:var(--text-mid)">iCloud is not authorized for CUI. Managed Apple IDs provisioned through ABM disable iCloud backup, iCloud Drive, and personal Apple services on supervised devices. This is a required configuration — not optional. Employees on supervised corporate devices use Managed Apple IDs, not personal Apple IDs. Personal apps and iCloud can be available on personal devices through BYOD enrollment if your policy allows it.</p>
+    </div>
+    <div style="padding:var(--space-3);border-left:3px solid var(--gold);background:var(--off-white)">
+      <h4 style="margin-bottom:8px">Our devices are already enrolled in commercial Intune. Now what?</h4>
+      <p style="font-size:0.875rem;margin:0;color:var(--text-mid)">Commercial Intune enrollment must be retired and re-enrolled in GCC High Intune. This is not an in-place migration — devices must be wiped or re-enrolled from scratch against the GCC High tenant. We plan and execute this migration with minimal end-user disruption using ADE zero-touch re-enrollment where devices have ABM eligibility.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="section section--gray"><div class="container">
+  <span class="eyebrow">Engagements</span>
+  <h2>Packages & Pricing</h2>
+  <table style="width:100%;border-collapse:collapse;margin-top:var(--space-3)">
+    <thead><tr style="background:var(--navy)"><th style="padding:10px 16px;text-align:left;color:var(--white);font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase">Engagement</th><th style="padding:10px 16px;text-align:left;color:var(--white);font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase">Scope</th><th style="padding:10px 16px;text-align:left;color:var(--white);font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase">Price</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid var(--border)"><td style="padding:12px 16px;font-weight:700;color:var(--navy)">MDM Readiness Assessment</td><td style="padding:12px 16px;font-size:0.875rem;color:var(--text-mid)">Current state evaluation, ABM eligibility, gap analysis against CMMC CM/AC controls, written findings</td><td style="padding:12px 16px;font-size:0.875rem;color:var(--navy);font-weight:600">$3,000–4,500</td></tr>
+      <tr style="border-bottom:1px solid var(--border);background:var(--off-white)"><td style="padding:12px 16px;font-weight:700;color:var(--navy)">ABM + GCC High Intune Deployment</td><td style="padding:12px 16px;font-size:0.875rem;color:var(--text-mid)">Full ABM setup, Entra ID integration, ADE configuration, compliance policies, app deployment, SSP documentation</td><td style="padding:12px 16px;font-size:0.875rem;color:var(--navy);font-weight:600">$6,000–10,000</td></tr>
+      <tr style="border-bottom:1px solid var(--border)"><td style="padding:12px 16px;font-weight:700;color:var(--navy)">JAMF + GCC High Integration</td><td style="padding:12px 16px;font-size:0.875rem;color:var(--navy);font-weight:600">Contact for scope</td><td style="padding:12px 16px;font-size:0.875rem;color:var(--text-mid)">JAMF Pro config, SCIM provisioning, Conditional Access, co-management if needed, SSP amendment</td></tr>
+      <tr style="background:var(--off-white)"><td style="padding:12px 16px;font-weight:700;color:var(--navy)">MDM Policy Package</td><td style="padding:12px 16px;font-size:0.875rem;color:var(--text-mid)">Acceptable use policy, device management SOP, BYOD policy, FIPS app inventory, SSP mobile device section</td><td style="padding:12px 16px;font-size:0.875rem;color:var(--navy);font-weight:600">$2,000–3,000</td></tr>
+    </tbody>
+  </table>
+</div></section>
+
+<section class="section section--dark"><div class="container" style="text-align:center;max-width:620px">
+  <span class="eyebrow eyebrow--light">Get Started</span>
+  <h2 style="color:var(--white);margin:8px 0 var(--space-2)">iOS Device Management That Closes Your CMMC Gap — Not Opens New Ones.</h2>
+  <p style="color:rgba(255,255,255,0.6);margin-bottom:var(--space-4)">ABM + ADE + GCC High Intune + CMMC documentation — done correctly the first time.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="../contact.html" class="btn btn--gold btn--lg">Schedule a Call</a>
+    <a href="gcch-platforms.html" class="btn btn--outline-white btn--lg">GCC High Platforms</a>
+  </div>
+</div></section>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><div class="logo-name">Fulcrum Advisory</div><span class="logo-tag">Defense · Cybersecurity · AI</span><p>Cleared GovCon advisory for defense contractors.</p><div class="footer-contact"><a href="mailto:info@fulcrumadvisory.us"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@fulcrumadvisory.us</a></div></div>
+<div class="footer-col"><h5>Services</h5><ul><li><a href="foci-advisory.html">FOCI Advisory</a></li><li><a href="cmmc-compliance.html">CMMC Compliance</a></li><li><a href="gcch-platforms.html">GCC High Platforms</a></li><li><a href="mdm-apple.html">MDM Apple/iOS</a></li><li><a href="govcon-erp.html">GovCon ERP</a></li><li><a href="vciso-advisory.html">Fractional vCISO</a></li></ul></div>
+<div class="footer-col"><h5>Resources</h5><ul><li><a href="../resources.html">All Resources</a></li><li><a href="../gcc-high-licensing.html">GCC High Licensing</a></li><li><a href="../gcc-high-roadmap.html">Roadmap Tracker</a></li><li><a href="../regulatory-watch.html">Regulatory Watch</a></li></ul></div>
+<div class="footer-col"><h5>Company</h5><ul><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../contract-vehicles.html">Contract Vehicles</a></li><li><a href="../privacy.html">Privacy</a></li></ul></div>
+</div><div class="footer-bottom"><p>© 2026 Fulcrum Advisory. All rights reserved.</p><div class="footer-legal"><a href="../privacy.html">Privacy</a><a href="../terms.html">Terms</a></div></div></div></footer>
+<script>const nav=document.getElementById('siteNav'),toggle=document.getElementById('navToggle'),mobile=document.getElementById('navMobile');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));toggle.addEventListener('click',()=>mobile.classList.toggle('open'));mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.remove('open')));</script>
+</body></html>
