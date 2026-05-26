@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.fulcrumadvisory.us/</loc>
-    <lastmod>2025-05-24</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,13 +12,13 @@
   <!-- Main pages -->
   <url>
     <loc>https://www.fulcrumadvisory.us/about.html</loc>
-    <lastmod>2025-05-24</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.fulcrumadvisory.us/contact.html</loc>
-    <lastmod>2025-05-24</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -35,34 +35,128 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- Procurement & Resources -->
+  <url>
+    <loc>https://www.fulcrumadvisory.us/contract-vehicles.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/capability-statement.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/resources.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/tools.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/regulatory-watch.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GCC High Reference Pages -->
+  <url>
+    <loc>https://www.fulcrumadvisory.us/gcc-high-licensing.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/gcc-high-parity.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/gcc-high-roadmap.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/claude-code-gcc-high.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Services -->
   <url>
     <loc>https://www.fulcrumadvisory.us/services.html</loc>
-    <lastmod>2025-05-24</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.fulcrumadvisory.us/services/foci-advisory.html</loc>
-    <lastmod>2025-05-24</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.fulcrumadvisory.us/services/cmmc-compliance.html</loc>
-    <lastmod>2025-05-24</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.fulcrumadvisory.us/services/ai-govcon.html</loc>
-    <lastmod>2025-05-24</lastmod>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/services/gcch-platforms.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/services/corp-comms.html</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.fulcrumadvisory.us/services/vciso-advisory.html</loc>
-    <lastmod>2025-05-24</lastmod>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/services/govcon-erp.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/services/bpm.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/services/pmo.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.fulcrumadvisory.us/services/mdm-apple.html</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -70,12 +164,18 @@
   <!-- Insights index -->
   <url>
     <loc>https://www.fulcrumadvisory.us/insights.html</loc>
-    <lastmod>2025-05-24</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Articles -->
+  <url>
+    <loc>https://www.fulcrumadvisory.us/insights/dfars-foci-rule-2026.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.fulcrumadvisory.us/insights/dfars-foci-rule-2025.html</loc>
     <lastmod>2025-05-12</lastmod>
