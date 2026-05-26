@@ -12,7 +12,7 @@
 **Site purpose:** Professional services website for a cleared GovCon advisor. Must look like it has been operating for several years. PwC-caliber polish.
 **Hosting:** GitHub Pages — 100% static. No server-side code, no build tools, no frameworks.
 **Domain:** `fulcrumadvisory.us`
-**Primary contact:** `david.taylor@fulcrumadvisory.us`
+**Primary contact:** `info@fulcrumadvisory.us`
 
 ### David's Unique Position (understand this before writing a single word of copy)
 David is one of a handful of people in the US who combines:
@@ -70,41 +70,42 @@ fulcrumadvisory.us/
 │
 ├── CLAUDE.md                    ← This file
 ├── styles.css                   ← ✅ BUILT — global design system, do not modify
-├── sitemap.xml                  ← 🔲 Generate last, after all pages exist
-├── robots.txt                   ← 🔲 Simple allow-all with sitemap reference
-├── CNAME                        ← 🔲 One line: fulcrumadvisory.us
-├── 404.html                     ← 🔲 Branded error page
+├── sitemap.xml                  ← ✅ BUILT
+├── robots.txt                   ← ✅ BUILT
+├── CNAME                        ← ✅ BUILT — fulcrumadvisory.us
+├── 404.html                     ← ✅ BUILT
 │
 ├── index.html                   ← ✅ BUILT — homepage
-├── about.html                   ← ✅ BUILT — David's bio and credentials
-├── contact.html                 ← ✅ BUILT — contact form + Calendly placeholder
-├── services.html                ← 🔲 Services overview (links to sub-pages)
-├── insights.html                ← 🔲 Blog/article index
-├── privacy.html                 ← 🔲 Privacy policy stub
-├── terms.html                   ← 🔲 Terms of service stub
+├── about.html                   ← ✅ BUILT — firm bio and credentials (firm-level, no personal name)
+├── contact.html                 ← ✅ BUILT — contact form + Microsoft Bookings embed
+├── services.html                ← ✅ BUILT — 6 services overview
+├── insights.html                ← ✅ BUILT — article index (9 articles)
+├── privacy.html                 ← ✅ BUILT
+├── terms.html                   ← ✅ BUILT
 │
 ├── services/
-│   ├── foci-advisory.html       ← 🔲 FOCI service detail
-│   ├── cmmc-compliance.html     ← 🔲 CMMC service detail
-│   ├── ai-govcon.html           ← 🔲 AI/GCC High service detail
-│   └── vciso-advisory.html      ← 🔲 Fractional vCISO detail
+│   ├── foci-advisory.html       ← ✅ BUILT
+│   ├── cmmc-compliance.html     ← ✅ BUILT
+│   ├── ai-govcon.html           ← ✅ BUILT
+│   ├── gcch-platforms.html      ← ✅ BUILT — GCC High Platform Solutioning (5 capabilities)
+│   ├── corp-comms.html          ← ✅ BUILT — Corporate Communications (NEW)
+│   └── vciso-advisory.html      ← ✅ BUILT
 │
 ├── insights/
-│   ├── dfars-foci-rule-2025.html          ← 🔲 Blog post (May 2025)
-│   ├── ai-cmmc-gcc-high.html             ← 🔲 Blog post (March 2025)
-│   ├── cmmc-final-rule-2024.html         ← 🔲 Blog post (Jan 2025)
-│   ├── nist-800-171-rev3.html            ← 🔲 Blog post (Nov 2024)
-│   ├── foci-foreign-investment-risk.html  ← 🔲 Blog post (Sep 2024)
-│   ├── gcc-high-ai-architecture.html     ← 🔲 Blog post (Jul 2024)
-│   ├── cmmc-scope-common-mistakes.html   ← 🔲 Blog post (Apr 2024)
-│   └── dcsa-assessment-prep.html         ← 🔲 Blog post (Jan 2024)
+│   ├── dfars-foci-rule-2026.html          ← ✅ BUILT — May 25, 2026 (Section 847 rule)
+│   ├── dfars-foci-rule-2025.html          ← ✅ BUILT — May 12, 2025
+│   ├── ai-cmmc-gcc-high.html             ← ✅ BUILT — March 3, 2025
+│   ├── cmmc-final-rule-2024.html         ← ✅ BUILT — January 14, 2025
+│   ├── nist-800-171-rev3.html            ← ✅ BUILT — November 7, 2024
+│   ├── foci-foreign-investment-risk.html  ← ✅ BUILT — September 18, 2024
+│   ├── gcc-high-ai-architecture.html     ← ✅ BUILT — July 22, 2024
+│   ├── cmmc-scope-common-mistakes.html   ← ✅ BUILT — April 9, 2024
+│   └── dcsa-assessment-prep.html         ← ✅ BUILT — January 30, 2024
 │
 └── assets/
-    ├── favicon.svg               ← 🔲 Inline SVG favicon (TCS monogram)
+    ├── favicon.svg               ← 🔲 Inline SVG favicon (pending)
     └── og-image.png              ← 🔲 Skip — not required for GitHub Pages launch
 ```
-
-**Build order:** `services.html` → `services/*` → `insights.html` → `insights/*` → `privacy.html` → `terms.html` → `404.html` → `CNAME` → `robots.txt` → `sitemap.xml`
 
 ---
 
