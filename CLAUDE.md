@@ -130,19 +130,19 @@ Every page must use the identical nav and footer. Copy it exactly from `index.ht
 
 **Page header:** Dark navy, grid overlay, breadcrumb (Home / Services)
 - H1: "Our Services"
-- Subhead: "Fixed-scope engagements, advisory retainers, and project-based work — all delivered by David Taylor directly."
+- Subhead: "Advisory and strategy engagements led personally. Implementation and technical execution delivered with select, vetted partners under direct oversight."
 
-**Body layout:** Four full-width service sections, alternating white/off-white background. Each section:
+**Body layout:** Six full-width service sections, alternating white/off-white background. Each section:
 ```
 [Left: number + heading + description + engagement details]
 [Right: package pricing card with specifics]
 ```
 
-**The four services:**
+**The six services:**
 
 **01 — FOCI Advisory**
-- Problem: "The May 2025 DFARS proposed rule means 40,000 contractors who have never touched classified work may now face SF 328 filings, beneficial ownership disclosure, and 90-day mitigation timelines triggered by option exercises and contract modifications."
-- What David delivers: Initial FOCI risk assessment, SF 328 preparation and review, DCSA engagement strategy, SSA/mitigation agreement navigation, beneficial ownership structure analysis, ongoing retainer support through the mitigation lifecycle
+- Problem: "The May 2026 DFARS proposed rule implementing Section 847 of the FY 2020 NDAA means 37,740 contractors who have never touched classified work may now face SF 328 filings, beneficial ownership disclosure, and 90-day mitigation timelines triggered by option exercises and contract modifications."
+- What we deliver: Initial FOCI risk assessment, SF 328 preparation and review, DCSA engagement strategy, SSA/mitigation agreement navigation, beneficial ownership structure analysis, ongoing retainer support through the mitigation lifecycle
 - Packages table:
 
 | Engagement | Scope | Price |
@@ -153,7 +153,7 @@ Every page must use the identical nav and footer. Copy it exactly from `index.ht
 
 **02 — CMMC Compliance**
 - Problem: "32 CFR Part 170 took effect December 16, 2024. CMMC Level 2 certification is now a contract requirement for defense contractors handling CUI. Most contractors significantly underestimate their scoping and remediation burden."
-- What David delivers: CUI scoping and data flow analysis, NIST SP 800-171 Rev 3 gap assessment, SSP development, POA&M creation and tracking, C3PAO assessment preparation, policy and procedure drafting
+- What we deliver: CUI scoping and data flow analysis, NIST SP 800-171 Rev 3 gap assessment, SSP development, POA&M creation and tracking, C3PAO assessment preparation, policy and procedure drafting
 - Packages table:
 
 | Engagement | Scope | Price |
@@ -165,7 +165,7 @@ Every page must use the identical nav and footer. Copy it exactly from `index.ht
 
 **03 — AI in GCC High**
 - Problem: "Leadership is demanding AI adoption. Your compliance officer is demanding you don't blow up the CMMC boundary. Most AI vendors will tell you their tool is 'FedRAMP authorized' and call it a day. That's not an SSP entry. It's not a boundary definition. And it won't survive a CMMC audit."
-- What David delivers: AI use case scoping against CMMC boundary, GCC High architecture design (Azure OpenAI, AI Search, CosmosDB), production deployment and configuration, SSP amendment for AI components, acceptable use policy and data handling SOP, model governance documentation
+- What we deliver: AI use case scoping against CMMC boundary, GCC High architecture design (Azure OpenAI, AI Search, CosmosDB), production deployment and configuration, SSP amendment for AI components, acceptable use policy and data handling SOP, model governance documentation
 - Packages table:
 
 | Engagement | Scope | Price |
@@ -174,12 +174,23 @@ Every page must use the identical nav and footer. Copy it exactly from `index.ht
 | GCC High AI Deployment | Full architecture, deployment, and configuration of Azure OpenAI + RAG in client tenant | $10,000–18,000 |
 | AI Policy Package | Acceptable use policy, data handling SOP, SSP amendment, risk register entries | $2,500–3,500 |
 
-**04 — Fractional vCISO**
+**04 — GCC High Platform Solutioning** (`services/gcch-platforms.html`)
+- Problem: Many defense contractors have a GCC High tenant they're not fully using. Migration from on-prem or commercial M365 is complex; licensing is confusing; some commercial services don't exist or have reduced functionality in GCC High.
+- What we deliver: GCC High environment assessment, Microsoft 365 migration planning (on-prem to GCC High, commercial to GCC High), Teams Voice/telephony implementation, SharePoint intranet build, compliance & governance (Purview, DLP, retention), internal comms foundation (SharePoint news hub, structured Teams channels, Viva where GCC High supports it)
+- Engagement types: GCC High Environment Assessment | Migration & Platform Build | Compliance & Governance Package
+
+**05 — Fractional vCISO**
 - Problem: "A cleared defense contractor CISO costs $250,000–350,000/year in salary and benefits, doesn't exist in the labor market anyway, and is overkill for a 75-person company whose primary compliance challenge is CMMC and FOCI — not a 24/7 SOC."
-- What David delivers: Security program ownership and strategy, board and leadership reporting, vendor and tool evaluations, incident response planning, DCSA/auditor interface, compliance calendar management, staff advisory
+- What we deliver: Security program ownership and strategy, board and leadership reporting, vendor and tool evaluations, incident response planning, DCSA/auditor interface, compliance calendar management, staff advisory
 - Packages: From $5,000/month | Minimum 3-month engagement | Scoped to client need
 
-**Bottom CTA:** "All engagements are delivered by David Taylor personally. No subcontractors, no junior analysts, no bait-and-switch. [Schedule a Call]"
+**06 — Corporate Communications** (`services/corp-comms.html`)
+- Problem: Nobody owns internal communications. Platform sprawl creates confusion. Compliance-critical announcements don't land. Leadership messages get lost in noise. Applies to both commercial M365 and GCC High environments (with important limitations in GCC High).
+- What we deliver: Communications audit, channel strategy & governance, SharePoint news hub & intranet, Viva Connections portal (commercial M365), Viva Engage (commercial M365), executive comms cadence, Teams Live Events, change management comms, measurement framework
+- Note on GCC High: Employee engagement is significantly harder in GCC High. The Viva suite is limited — Viva Engage has reduced functionality, Viva Connections has feature gaps, third-party tools require custom API work. The practical GCC High foundation is SharePoint news + structured Teams channels.
+- Engagement types: Communications Assessment | Strategy & Platform Build | Change Management Comms
+
+**Bottom CTA:** "Advisory is personal. Implementation uses people we trust." — Strategic advisory and retainer work is led personally. Implementation and technical execution is delivered with select, vetted partners under direct oversight. [Schedule a Call]
 
 ---
 
@@ -207,20 +218,21 @@ Deep-dive pages. Structure:
 **Layout:** Two-column article grid (3 per row on desktop, 1 on mobile)
 **Filter tabs:** All | FOCI | CMMC | AI & Cloud | Strategy
 
-**All 8 articles listed with:** date, category tag, title, 2-sentence excerpt, read time, "Read article →"
+**All 9 articles listed with:** date, category tag, title, 2-sentence excerpt, read time, "Read article →"
 
 **Article index (newest first):**
 
-| # | Date | Category | Title |
-|---|---|---|---|
-| 1 | May 12, 2025 | FOCI · Regulatory | What the New DFARS FOCI Rule Means for 40,000 Defense Contractors |
-| 2 | March 3, 2025 | AI · GCC High · CMMC | Deploying AI Inside a CMMC Boundary Without Destroying Your Compliance Posture |
-| 3 | January 14, 2025 | CMMC · Compliance | CMMC Final Rule Is Live: The Clock Is Running for 80,000 Contractors |
-| 4 | November 7, 2024 | CMMC · NIST | NIST SP 800-171 Rev 3 Is Final: What Changed and What It Means for Your SSP |
-| 5 | September 18, 2024 | FOCI · Strategy | Foreign Investment in Defense Contractors: What Triggers FOCI and What Doesn't |
-| 6 | July 22, 2024 | AI · Cloud | GCC High vs. Commercial Azure: Why the Boundary Matters More Than the Vendor |
-| 7 | April 9, 2024 | CMMC · Compliance | The Five Scoping Mistakes That Sink CMMC Assessments Before They Start |
-| 8 | January 30, 2024 | FOCI · DCSA | How to Prepare for a DCSA FOCI Review: What They Actually Look At |
+| # | Date | Category | Title | File |
+|---|---|---|---|---|
+| 1 | May 25, 2026 | FOCI · Regulatory | The Section 847 FOCI Rule Is Here: What 37,000 Uncleared Contractors Need to Know | `dfars-foci-rule-2026.html` |
+| 2 | May 12, 2025 | FOCI · Regulatory | What the New DFARS FOCI Rule Means for 40,000 Defense Contractors | `dfars-foci-rule-2025.html` |
+| 3 | March 3, 2025 | AI · GCC High · CMMC | Deploying AI Inside a CMMC Boundary Without Destroying Your Compliance Posture | `ai-cmmc-gcc-high.html` |
+| 4 | January 14, 2025 | CMMC · Compliance | CMMC Final Rule Is Live: The Clock Is Running for 80,000 Contractors | `cmmc-final-rule-2024.html` |
+| 5 | November 7, 2024 | CMMC · NIST | NIST SP 800-171 Rev 3 Is Final: What Changed and What It Means for Your SSP | `nist-800-171-rev3.html` |
+| 6 | September 18, 2024 | FOCI · Strategy | Foreign Investment in Defense Contractors: What Triggers FOCI and What Doesn't | `foci-foreign-investment-risk.html` |
+| 7 | July 22, 2024 | AI · Cloud | GCC High vs. Commercial Azure: Why the Boundary Matters More Than the Vendor | `gcc-high-ai-architecture.html` |
+| 8 | April 9, 2024 | CMMC · Compliance | The Five Scoping Mistakes That Sink CMMC Assessments Before They Start | `cmmc-scope-common-mistakes.html` |
+| 9 | January 30, 2024 | FOCI · DCSA | How to Prepare for a DCSA FOCI Review: What They Actually Look At | `dcsa-assessment-prep.html` |
 
 ---
 
@@ -242,7 +254,7 @@ Every article page uses this structure:
     <div class="article-author">
       <div class="author-avatar">DT</div>
       <div class="author-info">
-        <div class="author-name">David Taylor</div>
+        <div class="author-name">Fulcrum Advisory</div>
         <div class="author-role">Principal · Fulcrum Advisory</div>
       </div>
     </div>
@@ -256,7 +268,7 @@ Every article page uses this structure:
   <!-- Mid-article CTA -->
   <div class="article-cta">
     <h3 style="color:var(--white)">Dealing with [topic]?</h3>
-    <p style="color:rgba(255,255,255,0.65)">David Taylor works directly with defense contractors on [topic]. [One sentence on what he delivers.]</p>
+    <p style="color:rgba(255,255,255,0.65)">Fulcrum Advisory works directly with defense contractors on [topic]. [One sentence on what we deliver.]</p>
     <a href="../contact.html" class="btn btn--gold">Schedule a Call</a>
   </div>
 
@@ -377,14 +389,7 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 
 **What Claude Code should do:** Leave the form HTML exactly as-is. Add a comment block above the form clearly marking where the form handler script should be inserted. The `<form>` element should have `id="contact-form"` so any handler can target it consistently.
 
-**Calendly embed:** The `<div id="calendly-embed">` placeholder is already in `contact.html`. When David provides his Calendly URL, replace the placeholder div with the official Calendly inline embed:
-```html
-<div class="calendly-inline-widget"
-     data-url="https://calendly.com/DAVID_SLUG/30min"
-     style="min-width:320px;height:630px;">
-</div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-```
+**Scheduling embed:** `contact.html` uses a **Microsoft Bookings** iframe embed (not Calendly). Do not replace it with Calendly or any other scheduler. The Bookings iframe is already live in the page. If the Bookings URL needs to change, update the `src` attribute of the existing `<iframe>` inside the `#calendly-embed` container.
 
 ---
 
@@ -496,47 +501,58 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 
 12. **Accessibility.** All images have `alt` text. Form inputs have `<label>`. Buttons have `aria-label` when icon-only. Color contrast meets WCAG AA.
 
+13. **Firm-level language.** Copy is written for the firm ("we deliver", "our engagements"), not as a personal solo practitioner ("David Taylor delivers"). Do not use "David Taylor" as the subject of a sentence in public-facing copy. The about page and schema.org metadata may reference "David Taylor" as the principal, but body copy and CTAs speak for the firm.
+
+14. **Delivery model distinction.** Advisory and strategy work is led personally. Implementation and technical execution uses select vetted partners under direct oversight. Do not write "no subcontractors" anywhere on the site — that claim was removed. The accurate language is: "Advisory is personal. Implementation uses people we trust."
+
+15. **GCC High Viva limitations are real — say so.** The Viva suite in GCC High is significantly more limited than commercial M365. Viva Engage has reduced functionality. Viva Connections has feature gaps. Advanced Viva apps (Learning, Insights, Topics) are unavailable or lag commercial release by 12+ months. Third-party employee engagement tools require custom API work. Never describe GCC High as having full Viva parity with commercial. The practical GCC High internal comms foundation is SharePoint news hub + structured Teams channels.
+
 ---
 
 ## 8. Open Items (David to Confirm)
 
 | Item | Status | Notes |
 |---|---|---|
-| Calendly URL | ⏳ Pending | Insert into `contact.html` `#calendly-embed` |
+| Microsoft Bookings embed | ✅ Done | Live in `contact.html` — do NOT replace with Calendly |
 | LinkedIn URL | ⏳ Pending | Footer + about.html `data-placeholder="true"` |
 | Contact form backend | ⏳ Pending | Same solution as Paradise Beach House website |
 | State of incorporation | ⏳ Pending | Needed for `terms.html` |
 | Any certifications (CISSP, etc.) | ⏳ Pending | Add to `about.html` credential cards |
-| Logo/favicon preference | ⏳ Pending | Currently text-based; SVG monogram "TCS" acceptable |
+| Favicon (SVG) | ⏳ Pending | `assets/favicon.svg` — text-based monogram acceptable |
 | Google Analytics / Search Console | ⏳ Pending | Add `<script>` tag to `<head>` of all pages when ready |
+| Sitemap.xml | ⏳ Update needed | Needs gcch-platforms.html, corp-comms.html, dfars-foci-rule-2026.html added |
 
 ---
 
 ## 9. Current Build Status
 
-| File | Status |
-|---|---|
-| `styles.css` | ✅ Complete |
-| `index.html` | ✅ Complete |
-| `about.html` | ✅ Complete |
-| `contact.html` | ✅ Complete |
-| `services.html` | 🔲 Build next |
-| `services/foci-advisory.html` | 🔲 |
-| `services/cmmc-compliance.html` | 🔲 |
-| `services/ai-govcon.html` | 🔲 |
-| `services/vciso-advisory.html` | 🔲 |
-| `insights.html` | 🔲 |
-| `insights/dfars-foci-rule-2025.html` | 🔲 |
-| `insights/ai-cmmc-gcc-high.html` | 🔲 |
-| `insights/cmmc-final-rule-2024.html` | 🔲 |
-| `insights/nist-800-171-rev3.html` | 🔲 |
-| `insights/foci-foreign-investment-risk.html` | 🔲 |
-| `insights/gcc-high-ai-architecture.html` | 🔲 |
-| `insights/cmmc-scope-common-mistakes.html` | 🔲 |
-| `insights/dcsa-assessment-prep.html` | 🔲 |
-| `privacy.html` | 🔲 |
-| `terms.html` | 🔲 |
-| `404.html` | 🔲 |
-| `CNAME` | 🔲 |
-| `robots.txt` | 🔲 |
-| `sitemap.xml` | 🔲 (build last) |
+| File | Status | Notes |
+|---|---|---|
+| `styles.css` | ✅ Complete | Sacred — do not modify |
+| `index.html` | ✅ Complete | Alert banner updated for May 2026 DFARS rule |
+| `about.html` | ✅ Complete | Firm-level language; updated delivery model credential bar |
+| `contact.html` | ✅ Complete | Microsoft Bookings iframe embedded |
+| `services.html` | ✅ Complete | 6 services; updated delivery model CTA |
+| `services/foci-advisory.html` | ✅ Complete | |
+| `services/cmmc-compliance.html` | ✅ Complete | |
+| `services/ai-govcon.html` | ✅ Complete | |
+| `services/gcch-platforms.html` | ✅ Complete | 5 capabilities; accurate GCC High Viva limitations |
+| `services/corp-comms.html` | ✅ Complete | NEW — Service 06; Viva limitations documented |
+| `services/vciso-advisory.html` | ✅ Complete | |
+| `insights.html` | ✅ Complete | 9 articles; 2026 DFARS article at top |
+| `insights/dfars-foci-rule-2026.html` | ✅ Complete | NEW — May 25, 2026; Section 847 rule |
+| `insights/dfars-foci-rule-2025.html` | ✅ Complete | |
+| `insights/ai-cmmc-gcc-high.html` | ✅ Complete | |
+| `insights/cmmc-final-rule-2024.html` | ✅ Complete | |
+| `insights/nist-800-171-rev3.html` | ✅ Complete | |
+| `insights/foci-foreign-investment-risk.html` | ✅ Complete | |
+| `insights/gcc-high-ai-architecture.html` | ✅ Complete | |
+| `insights/cmmc-scope-common-mistakes.html` | ✅ Complete | |
+| `insights/dcsa-assessment-prep.html` | ✅ Complete | |
+| `privacy.html` | ✅ Complete | |
+| `terms.html` | ✅ Complete | |
+| `404.html` | ✅ Complete | |
+| `CNAME` | ✅ Complete | `fulcrumadvisory.us` |
+| `robots.txt` | ✅ Complete | |
+| `sitemap.xml` | ⚠️ Needs update | Missing gcch-platforms, corp-comms, dfars-foci-rule-2026 |
+| `assets/favicon.svg` | 🔲 Pending | |
