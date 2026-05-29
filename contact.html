@@ -83,7 +83,7 @@
           Fields: name, company, email, inquiry_type (select), message
           ============================================================ -->
 
-        <div id="contact-form-container">
+        <form id="contact-form" novalidate>
           <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="John Smith" required />
@@ -103,7 +103,9 @@
               <option value="foci">FOCI Advisory</option>
               <option value="cmmc">CMMC Compliance</option>
               <option value="ai">AI / GCC High Deployment</option>
-              <option value="vciso">Fractional vCISO</option>
+              <option value="vciso">Fractional vCISO / vCIO</option>
+              <option value="gcch">GCC High Platforms</option>
+              <option value="comms">Corporate Communications</option>
               <option value="other">General Inquiry</option>
             </select>
           </div>
@@ -115,6 +117,10 @@
           <p style="font-size:0.78rem;color:var(--text-muted);margin-top:12px;text-align:center">
             Your message goes directly to us. No intake team, no CRM drip campaigns.
           </p>
+        </form>
+        <div id="contact-success" style="display:none;padding:var(--space-4);background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);text-align:center">
+          <p style="font-weight:600;color:var(--navy);margin-bottom:8px">Message sent.</p>
+          <p style="font-size:0.875rem;color:var(--text-muted);margin:0">Your email client should have opened with your message pre-filled. If it did not, email us directly at <a href="mailto:info@fulcrumadvisory.us" style="color:var(--blue)">info@fulcrumadvisory.us</a>.</p>
         </div>
       </div>
 
@@ -236,6 +242,40 @@
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
   toggle.addEventListener('click', () => mobile.classList.toggle('open'));
   mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobile.classList.remove('open')));
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name    = document.getElementById('name').value.trim();
+    const company = document.getElementById('company').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const inquiry = document.getElementById('inquiry').value;
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill in your name, email, and message.');
+      return;
+    }
+
+    const topicMap = {
+      foci: 'FOCI Advisory', cmmc: 'CMMC Compliance', ai: 'AI / GCC High Deployment',
+      vciso: 'Fractional vCISO / vCIO', gcch: 'GCC High Platforms',
+      comms: 'Corporate Communications', other: 'General Inquiry', '': 'General Inquiry'
+    };
+    const topic   = topicMap[inquiry] || 'General Inquiry';
+    const subject = encodeURIComponent('Fulcrum Advisory Inquiry: ' + topic);
+    const body    = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Company: ' + (company || 'Not provided') + '\n' +
+      'Email: ' + email + '\n' +
+      'Topic: ' + topic + '\n\n' +
+      message
+    );
+
+    window.location.href = 'mailto:info@fulcrumadvisory.us?subject=' + subject + '&body=' + body;
+
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('contact-success').style.display = 'block';
+  });
 </script>
 </body>
 </html>
