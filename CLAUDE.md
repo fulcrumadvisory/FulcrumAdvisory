@@ -19,7 +19,7 @@ David is one of a handful of people in the US who combines:
 - **FOCI**: 16+ years *inside* a FOCI-mitigated contractor (Leonardo Electronics US). Has personally run DCSA engagements, SF 328 filings, SSA maintenance, and mitigation agreement cycles. Billed $350/hr for SSA work 10+ years ago.
 - **CMMC**: Built and maintained SSPs, POA&Ms, and NIST 800-171 compliance programs under live DCSA scrutiny.
 - **AI in GCC High**: Designed and deployed a production enterprise AI assistant (Azure OpenAI + RAG + CosmosDB + Bot Framework) inside a CMMC-scoped GCC High tenant. This is not a POC — it runs in production.
-- **Active U.S. Security Clearance**: Real accountability. Not a talking point.
+- **DCSA Engagement**: Primary DCSA interface for FOCI reviews, SF 328 filings, mitigation agreement compliance, and facility clearance actions. Do NOT advertise or reference holding a personal security clearance on any public-facing page — this is a compliance requirement, not a style choice.
 
 Copy must convey practitioner credibility, not consultant-speak. Every sentence should pass the test: *would someone who has actually done this write it this way?*
 
