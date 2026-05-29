@@ -106,6 +106,7 @@
         <p>The phased rollout matters, but it creates a false sense of runway. Phase 1 began at rule effective date and covers DoD's internal processes. Phase 2 — when CMMC Level 2 self-assessment requirements begin appearing in solicitations and contracts — is already underway. Phase 3 introduces CMMC Level 2 certification (C3PAO assessment) requirements. Phase 4 is full implementation across all applicable contracts. The timeline compresses fast for companies that haven't started. If your contract is in Phase 2 and you're starting a gap assessment today, you may already be behind the cycle for an assessment-ready documentation package.</p>
         <p>The scoping problem is the most consistently underestimated challenge. Most contractors assume their CMMC environment is limited to their primary workstations and file servers. In practice, CUI flows into email systems, collaboration platforms, cloud storage, contractor-managed external services, and backup systems — all of which are potentially in scope. "Security protection assets," systems that protect CUI without directly processing it (firewalls, authentication systems, monitoring tools), are also in scope under the CMMC assessment guide, even though they don't touch CUI directly. Defining the scope incorrectly, in either direction, invalidates the assessment.</p>
         <p>The SPRS score requirement is an existing obligation that predates CMMC and is already required for any contractor with a DFARS 252.204-7012 clause in their contracts. Many contractors have never submitted a score. That is a current compliance gap, not a future one — and auditors are aware of it. Getting current on SPRS is typically the first action item following a gap assessment.</p>
+        <p>The one-size-fits-all approach is a separate failure mode. A 50-person defense sub does not have the same compliance environment as a 2,000-person prime, and the control implementations that make sense for a large enterprise with a dedicated security team may be disproportionate or simply wrong at your scale. Understanding what genuinely needs to be in scope, what can be isolated through enclave architecture, and what each requirement actually demands at your operating environment is where compliance programs succeed or fail before the gap assessment begins.</p>
       </div>
       <div>
         <div style="background:var(--navy);border-radius:var(--radius);padding:var(--space-4);position:sticky;top:calc(var(--nav-height) + var(--space-3))">
@@ -149,8 +150,8 @@
     <p class="section-intro">Every engagement starts with an accurate picture of where you stand. Every deliverable is built to hold up under C3PAO scrutiny — not just to satisfy an internal audit.</p>
     <div class="deliverable-grid">
       <div class="deliverable-item">
-        <h4>CUI Scoping &amp; Data Flow Analysis</h4>
-        <p>Identifying where CUI lives, where it moves, and which systems are in scope. Correct scoping is the foundation of everything that follows — an oversized scope is unmanageable, an undersized scope is a failed assessment.</p>
+        <h4>CUI Scoping &amp; Boundary Definition</h4>
+        <p>Determining what genuinely belongs in scope and what can be legitimately excluded or isolated through enclave architecture. Getting this right before the gap assessment begins — not after — drives the entire cost and complexity of the program. Oversized scope is unmanageable; undersized scope fails assessment.</p>
       </div>
       <div class="deliverable-item">
         <h4>NIST SP 800-171 Rev 3 Gap Assessment</h4>
