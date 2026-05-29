@@ -55,6 +55,13 @@
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    .hero-mob-br { display: none; }
+    @media (max-width: 640px) {
+      .hero-mob-br { display: block; }
+      .hero h1 { font-size: clamp(1.45rem, 6vw, 3.5rem); }
+    }
+  </style>
 </head>
 <body>
 
@@ -102,7 +109,7 @@
       <div class="hero-eyebrow">
         <span>Defense Industrial Base Advisory</span>
       </div>
-      <h1>The Experience Is Real.<br><em>So Is the Accountability.</em></h1>
+      <h1>Built From Inside the<span class="hero-mob-br"></span> Defense Industrial Base.<br><em>Not Consulting Into It.</em></h1>
       <p class="hero-sub">
         FOCI mitigation, CMMC compliance, and AI deployment inside GCC High. Built on 25+ years of operating under these frameworks inside the defense industrial base, not advising on them from the outside.
       </p>
