@@ -16,7 +16,7 @@
 
 ### David's Unique Position (understand this before writing a single word of copy)
 David is one of a handful of people in the US who combines:
-- **FOCI**: 16+ years *inside* a FOCI-mitigated contractor (Leonardo Electronics US). Has personally run DCSA engagements, SF 328 filings, SSA maintenance, and mitigation agreement cycles. Billed $350/hr for SSA work 10+ years ago.
+- **FOCI**: 16+ years *inside* a FOCI-mitigated contractor (Leonardo Electronics US). Has personally run DCSA engagements, SF 328 filings, SSA maintenance, and mitigation agreement cycles. Supported facilities through initial Possessing FCL award. Billed $350/hr for SSA work 10+ years ago. Also experienced in classified computing program stand-up. Reference these lightly — woven into existing credential descriptions, not as standalone headline claims.
 - **CMMC**: Built and maintained SSPs, POA&Ms, and NIST 800-171 compliance programs under live DCSA scrutiny.
 - **AI in GCC High**: Designed and deployed a production enterprise AI assistant (Azure OpenAI + RAG + CosmosDB + Bot Framework) inside a CMMC-scoped GCC High tenant. This is not a POC — it runs in production.
 - **DCSA Engagement**: Primary DCSA interface for FOCI reviews, SF 328 filings, mitigation agreement compliance, and facility clearance actions. Do NOT advertise or reference holding a personal security clearance on any public-facing page — this is a compliance requirement, not a style choice.
