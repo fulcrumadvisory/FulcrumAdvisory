@@ -56,20 +56,47 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <style>
+    /* Hero mobile headline */
     .hero-mob-br { display: none; }
     @media (max-width: 640px) {
       .hero-mob-br { display: block; }
       .hero h1 { font-size: clamp(1.45rem, 6vw, 3.5rem); }
+    }
+    /* Alert banner dismiss + expand */
+    .alert-dismiss-btn {
+      background: none; border: none; color: rgba(255,255,255,0.45);
+      cursor: pointer; font-size: 1.25rem; line-height: 1;
+      padding: 0 0 0 12px; flex-shrink: 0; transition: color 0.15s;
+    }
+    .alert-dismiss-btn:hover { color: rgba(255,255,255,0.85); }
+    .alert-expand-btn {
+      display: none; background: none; border: none;
+      color: var(--gold); cursor: pointer; font-size: 0.78rem;
+      padding: 3px 0 0; font-family: var(--font-sans); font-weight: 600;
+    }
+    @media (max-width: 640px) {
+      #alertExtra { display: none; }
+      .alert-expand-btn { display: inline-block; }
+      #alertEllipsis { display: inline; }
+    }
+    @media (min-width: 641px) {
+      #alertEllipsis { display: none; }
     }
   </style>
 </head>
 <body>
 
 <!-- ALERT BANNER -->
-<div class="alert-banner">
-  <div class="container" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-top:0;padding-bottom:0">
-    <span class="alert-label">Regulatory Alert</span>
-    <p><strong>New Proposed Rule, May 7, 2026:</strong> DoD proposes FOCI disclosure and mitigation obligations for unclassified contracts above $5M, implementing Section 847 of the FY 2020 NDAA. SF 328 requirements and mitigation timelines may apply to contractors who have never faced a FOCI review. Comment period open. <a href="insights/dfars-foci-rule-2026.html">Read our analysis →</a></p>
+<div class="alert-banner" id="alertBanner">
+  <div class="container" style="display:flex;align-items:flex-start;gap:12px;padding-top:0;padding-bottom:0">
+    <span class="alert-label" style="flex-shrink:0;margin-top:2px">Regulatory Alert</span>
+    <div style="flex:1;min-width:0">
+      <p style="margin:0">
+        <strong>New Proposed Rule, May 7, 2026:</strong> DoD proposes FOCI disclosure and mitigation obligations for unclassified contracts above $5M<span id="alertEllipsis">…</span><span id="alertExtra">, implementing Section 847 of the FY 2020 NDAA. SF 328 requirements and mitigation timelines may apply to contractors who have never faced a FOCI review. Comment period open. <a href="insights/dfars-foci-rule-2026.html">Read our analysis →</a></span>
+      </p>
+      <button class="alert-expand-btn" id="alertExpand" aria-label="Read full alert">Read more →</button>
+    </div>
+    <button class="alert-dismiss-btn" id="alertDismiss" aria-label="Dismiss alert">×</button>
   </div>
 </div>
 
@@ -423,15 +450,21 @@
 </footer>
 
 <script>
-  const nav = document.getElementById('siteNav');
+  const nav    = document.getElementById('siteNav');
   const toggle = document.getElementById('navToggle');
   const mobile = document.getElementById('navMobile');
-  const banner = document.querySelector('.alert-banner');
+  const banner = document.getElementById('alertBanner');
+
+  // Restore dismissed state
+  if (sessionStorage.getItem('fa-alert-v1') === 'dismissed' && banner) {
+    banner.style.display = 'none';
+  }
 
   function updateNavTop() {
-    if (banner) {
-      const bannerBottom = banner.getBoundingClientRect().bottom;
-      nav.style.top = Math.max(0, bannerBottom) + 'px';
+    if (banner && banner.style.display !== 'none') {
+      nav.style.top = Math.max(0, banner.getBoundingClientRect().bottom) + 'px';
+    } else {
+      nav.style.top = '0';
     }
   }
   updateNavTop();
@@ -440,6 +473,28 @@
     updateNavTop();
     nav.classList.toggle('scrolled', window.scrollY > 40);
   });
+
+  // Dismiss button
+  var alertDismiss = document.getElementById('alertDismiss');
+  if (alertDismiss) {
+    alertDismiss.addEventListener('click', function() {
+      banner.style.display = 'none';
+      sessionStorage.setItem('fa-alert-v1', 'dismissed');
+      updateNavTop();
+    });
+  }
+
+  // Mobile expand
+  var alertExpand = document.getElementById('alertExpand');
+  var alertExtra  = document.getElementById('alertExtra');
+  var alertEllipsis = document.getElementById('alertEllipsis');
+  if (alertExpand) {
+    alertExpand.addEventListener('click', function() {
+      alertExtra.style.display = 'inline';
+      alertEllipsis.style.display = 'none';
+      alertExpand.style.display = 'none';
+    });
+  }
 
   toggle.addEventListener('click', () => mobile.classList.toggle('open'));
 
