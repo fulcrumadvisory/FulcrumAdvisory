@@ -1,1 +1,28 @@
+# Build artifacts
 *.zip
+
+# Claude Code spec and config files — keep local only
+Claude_*.md
+assets/*Config*.md
+assets/*config*.md
+
+# Environment and credentials — never commit
+.env
+.env.*
+*.env
+secrets.*
+credentials.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local notes and drafts
+_drafts/
+_private/
+_notes/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.vscode/settings.json
