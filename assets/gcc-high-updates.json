@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T19:02:12.448271+00:00",
+  "updated": "2026-06-03T19:59:52.272327+00:00",
   "count": 25,
   "items": [
     {
@@ -49,6 +49,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=472031",
       "description": "Copilot for Security in DLP can summarize DLP policies. This enhancement enables DLP admins to gain insights on coverage of policies viz. location, classifiers and notifications, and more. \n \nDLP admins can get these insights on all the policies or on few selected policies. They "
+    },
+    {
+      "id": "409534",
+      "title": "\tMicrosoft Teams: Local PTZ for Microsoft Teams Rooms on Windows",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=409534",
+      "description": "Microsoft Teams Rooms on Windows will provide native Pan-Tilt-Zoom (PTZ) controls for connected cameras that support this capability. The feature will initially contain limited support for cameras with mechanical/optical PTZ, with digital PTZ to come in the future."
     },
     {
       "id": "93269",
@@ -193,14 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=495000",
       "description": "This feature will enable customers working across cloud boundaries - worldwide cloud to GCC High or Microsoft 365 operated by 21-Vianet, to share files protected with Purview Information Protection sensitivity labels. Recipients in the other cloud will be able to view, edit, prin"
-    },
-    {
-      "id": "491028",
-      "title": "Microsoft Intune: Customization of app installs with Enterprise Application Management",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=491028",
-      "description": "Script installer offers you a way to have more control and customization around Win32 (including in EAM catalog) app installations. You now have the option to use a PowerShell script in place of command line configurations to install your app."
     }
   ]
 }
