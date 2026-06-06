@@ -164,6 +164,8 @@ window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scro
 toggle.addEventListener('click',()=>mobile.classList.toggle('open'));
 mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.remove('open')));
 
+function esc(s){ const d=document.createElement('div'); d.textContent=s||''; return d.innerHTML; }
+
 let regItems=[], newsItems=[], currentTab='all';
 
 function typePill(type) {
@@ -193,8 +195,8 @@ function renderRegItems(items) {
   if(!items.length) return '<div style="padding:var(--space-4);color:var(--text-muted);text-align:center">No items found.</div>';
   return items.map(item => {
     const p=typePill(item.type);
-    const citation=item.citation?`<span class="citation-mono">${item.citation}</span>`:'';
-    const abstract=item.abstract?`<p class="reg-abstract">${item.abstract}</p>`:'';
+    const citation=item.citation?`<span class="citation-mono">${esc(item.citation)}</span>`:'';
+    const abstract=item.abstract?`<p class="reg-abstract">${esc(item.abstract)}</p>`:'';
     return `
       <div class="reg-card ${cardClass(item.type)}" style="margin-bottom:12px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px">
@@ -204,9 +206,9 @@ function renderRegItems(items) {
           </div>
           <span class="reg-date">${fmtDate(item.date)}</span>
         </div>
-        <h4 style="font-size:0.9rem;line-height:1.35;color:var(--navy)">${item.title}</h4>
+        <h4 style="font-size:0.9rem;line-height:1.35;color:var(--navy)">${esc(item.title)}</h4>
         ${abstract}
-        <a href="${item.link}" target="_blank" rel="noopener"
+        <a href="${esc(item.link)}" target="_blank" rel="noopener"
            style="display:inline-flex;align-items:center;gap:4px;font-size:0.72rem;font-weight:700;
                   letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-top:10px">
           Read on Federal Register ↗
@@ -220,12 +222,12 @@ function renderNewsItems(items) {
   return items.map(item=>`
     <div class="reg-card" style="margin-bottom:12px">
       <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px">
-        <span class="source-tag">${item.source}</span>
+        <span class="source-tag">${esc(item.source)}</span>
         <span class="reg-date">${fmtDate(item.date)}</span>
       </div>
-      <h4 style="font-size:0.9rem;line-height:1.35;color:var(--navy)">${item.title}</h4>
-      ${item.summary?`<p class="reg-abstract">${item.summary}</p>`:''}
-      <a href="${item.link}" target="_blank" rel="noopener"
+      <h4 style="font-size:0.9rem;line-height:1.35;color:var(--navy)">${esc(item.title)}</h4>
+      ${item.summary?`<p class="reg-abstract">${esc(item.summary)}</p>`:''}
+      <a href="${esc(item.link)}" target="_blank" rel="noopener"
          style="display:inline-flex;align-items:center;gap:4px;font-size:0.72rem;font-weight:700;
                 letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-top:10px">
         Read more ↗

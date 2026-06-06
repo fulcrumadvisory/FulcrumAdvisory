@@ -172,6 +172,8 @@ toggle.addEventListener('click',()=>mobile.classList.toggle('open'));
 mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobile.classList.remove('open')));
 
 // ── Roadmap Data Loader ───────────────────────────────────────────────────────
+function esc(s){ const d=document.createElement('div'); d.textContent=s||''; return d.innerHTML; }
+
 let allItems = [];
 
 function statusInfo(status) {
@@ -201,16 +203,16 @@ function renderCards(items) {
   grid.innerHTML = items.map(item => {
     const s = statusInfo(item.status);
     const link = item.link || '#';
-    const desc = item.description ? `<p class="card-desc">${item.description}</p>` : '';
+    const desc = item.description ? `<p class="card-desc">${esc(item.description)}</p>` : '';
     return `
       <div class="roadmap-card ${s.cardCls}">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px">
           <span class="status-pill ${s.cls}">${s.label}</span>
           <span class="card-date">${formatDate(item.date)}</span>
         </div>
-        <h4 style="font-size:0.9rem;line-height:1.35;color:var(--navy)">${item.title||'Untitled'}</h4>
+        <h4 style="font-size:0.9rem;line-height:1.35;color:var(--navy)">${esc(item.title)||'Untitled'}</h4>
         ${desc}
-        <a href="${link}" target="_blank" rel="noopener"
+        <a href="${esc(link)}" target="_blank" rel="noopener"
            style="display:inline-flex;align-items:center;gap:4px;font-size:0.72rem;font-weight:700;
                   letter-spacing:0.06em;text-transform:uppercase;color:var(--blue);margin-top:10px">
           View on Roadmap ↗
