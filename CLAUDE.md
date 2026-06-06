@@ -523,6 +523,10 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 | Sitemap.xml | ✅ Done | All 35 pages included |
 | sf-328-web Formspree endpoint | ⏳ Pending | Replace `FORMSPREE_ENDPOINT` in `sf-328-web/index.html` |
 | fulcrumfoci-web Formspree endpoint | ⏳ Pending | Replace `FORMSPREE_ENDPOINT` in `fulcrumfoci-web/index.html` |
+| DNS — fulcrumadvisory.us | ✅ Done | All 4 GitHub Pages A records live; www CNAME → fulcrumadvisory.github.io; M365 fully wired |
+| DNS — fulcrumfoci.us | ⏳ Pending | Currently GoDaddy forward — needs A records + www CNAME for GitHub Pages to serve |
+| DNS — sf-328.us | ⏳ Pending | DNS state unconfirmed — needs A records + www CNAME verified |
+| focihelp.us intent | ⏳ Pending | Domain owned — purpose not yet defined (help center? forward to fulcrumfoci.us?) |
 
 ---
 
@@ -563,11 +567,68 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 
 ## 10. Related Sites (separate repos)
 
-| Site | Repo | Domain | Status | Notes |
+| Site | Repo | Primary Domain | Status | Notes |
 |---|---|---|---|---|
-| SF-328 Resource | `sf-328-web` | `sf-328.us` | ✅ Live | Formspree endpoint pending; sf-328.com/sf328.us forward to it |
-| FulcrumFOCI Product | `fulcrumfoci-web` | `fulcrumfoci.us` | ✅ Live | Formspree endpoint pending; fulcrumfoci.com forwards to it |
+| SF-328 Resource | `sf-328-web` | `sf-328.us` | ✅ Live | Formspree endpoint pending; sf-328.com and sf328.us are pointer/ad domains forwarding to it |
+| FulcrumFOCI Product | `fulcrumfoci-web` | `fulcrumfoci.us` | ✅ Live | Formspree endpoint pending; fulcrumfoci.com and focihelp.us are pointer/ad domains forwarding to it |
 
 **Design system for related sites:** Navy `#0A1628` / Gold `#C9A84C` / Inter font. Vanilla HTML/CSS/JS only. No shared stylesheet with fulcrumadvisory.us — each has its own `assets/css/main.css`.
 
 **Formspree wiring (both sites):** Replace `FORMSPREE_ENDPOINT` in each `index.html` form action with the Formspree form ID. Use AJAX fetch pattern — see `fulcrumadvisory.us/contact.html` for reference implementation.
+
+---
+
+## 11. Domain & DNS Reference
+
+### Domain Architecture
+
+All SF-328 and FOCI domains are advertising/pointer domains. Each cluster has one primary domain (GitHub Pages) and the rest forward to it.
+
+| Domain | Role | DNS state |
+|---|---|---|
+| `fulcrumadvisory.us` | Primary — advisory site | ✅ Configured |
+| `fulcrumtech.us` | Pointer → fulcrumadvisory.us | ✅ GoDaddy forward |
+| `fulcrumfoci.us` | Primary — FulcrumFOCI product page | ⏳ Needs GitHub Pages DNS |
+| `fulcrumfoci.com` | Pointer → fulcrumfoci.us | ✅ GoDaddy forward |
+| `focihelp.us` | Pointer → fulcrumfoci.us (TBD) | ⏳ Intent TBD |
+| `sf-328.us` | Primary — SF-328 resource page | ⏳ DNS state unconfirmed |
+| `sf-328.com` | Pointer → sf-328.us | ✅ GoDaddy forward |
+| `sf328.us` | Pointer → sf-328.us | ✅ GoDaddy forward |
+
+### GitHub Pages DNS (needed for each primary domain)
+
+Apply these records at GoDaddy for `fulcrumfoci.us` and `sf-328.us`. Remove any existing GoDaddy forwarding first.
+
+```
+A     @    185.199.108.153
+A     @    185.199.109.153
+A     @    185.199.110.153
+A     @    185.199.111.153
+CNAME www  fulcrumadvisory.github.io.
+```
+
+After DNS propagates: enable **Enforce HTTPS** in each repo → Settings → Pages.
+
+### `fulcrumadvisory.us` — Confirmed DNS (exported 2026-06-06)
+
+```
+; GitHub Pages
+A     @    185.199.108.153 / .109 / .110 / .111
+CNAME www  fulcrumadvisory.github.io.
+
+; M365 / Exchange Online
+MX    @    0 fulcrumadvisory-us.mail.protection.outlook.com.
+TXT   @    "v=spf1 include:spf.protection.outlook.com -all"
+TXT   @    "MS=ms60778153"  (domain verification)
+TXT   _dmarc  "v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;"
+CNAME autodiscover  autodiscover.outlook.com.
+
+; Intune / Entra ID MDM enrollment
+CNAME enterpriseenrollment    enterpriseenrollment-s.manage.microsoft.com.
+CNAME enterpriseregistration  enterpriseregistration.windows.net.
+
+; GoDaddy Pay
+CNAME pay  paylinks.commerce.godaddy.com.
+```
+
+Email at `info@fulcrumadvisory.us` routes through Exchange Online (M365). Registrar: GoDaddy (ns53/ns54.domaincontrol.com).
