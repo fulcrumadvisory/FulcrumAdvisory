@@ -526,7 +526,7 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 | DNS — fulcrumadvisory.us | ✅ Done | All 4 GitHub Pages A records live; www CNAME → fulcrumadvisory.github.io; M365 fully wired |
 | DNS — fulcrumfoci.us | ⏳ Pending | Currently GoDaddy forward — needs A records + www CNAME for GitHub Pages to serve |
 | DNS — sf-328.us | ⏳ Pending | DNS state unconfirmed — needs A records + www CNAME verified |
-| focihelp.us forward | ⏳ Pending | Forward to fulcrumadvisory.us/services/foci-advisory.html — 301 permanent, no masking |
+| focihelp.us forward | ✅ Done | 301 permanent → fulcrumadvisory.us/services/foci-advisory.html |
 
 ---
 
@@ -590,7 +590,7 @@ All SF-328 and FOCI domains are advertising/pointer domains. Each cluster has on
 | `fulcrumtech.us` | Pointer → fulcrumadvisory.us | ✅ GoDaddy forward |
 | `fulcrumfoci.us` | Primary — FulcrumFOCI product page | ⏳ Needs GitHub Pages DNS |
 | `fulcrumfoci.com` | Pointer → fulcrumfoci.us | ✅ GoDaddy forward |
-| `focihelp.us` | Pointer → fulcrumadvisory.us/services/foci-advisory.html | ⏳ Forward not yet set |
+| `focihelp.us` | Pointer → fulcrumadvisory.us/services/foci-advisory.html | ✅ 301 permanent forward live |
 | `sf-328.us` | Primary — SF-328 resource page | ⏳ DNS state unconfirmed |
 | `sf-328.com` | Pointer → sf-328.us | ✅ GoDaddy forward |
 | `sf328.us` | Pointer → sf-328.us | ✅ GoDaddy forward |
