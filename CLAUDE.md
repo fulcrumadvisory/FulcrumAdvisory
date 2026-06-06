@@ -19,7 +19,7 @@ David is one of a handful of people in the US who combines:
 - **FOCI**: 16+ years *inside* a FOCI-mitigated contractor (Leonardo Electronics US). Primary DCSA interface — ran FOCI compliance programs, mitigation agreement compliance (ECP), and facility clearance actions. Supported facilities through initial Possessing FCL award. Billed $350/hr for SSA work 10+ years ago. Also experienced in classified computing program stand-up. **David has NOT personally filed SF 328s — his focus is the ECP/ongoing compliance side; he works with consultants who handle SF 328 preparation. Do not claim personal SF 328 filing experience in copy.** Reference credentials lightly — woven into existing descriptions, not as standalone headline claims.
 - **CMMC**: Built and maintained SSPs, POA&Ms, and NIST 800-171 compliance programs under live DCSA scrutiny. Expertise is practical: boundary definition, enclave architecture, and determining what a contractor genuinely needs to implement at their scale vs. a one-size-fits-all approach. **David is NOT registered with the Cyber AB at any level (no CCA, CCP, or C3PAO affiliation). Do not imply assessor status. He helps clients prepare for C3PAO assessments and connects them with registered assessors — he does not conduct them.**
 - **AI in GCC High**: Designed and deployed a production enterprise AI assistant (Azure OpenAI + RAG + CosmosDB + Bot Framework) inside a CMMC-scoped GCC High tenant. This is not a POC — it runs in production.
-- **DCSA Engagement**: Primary DCSA interface for FOCI reviews, SF 328 filings, mitigation agreement compliance, and facility clearance actions. Do NOT advertise or reference holding a personal security clearance on any public-facing page — this is a compliance requirement, not a style choice.
+- **DCSA Engagement**: Primary DCSA interface for FOCI reviews, mitigation agreement compliance (ECP), and facility clearance actions. Do NOT advertise or reference holding a personal security clearance on any public-facing page — this is a compliance requirement, not a style choice.
 
 Copy must convey practitioner credibility, not consultant-speak. Every sentence should pass the test: *would someone who has actually done this write it this way?*
 
@@ -513,14 +513,16 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 
 | Item | Status | Notes |
 |---|---|---|
-| Microsoft Bookings embed | ✅ Done | Live in `contact.html` — do NOT replace with Calendly |
+| Contact form (fulcrumadvisory.us) | ✅ Done | Formspree `xwvzzkbj` wired via AJAX — info@fulcrumadvisory.us |
+| Microsoft Bookings embed | ⏳ Pending | Removed — schedule button links to contact page; re-add when Bookings is resolved |
 | LinkedIn URL | ⏳ Pending | Footer + about.html `data-placeholder="true"` |
-| Contact form backend | ⏳ Pending | Same solution as Paradise Beach House website |
 | State of incorporation | ⏳ Pending | Needed for `terms.html` |
 | Any certifications (CISSP, etc.) | ⏳ Pending | Add to `about.html` credential cards |
-| Favicon (SVG) | ⏳ Pending | `assets/favicon.svg` — text-based monogram acceptable |
+| Favicon (SVG) | ✅ Done | `assets/favicon.svg` — live |
 | Google Analytics / Search Console | ⏳ Pending | Add `<script>` tag to `<head>` of all pages when ready |
-| Sitemap.xml | ⏳ Update needed | Needs gcch-platforms.html, corp-comms.html, dfars-foci-rule-2026.html added |
+| Sitemap.xml | ✅ Done | All 35 pages included |
+| sf-328-web Formspree endpoint | ⏳ Pending | Replace `FORMSPREE_ENDPOINT` in `sf-328-web/index.html` |
+| fulcrumfoci-web Formspree endpoint | ⏳ Pending | Replace `FORMSPREE_ENDPOINT` in `fulcrumfoci-web/index.html` |
 
 ---
 
@@ -529,24 +531,24 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 | File | Status | Notes |
 |---|---|---|
 | `styles.css` | ✅ Complete | Sacred — do not modify |
-| `index.html` | ✅ Complete | Alert banner updated for May 2026 DFARS rule |
-| `about.html` | ✅ Complete | Firm-level language; updated delivery model credential bar |
-| `contact.html` | ✅ Complete | Microsoft Bookings iframe embedded |
-| `services.html` | ✅ Complete | 6 services; updated delivery model CTA |
+| `index.html` | ✅ Complete | Hero updated; alert dismiss/expand; FulcrumFOCI product section; Products nav link |
+| `about.html` | ✅ Complete | Background section reordered 25+/16+/10+/1+ yr; ECP credential accurate |
+| `contact.html` | ✅ Complete | Formspree xwvzzkbj wired (AJAX); Bookings removed pending resolution |
+| `services.html` | ✅ Complete | 6 services; pricing card bottom-aligned; delivery model CTA |
 | `services/foci-advisory.html` | ✅ Complete | |
-| `services/cmmc-compliance.html` | ✅ Complete | |
-| `services/ai-govcon.html` | ✅ Complete | |
-| `services/gcch-platforms.html` | ✅ Complete | 5 capabilities; accurate GCC High Viva limitations |
-| `services/corp-comms.html` | ✅ Complete | NEW — Service 06; Viva limitations documented |
-| `services/vciso-advisory.html` | ✅ Complete | |
+| `services/cmmc-compliance.html` | ✅ Complete | Scoping/enclave expertise added; Cyber AB non-registration noted |
+| `services/ai-govcon.html` | ✅ Complete | AI strategy/roadmap and COTS evaluation added; scope-first framing |
+| `services/gcch-platforms.html` | ✅ Complete | PBX/VoIP context; Power Platform deliverable; GCC High Viva limitations |
+| `services/corp-comms.html` | ✅ Complete | CMMC engagement angle; digital signage; GCC High focus; Live Events size boundary |
+| `services/vciso-advisory.html` | ✅ Complete | Expanded to vCISO/vCIO; 10–300 employee range; salary figure removed |
 | `insights.html` | ✅ Complete | 9 articles; 2026 DFARS article at top |
-| `insights/dfars-foci-rule-2026.html` | ✅ Complete | NEW — May 25, 2026; Section 847 rule |
+| `insights/dfars-foci-rule-2026.html` | ✅ Complete | May 25, 2026; Section 847 rule |
 | `insights/dfars-foci-rule-2025.html` | ✅ Complete | |
-| `insights/ai-cmmc-gcc-high.html` | ✅ Complete | |
+| `insights/ai-cmmc-gcc-high.html` | ✅ Complete | First-person voice removed |
 | `insights/cmmc-final-rule-2024.html` | ✅ Complete | |
 | `insights/nist-800-171-rev3.html` | ✅ Complete | |
 | `insights/foci-foreign-investment-risk.html` | ✅ Complete | |
-| `insights/gcc-high-ai-architecture.html` | ✅ Complete | |
+| `insights/gcc-high-ai-architecture.html` | ✅ Complete | First-person voice removed |
 | `insights/cmmc-scope-common-mistakes.html` | ✅ Complete | |
 | `insights/dcsa-assessment-prep.html` | ✅ Complete | |
 | `privacy.html` | ✅ Complete | |
@@ -554,5 +556,18 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 | `404.html` | ✅ Complete | |
 | `CNAME` | ✅ Complete | `fulcrumadvisory.us` |
 | `robots.txt` | ✅ Complete | |
-| `sitemap.xml` | ⚠️ Needs update | Missing gcch-platforms, corp-comms, dfars-foci-rule-2026 |
-| `assets/favicon.svg` | 🔲 Pending | |
+| `sitemap.xml` | ✅ Complete | All 35 pages included |
+| `assets/favicon.svg` | ✅ Complete | |
+
+---
+
+## 10. Related Sites (separate repos)
+
+| Site | Repo | Domain | Status | Notes |
+|---|---|---|---|---|
+| SF-328 Resource | `sf-328-web` | `sf-328.us` | ✅ Live | Formspree endpoint pending; sf-328.com/sf328.us forward to it |
+| FulcrumFOCI Product | `fulcrumfoci-web` | `fulcrumfoci.us` | ✅ Live | Formspree endpoint pending; fulcrumfoci.com forwards to it |
+
+**Design system for related sites:** Navy `#0A1628` / Gold `#C9A84C` / Inter font. Vanilla HTML/CSS/JS only. No shared stylesheet with fulcrumadvisory.us — each has its own `assets/css/main.css`.
+
+**Formspree wiring (both sites):** Replace `FORMSPREE_ENDPOINT` in each `index.html` form action with the Formspree form ID. Use AJAX fetch pattern — see `fulcrumadvisory.us/contact.html` for reference implementation.
