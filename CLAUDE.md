@@ -524,8 +524,8 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 | sf-328-web Formspree endpoint | ⏳ Pending | Replace `FORMSPREE_ENDPOINT` in `sf-328-web/index.html` |
 | fulcrumfoci-web Formspree endpoint | ⏳ Pending | Replace `FORMSPREE_ENDPOINT` in `fulcrumfoci-web/index.html` |
 | DNS — fulcrumadvisory.us | ✅ Done | All 4 GitHub Pages A records live; www CNAME → fulcrumadvisory.github.io; M365 fully wired |
-| DNS — fulcrumfoci.us | ⏳ Pending | Currently GoDaddy forward — needs A records + www CNAME for GitHub Pages to serve |
-| DNS — sf-328.us | ⏳ Pending | DNS state unconfirmed — needs A records + www CNAME verified |
+| DNS — fulcrumfoci.us | ⏳ In progress | A records added but GoDaddy forward may still be active — remove forward, wait TTL (1hr), then enable HTTPS in repo Settings → Pages |
+| DNS — sf-328.us | ✅ Done | All 4 GitHub Pages A records live; www CNAME correct — enable HTTPS in repo Settings → Pages |
 | focihelp.us forward | ✅ Done | 301 permanent → fulcrumadvisory.us/services/foci-advisory.html |
 
 ---
