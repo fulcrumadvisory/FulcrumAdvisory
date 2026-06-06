@@ -1,7 +1,15 @@
 {
-  "updated": "2026-06-05T16:14:43.783132+00:00",
+  "updated": "2026-06-06T11:11:44.582399+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "565222",
+      "title": "Microsoft Purview: eDiscovery - In-product diagnostics to troubleshoot common challenges",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=565222",
+      "description": "Self-service diagnostics help identify common issues with case permissions, security filters, and policy status. The experience highlights potential misconfigurations and provides simple guidance to help customers understand and resolve them. This brings basic troubleshooting int"
+    },
     {
       "id": "564913",
       "title": "Outlook: New Outlook for Windows for GCC-H and DoD",
@@ -193,14 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=497834",
       "description": "Quick Steps are now integrated into the ribbon of email pop-out ribbon in the new Outlook for Windows and Web. Users can access and execute their configured Quick Steps directly while reading emails in separate windows. #newoutlookforwindows"
-    },
-    {
-      "id": "496144",
-      "title": "Outlook: Folder Deletion Warning for Rules",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=496144",
-      "description": "Outlook will show warning when you try to delete a folder that's used in a rule. This helps prevent accidental rule breakage and ensures your email flow remains uninterrupted. You'll be prompted to review or update affected rules before the folder is removed. #newoutlookforwindow"
     }
   ]
 }
