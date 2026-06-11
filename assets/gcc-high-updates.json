@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T17:43:41.349056+00:00",
+  "updated": "2026-06-11T17:57:58.937505+00:00",
   "count": 25,
   "items": [
     {
@@ -27,12 +27,28 @@
       "description": "You can now quickly switch between your favorite folders without opening the full folder pane. When the pane is collapsed, your favorite folders appear as a vertical list, giving you one-click access to the folders you use most. Each folder shows unread or total counts so you alw"
     },
     {
+      "id": "562345",
+      "title": "Microsoft Purview: Data Lifecycle Management - Archive OneDrive and SharePoint files under retention",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=562345",
+      "description": "Retention based file archiving moves inactive content to low-cost storage, lowering costs with no compromise on Compliance, keeping data discoverable and making Copilot results highly relevant."
+    },
+    {
       "id": "561485",
       "title": "Microsoft Copilot (Microsoft 365): Copilot in Forms - US Government clouds",
       "status": "In development",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561485",
       "description": "Copilot in Forms is being enabled for Microsoft Forms in Government Cloud environments, bringing end-to-end AI assistance to forms, from creating a form, to refining and sending to analyzing results. This rollout includes key Copilot features such as: - Draft with Copilot - Distr"
+    },
+    {
+      "id": "560075",
+      "title": "Microsoft Purview: Insider Risk Management- IRM alerts in XDR",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=560075",
+      "description": "With this feature, IRM alerts and other supporting data will be available in the following Microsoft Defender XDR experiences:\n\n1. IRM alerts will be surfaced in unified alert and Incident queue in Microsoft Defender XDR.\n2. IRM alerts, Indicators and enriched events will be avai"
     },
     {
       "id": "559617",
@@ -185,22 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=498160",
       "description": "This update enhances the export download experience in Microsoft Purview eDiscovery by introducing support for both pre-authorized and non pre-authorized links. Pre-authorized links offer faster downloads and maintain session continuity for a specified duration. Non pre-authorize"
-    },
-    {
-      "id": "497912",
-      "title": "Microsoft Purview compliance portal: Optical character recognition (OCR) - Support for embedded images in files including Office files in SharePoint and OneDrive ",
-      "status": "In development",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=497912",
-      "description": "Optical character recognition (OCR) scanning enables Microsoft Purview to scan images for sensitive information. With Embedded support, OCR will scan content in DOCX, PPTX, XLSX and PDFs (scanned and hybrid containing searchable text and images). This will be in addition to suppo"
-    },
-    {
-      "id": "497834",
-      "title": "Outlook: Quick steps in the pop-out ribbon",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=497834",
-      "description": "Quick Steps are now integrated into the ribbon of email pop-out ribbon in the new Outlook for Windows and Web. Users can access and execute their configured Quick Steps directly while reading emails in separate windows. #newoutlookforwindows"
     }
   ]
 }
