@@ -1,7 +1,15 @@
 {
-  "updated": "2026-06-15T19:58:54.714542+00:00",
+  "updated": "2026-06-16T19:50:23.357049+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "565373",
+      "title": "Microsoft Purview: eDiscovery - CMK (Customer managed key) for eDiscovery direct export ",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=565373",
+      "description": "This release of eDiscovery features the implementation of customer-managed key (CMK) options, allowing users to manage their own encryption keys for the data included in the direct export workflow in eDiscovery, adding to the Microsoft-managed encryption already in place."
+    },
     {
       "id": "565222",
       "title": "Microsoft Purview: eDiscovery - In-product diagnostics to troubleshoot common challenges",
@@ -193,14 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499077",
       "description": "Information Barrier (IB) support in Microsoft Planner will enable organizations to restrict access to plans and tasks based on user groups.  IB will help prevent data leakage, enforce internal policies, and support regulatory mandates by limiting plan visibility and collaboration"
-    },
-    {
-      "id": "498160",
-      "title": "Microsoft Purview compliance portal: eDiscovery \u2013 Export download with pre-authorized link support",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=498160",
-      "description": "This update enhances the export download experience in Microsoft Purview eDiscovery by introducing support for both pre-authorized and non pre-authorized links. Pre-authorized links offer faster downloads and maintain session continuity for a specified duration. Non pre-authorize"
     }
   ]
 }
