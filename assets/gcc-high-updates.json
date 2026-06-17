@@ -1,7 +1,15 @@
 {
-  "updated": "2026-06-16T19:50:23.357049+00:00",
+  "updated": "2026-06-17T17:30:46.997913+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "566203",
+      "title": "Outlook: Export support for data files in Mac Outlook",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566203",
+      "description": "This feature adds support for exporting PST files into Outlook for Mac. "
+    },
     {
       "id": "565373",
       "title": "Microsoft Purview: eDiscovery - CMK (Customer managed key) for eDiscovery direct export ",
@@ -193,14 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499616",
       "description": "To improve privacy, when transcription is off, captions will now show only the past five minutes of dialogue instead of the full meeting. If transcription is on, captions display the entire conversation, just like with live transcription. We\u2019re also fixing an issue where changing"
-    },
-    {
-      "id": "499077",
-      "title": "Planner: Information Barrier support in Planner",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499077",
-      "description": "Information Barrier (IB) support in Microsoft Planner will enable organizations to restrict access to plans and tasks based on user groups.  IB will help prevent data leakage, enforce internal policies, and support regulatory mandates by limiting plan visibility and collaboration"
     }
   ]
 }
