@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T17:48:51.572917+00:00",
+  "updated": "2026-06-19T16:18:52.230566+00:00",
   "count": 25,
   "items": [
     {
@@ -9,14 +9,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566203",
       "description": "This feature adds support for exporting PST files into Outlook for Mac. "
-    },
-    {
-      "id": "565373",
-      "title": "Microsoft Purview: eDiscovery - CMK (Customer managed key) for eDiscovery direct export ",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=565373",
-      "description": "This release of eDiscovery features the implementation of customer-managed key (CMK) options, allowing users to manage their own encryption keys for the data included in the direct export workflow in eDiscovery, adding to the Microsoft-managed encryption already in place."
     },
     {
       "id": "565222",
@@ -81,14 +73,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=488142",
       "description": "GCC-H and DoD sovereign cloud customers will be able to use features in Excel run by Insights Services, including Analyze Data found on the Data tab."
-    },
-    {
-      "id": "473493",
-      "title": "Microsoft Purview compliance portal: Data Lifecycle Management - Introduction of secure workflow to bypass legal holds and retention policies in Exchange",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=473493",
-      "description": "The first release of Priority cleanup enables admins to create a recurring exception to delete items under a broader retention policy and/or legal hold on Exchange workload. Creating a Priority cleanup will require a separate security role, multiple approvers, and will have a com"
     },
     {
       "id": "472031",
@@ -201,6 +185,22 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499616",
       "description": "To improve privacy, when transcription is off, captions will now show only the past five minutes of dialogue instead of the full meeting. If transcription is on, captions display the entire conversation, just like with live transcription. We\u2019re also fixing an issue where changing"
+    },
+    {
+      "id": "499077",
+      "title": "Planner: Information Barrier support in Planner",
+      "status": "Launched",
+      "date": "September CY2025",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499077",
+      "description": "Information Barrier (IB) support in Microsoft Planner will enable organizations to restrict access to plans and tasks based on user groups.  IB will help prevent data leakage, enforce internal policies, and support regulatory mandates by limiting plan visibility and collaboration"
+    },
+    {
+      "id": "498160",
+      "title": "Microsoft Purview compliance portal: eDiscovery \u2013 Export download with pre-authorized link support",
+      "status": "Launched",
+      "date": "September CY2025",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=498160",
+      "description": "This update enhances the export download experience in Microsoft Purview eDiscovery by introducing support for both pre-authorized and non pre-authorized links. Pre-authorized links offer faster downloads and maintain session continuity for a specified duration. Non pre-authorize"
     }
   ]
 }
