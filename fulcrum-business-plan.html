@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fulcrum Advisory Technologies — Business Plan & Exit Strategy 2026</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0A1628;
+      --navy-light: #142240;
+      --navy-mid: #1e3458;
+      --gold: #C9A84C;
+      --gold-light: #E8C96A;
+      --gold-pale: rgba(201,168,76,0.12);
+      --white: #FFFFFF;
+      --gray-50: #F8F9FB;
+      --gray-100: #E8E9EC;
+      --gray-200: #D1D5DB;
+      --gray-400: #9CA3AF;
+      --gray-600: #4B5563;
+      --gray-700: #374151;
+      --green: #16A34A;
+      --green-pale: #F0FDF4;
+      --amber: #D97706;
+      --amber-pale: #FFFBEB;
+      --red: #DC2626;
+      --red-pale: #FEF2F2;
+      --blue: #2563EB;
+      --blue-pale: #EFF6FF;
+      --font: 'Inter', -apple-system, sans-serif;
+      --radius: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+      --shadow: 0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,.14);
+      --container: 1160px;
+      --print-break: page-break-before: always;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 15px; }
+    body { font-family: var(--font); color: var(--gray-700); background: var(--white); line-height: 1.65; }
+    a { color: var(--gold); text-decoration: none; }
+    strong { font-weight: 600; color: var(--navy); }
+    h1,h2,h3,h4,h5 { color: var(--navy); line-height: 1.25; }
+    p { margin-bottom: .85rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ─── LAYOUT ─── */
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 4.5rem 0; }
+    .section--alt { background: var(--gray-50); }
+    .section--dark { background: var(--navy); color: var(--white); }
+    .section--dark h2, .section--dark h3, .section--dark h4 { color: var(--white); }
+    .section--dark p { color: rgba(255,255,255,.75); }
+    .section--gold-border { border-top: 4px solid var(--gold); }
+
+    /* ─── COVER ─── */
+    .cover {
+      background: linear-gradient(145deg, var(--navy) 0%, #1a3060 60%, #0f2040 100%);
+      color: var(--white);
+      padding: 5rem 0 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cover::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 30%, rgba(201,168,76,.12) 0%, transparent 60%);
+    }
+    .cover__inner { position: relative; z-index: 1; }
+    .cover__tag {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(201,168,76,.15); border: 1px solid rgba(201,168,76,.35);
+      color: var(--gold); font-size: .8rem; font-weight: 600; letter-spacing: .07em;
+      text-transform: uppercase; padding: .375rem 1rem; border-radius: 99px;
+      margin-bottom: 1.75rem;
+    }
+    .cover__dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+    .cover__title { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.12; margin-bottom: .75rem; }
+    .cover__title span { color: var(--gold); }
+    .cover__subtitle { font-size: 1.2rem; color: rgba(255,255,255,.65); margin-bottom: 2.5rem; }
+    .cover__meta { display: flex; gap: 2.5rem; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,.12); padding-top: 1.75rem; }
+    .cover__meta-item { display: flex; flex-direction: column; gap: .25rem; }
+    .cover__meta-label { font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); }
+    .cover__meta-value { font-size: .95rem; font-weight: 600; color: var(--white); }
+    .cover__disclaimer { margin-top: 2rem; font-size: .72rem; color: rgba(255,255,255,.3); line-height: 1.5; max-width: 600px; }
+
+    /* ─── SECTION HEADERS ─── */
+    .sec-eyebrow {
+      font-size: .7rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: .6rem;
+    }
+    .sec-eyebrow--light { color: var(--gold); }
+    .sec-title { font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 700; margin-bottom: .75rem; }
+    .sec-intro { font-size: 1.05rem; color: var(--gray-600); max-width: 680px; line-height: 1.7; }
+    .rule { width: 48px; height: 3px; background: var(--gold); border-radius: 2px; margin: 1rem 0 1.5rem; }
+
+    /* ─── NAV / TOC ─── */
+    .toc {
+      background: var(--navy); color: var(--white);
+      padding: 1.5rem 0;
+      position: sticky; top: 0; z-index: 50;
+      border-bottom: 2px solid var(--gold);
+    }
+    .toc__inner { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .toc__brand { font-weight: 700; font-size: .85rem; color: var(--gold); white-space: nowrap; }
+    .toc__links { display: flex; gap: 1.25rem; flex-wrap: wrap; list-style: none; margin-left: auto; }
+    .toc__links a { font-size: .75rem; color: rgba(255,255,255,.6); font-weight: 500; transition: color .15s; white-space: nowrap; }
+    .toc__links a:hover { color: var(--gold); }
+    .toc__conf { font-size: .65rem; color: rgba(255,255,255,.3); margin-left: auto; white-space: nowrap; }
+
+    /* ─── CARDS ─── */
+    .card { background: var(--white); border: 1px solid var(--gray-100); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-sm); }
+    .card--gold { border-color: rgba(201,168,76,.4); background: var(--gold-pale); }
+    .card--navy { background: var(--navy); color: var(--white); border-color: transparent; }
+    .card--navy h3, .card--navy h4 { color: var(--white); }
+    .card--navy p { color: rgba(255,255,255,.7); }
+    .card--featured { border: 2px solid var(--gold); }
+    .card__label { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--gold); margin-bottom: .5rem; }
+    .card__num { font-size: 2rem; font-weight: 800; color: var(--navy); line-height: 1; }
+    .card__num--gold { color: var(--gold); }
+    .card__unit { font-size: .75rem; color: var(--gray-400); margin-top: .2rem; }
+
+    /* ─── GRIDS ─── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
+    .grid-5 { display: grid; grid-template-columns: repeat(5,1fr); gap: 1rem; }
+    @media (max-width: 900px) {
+      .grid-4 { grid-template-columns: repeat(2,1fr); }
+      .grid-5 { grid-template-columns: repeat(3,1fr); }
+    }
+    @media (max-width: 640px) {
+      .grid-2,.grid-3,.grid-4,.grid-5 { grid-template-columns: 1fr; }
+    }
+
+    /* ─── TABLES ─── */
+    .table-wrap { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--gray-100); margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    th { background: var(--navy); color: var(--white); padding: .75rem 1rem; text-align: left; font-weight: 600; font-size: .78rem; letter-spacing: .04em; white-space: nowrap; }
+    td { padding: .7rem 1rem; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: var(--gray-50); }
+    .td--gold { color: var(--gold); font-weight: 700; }
+    .td--green { color: var(--green); font-weight: 600; }
+    .td--navy { color: var(--navy); font-weight: 600; }
+    .td--bold { font-weight: 700; color: var(--navy); }
+    .td--muted { color: var(--gray-400); font-size: .8rem; }
+
+    /* ─── CALLOUTS ─── */
+    .callout { border-radius: var(--radius); padding: 1.1rem 1.25rem; margin: 1.25rem 0; font-size: .9rem; line-height: 1.65; }
+    .callout--info { background: var(--blue-pale); border-left: 4px solid var(--blue); }
+    .callout--gold { background: var(--gold-pale); border-left: 4px solid var(--gold); }
+    .callout--green { background: var(--green-pale); border-left: 4px solid var(--green); }
+    .callout--amber { background: var(--amber-pale); border-left: 4px solid var(--amber); }
+
+    /* ─── STAT STRIP ─── */
+    .stat-strip { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+    @media (max-width: 768px) { .stat-strip { grid-template-columns: repeat(2,1fr); } }
+    .stat-block { text-align: center; }
+    .stat-block__num { font-size: 2.2rem; font-weight: 800; color: var(--gold); line-height: 1; display: block; margin-bottom: .25rem; }
+    .stat-block__label { font-size: .8rem; color: var(--gray-400); line-height: 1.4; }
+
+    /* ─── TIMELINE ─── */
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .tl-item { display: grid; grid-template-columns: 140px 2px 1fr; gap: 0 1.5rem; }
+    .tl-date { font-size: .8rem; font-weight: 700; color: var(--gold); text-align: right; padding: 1.25rem 0; padding-top: 1.4rem; }
+    .tl-spine { display: flex; flex-direction: column; align-items: center; }
+    .tl-dot { width: 14px; height: 14px; background: var(--gold); border-radius: 50%; margin-top: 1.4rem; flex-shrink: 0; border: 2px solid var(--white); box-shadow: 0 0 0 2px var(--gold); }
+    .tl-line { flex: 1; width: 2px; background: var(--gray-100); }
+    .tl-item:last-child .tl-line { display: none; }
+    .tl-body { padding: 1.1rem 0 1.5rem; }
+    .tl-body h4 { font-size: .95rem; margin-bottom: .35rem; }
+    .tl-body p { font-size: .85rem; color: var(--gray-600); line-height: 1.55; }
+
+    /* ─── REVENUE BARS ─── */
+    .rev-bar-wrap { margin: .5rem 0; }
+    .rev-bar-label { display: flex; justify-content: space-between; font-size: .78rem; margin-bottom: .3rem; }
+    .rev-bar-label span:first-child { color: var(--gray-600); }
+    .rev-bar-label span:last-child { font-weight: 700; color: var(--navy); }
+    .rev-bar-track { height: 8px; background: var(--gray-100); border-radius: 4px; overflow: hidden; }
+    .rev-bar-fill { height: 100%; border-radius: 4px; background: var(--gold); }
+
+    /* ─── COMPETITOR TABLE ─── */
+    .comp-check { color: var(--green); font-weight: 700; }
+    .comp-x { color: var(--red); font-weight: 700; }
+    .comp-partial { color: var(--amber); font-weight: 700; }
+
+    /* ─── PHASE CARDS ─── */
+    .phase-card { border: 1px solid var(--gray-100); border-radius: var(--radius-lg); overflow: hidden; }
+    .phase-card__header { background: var(--navy); padding: 1rem 1.25rem; display: flex; align-items: center; gap: .75rem; }
+    .phase-card__num { font-size: .7rem; font-weight: 700; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; }
+    .phase-card__title { font-size: 1rem; font-weight: 700; color: var(--white); }
+    .phase-card__period { margin-left: auto; font-size: .75rem; color: rgba(255,255,255,.5); }
+    .phase-card__body { padding: 1.25rem; }
+    .phase-card__kpis { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; margin-bottom: 1rem; }
+    .kpi-box { background: var(--gray-50); border-radius: var(--radius); padding: .75rem; text-align: center; }
+    .kpi-box__val { font-size: 1.1rem; font-weight: 800; color: var(--navy); display: block; }
+    .kpi-box__key { font-size: .68rem; color: var(--gray-400); text-transform: uppercase; letter-spacing: .07em; }
+    .phase-card__actions { list-style: none; }
+    .phase-card__actions li { font-size: .83rem; color: var(--gray-700); padding: .3rem 0; border-bottom: 1px solid var(--gray-100); display: flex; gap: .5rem; align-items: flex-start; }
+    .phase-card__actions li:last-child { border-bottom: none; }
+    .phase-card__actions li::before { content: "→"; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    /* ─── BUTTONS ─── */
+    .btn { display: inline-flex; align-items: center; gap: .4rem; padding: .625rem 1.25rem; border-radius: var(--radius); font-size: .875rem; font-weight: 600; border: 2px solid transparent; cursor: pointer; transition: all .15s; }
+    .btn--gold { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+    .btn--outline { background: transparent; color: var(--navy); border-color: var(--navy); }
+
+    /* ─── PRINT ─── */
+    @media print {
+      .toc { display: none; }
+      .section { padding: 2rem 0; }
+      .cover { padding: 3rem 0; }
+    }
+
+    /* ─── MISC ─── */
+    .badge { display: inline-block; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; padding: .2rem .6rem; border-radius: 99px; }
+    .badge--gold { background: var(--gold-pale); color: var(--gold); border: 1px solid rgba(201,168,76,.3); }
+    .badge--green { background: var(--green-pale); color: var(--green); }
+    .badge--navy { background: var(--navy); color: var(--gold); }
+    .badge--amber { background: var(--amber-pale); color: var(--amber); }
+    .divider { height: 1px; background: var(--gray-100); margin: 2rem 0; }
+    .text-muted { color: var(--gray-400); }
+    .text-gold { color: var(--gold); }
+    .text-green { color: var(--green); }
+    .fw-700 { font-weight: 700; }
+    ul.check-list { list-style: none; }
+    ul.check-list li { font-size: .88rem; padding: .3rem 0; padding-left: 1.25rem; position: relative; }
+    ul.check-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+    .footnote { font-size: .72rem; color: var(--gray-400); margin-top: 1rem; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover" id="top">
+  <div class="container cover__inner">
+    <div class="cover__tag"><span class="cover__dot"></span> Confidential — Not for Distribution</div>
+    <h1 class="cover__title">Fulcrum Advisory Technologies<br><span>Business Plan &amp; Exit Strategy</span></h1>
+    <p class="cover__subtitle">FulcrumFOCI Platform · Advisory Services · Grow-to-Sell Roadmap</p>
+    <div class="cover__meta">
+      <div class="cover__meta-item">
+        <span class="cover__meta-label">Prepared by</span>
+        <span class="cover__meta-value">David Taylor, Principal</span>
+      </div>
+      <div class="cover__meta-item">
+        <span class="cover__meta-label">Date</span>
+        <span class="cover__meta-value">June 2026</span>
+      </div>
+      <div class="cover__meta-item">
+        <span class="cover__meta-label">Entity</span>
+        <span class="cover__meta-value">Fulcrum Advisory Technologies, LLC</span>
+      </div>
+      <div class="cover__meta-item">
+        <span class="cover__meta-label">Document Version</span>
+        <span class="cover__meta-value">v1.0 — Draft for Review</span>
+      </div>
+    </div>
+    <p class="cover__disclaimer">This document contains proprietary and confidential business information. It is intended solely for the named recipient(s) and may not be reproduced, distributed, or disclosed without written consent from Fulcrum Advisory Technologies, LLC. All financial projections are forward-looking estimates and subject to change.</p>
+  </div>
+</section>
+
+<!-- TOC NAV -->
+<nav class="toc">
+  <div class="container toc__inner">
+    <span class="toc__brand">Fulcrum Advisory Technologies</span>
+    <ul class="toc__links">
+      <li><a href="#exec-summary">Executive Summary</a></li>
+      <li><a href="#business-plan">Business Plan</a></li>
+      <li><a href="#marketing">Marketing Strategy</a></li>
+      <li><a href="#grow-to-sell">Grow-to-Sell</a></li>
+      <li><a href="#exit-strategy">Exit Strategy</a></li>
+      <li><a href="#financials">Financials</a></li>
+      <li><a href="#funding">Funding</a></li>
+    </ul>
+    <span class="toc__conf">CONFIDENTIAL</span>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- 1. EXECUTIVE SUMMARY                    -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="exec-summary">
+  <div class="container">
+    <div class="sec-eyebrow">Section 01</div>
+    <h2 class="sec-title">Executive Summary</h2>
+    <div class="rule"></div>
+
+    <div class="grid-2" style="gap:2.5rem; align-items:start; margin-bottom:2.5rem;">
+      <div>
+        <p><strong>Fulcrum Advisory Technologies, LLC</strong> is a defense-sector advisory and software company founded by David Taylor — a 25-year enterprise IT and cybersecurity veteran with 16+ years operating as VP of Information Systems and CISO inside a live FOCI-mitigated defense contractor. The company operates at the intersection of three converging market forces: the Section 847 DFARS rulemaking expanding FOCI compliance requirements to ~37,740 previously unaffected contractors, the CMMC final rule now in mandatory enforcement, and the explosion of AI deployment in GCC High environments.</p>
+
+        <p>The business comprises two interlocking units: a <strong>professional advisory practice</strong> (FOCI, CMMC, AI/GCC High, vCISO) and <strong>FulcrumFOCI</strong> — the first and, as of this writing, only purpose-built FOCI compliance management platform on the market. FulcrumFOCI is a licensed SaaS solution built on Microsoft Power Platform, deployed directly into the customer's Azure Government or GCC High tenant. It manages the full FOCI compliance lifecycle — from SF-328 assessment through annual GSC reports, self-inspections, visitor management, changed condition tracking, and DCSA inspection readiness.</p>
+
+        <p>The timing is extraordinary: the proposed DFARS rule published May 7, 2026, will convert a niche compliance obligation affecting ~2,000 cleared facilities into a mainstream requirement affecting 41,000 companies covering $200 billion in DoD acquisitions. No incumbent software platform exists built for this use case. Fulcrum is positioned to own the category before it forms.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1rem;">
+        <div class="card card--featured">
+          <div class="card__label">The Opportunity</div>
+          <div style="font-size:1.75rem; font-weight:800; color:var(--navy); line-height:1.1; margin-bottom:.5rem;">First-Mover<br><span style="color:var(--gold)">Category Creator</span></div>
+          <p style="font-size:.875rem; color:var(--gray-600);">Zero purpose-built FOCI compliance platforms exist. Section 847 creates a mandatory compliance market of 37,740+ companies — by regulatory deadline, not by discretionary purchase.</p>
+        </div>
+
+        <div class="card card--gold">
+          <div class="card__label">3-Year Revenue Target</div>
+          <div class="card__num card__num--gold">$4.1M+</div>
+          <div class="card__unit">Combined advisory + SaaS ARR by end of Year 3 (2028)</div>
+        </div>
+
+        <div class="card">
+          <div class="card__label">Target Exit Valuation</div>
+          <div class="card__num">$35M–$65M</div>
+          <div class="card__unit">Strategic acquisition target at 8–14× ARR / 10–16× EBITDA — 2029–2030 horizon</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Stats -->
+    <div style="background:var(--navy); border-radius:var(--radius-xl); padding:2.5rem; margin-bottom:2rem;">
+      <div class="stat-strip">
+        <div class="stat-block">
+          <span class="stat-block__num">37,740</span>
+          <span class="stat-block__label" style="color:rgba(255,255,255,.5)">Newly impacted contractors under Section 847</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-block__num">$200B</span>
+          <span class="stat-block__label" style="color:rgba(255,255,255,.5)">In DoD acquisitions now subject to FOCI requirements</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-block__num">0</span>
+          <span class="stat-block__label" style="color:rgba(255,255,255,.5)">Existing purpose-built FOCI compliance platforms</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-block__num">25+</span>
+          <span class="stat-block__label" style="color:rgba(255,255,255,.5)">Years of lived defense industrial base experience</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary Points -->
+    <div class="grid-3">
+      <div class="card">
+        <div class="card__label">The Product</div>
+        <h4 style="margin-bottom:.5rem;">FulcrumFOCI Platform</h4>
+        <p style="font-size:.875rem; color:var(--gray-600);">Three subscription tiers + three add-on modules covering the full FOCI lifecycle. Managed Power Platform solution deploying into the customer's GCC High or Azure Government tenant. License-gated, updateable, audit-ready.</p>
+      </div>
+      <div class="card">
+        <div class="card__label">The Services</div>
+        <h4 style="margin-bottom:.5rem;">Advisory Practice</h4>
+        <p style="font-size:.875rem; color:var(--gray-600);">FOCI mitigation advisory, CMMC compliance, AI in GCC High, fractional vCISO, and sf-328.com lead generation. Advisory both generates revenue and feeds the SaaS pipeline.</p>
+      </div>
+      <div class="card">
+        <div class="card__label">The Exit</div>
+        <h4 style="margin-bottom:.5rem;">Strategic Acquisition</h4>
+        <p style="font-size:.875rem; color:var(--gray-600);">Target acquirers: large defense primes and IT integrators (Leidos, Booz Allen, CACI, Peraton, ManTech) and PE firms rolling up govtech compliance platforms. Exit horizon: 2029–2030.</p>
+      </div>
+    </div>
+
+    <div class="callout callout--gold" style="margin-top:2rem;">
+      <strong>The Ask (Preliminary):</strong> David is evaluating whether to bootstrap through Year 1 profitability or raise a targeted seed round of $500K–$1.5M to accelerate platform development, sales infrastructure, and Microsoft partner certification. This document is designed to support both paths and to frame the opportunity for potential early investors or strategic co-founders.
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- 2. BUSINESS PLAN                        -->
+<!-- ════════════════════════════════════════ -->
+<section class="section section--alt section--gold-border" id="business-plan">
+  <div class="container">
+    <div class="sec-eyebrow">Section 02</div>
+    <h2 class="sec-title">Business Plan</h2>
+    <div class="rule"></div>
+
+    <!-- 2.1 Product -->
+    <h3 style="margin-bottom:1rem;">2.1 The Product — FulcrumFOCI</h3>
+    <p class="sec-intro" style="margin-bottom:1.75rem;">FulcrumFOCI is a managed Power Platform solution deployed as a licensed, versioned application inside the customer's existing Microsoft tenant. It is the only platform on the market purpose-built for the FOCI compliance lifecycle under NISPOM (32 CFR Part 117).</p>
+
+    <div class="grid-3" style="margin-bottom:2rem;">
+      <div class="card">
+        <div class="card__label">Core — Tier 1</div>
+        <h4 style="margin-bottom:.5rem;">FOCI Document Lifecycle</h4>
+        <ul class="check-list">
+          <li>ECP / TCP / AOP / FLP management</li>
+          <li>Annual GSC compliance report wizard</li>
+          <li>Self-inspection workflow (32 CFR 117.7)</li>
+          <li>Changed condition tracker + DCSA draft</li>
+          <li>Inspection readiness dashboard</li>
+          <li>Full audit trail + artifact export</li>
+        </ul>
+        <div style="margin-top:1rem; font-size:.8rem; color:var(--gold); font-weight:700;">Est. Pricing: $2,000–3,500/month</div>
+      </div>
+      <div class="card card--featured">
+        <div class="badge badge--gold" style="margin-bottom:.75rem;">Most Popular</div>
+        <div class="card__label">Platform — Tier 2</div>
+        <h4 style="margin-bottom:.5rem;">Full FOCI + Visitor &amp; Travel</h4>
+        <ul class="check-list">
+          <li>All Tier 1 features</li>
+          <li>Visitor management + FN tracking</li>
+          <li>Travel &amp; interaction request module</li>
+          <li>Contract &amp; CUI register</li>
+          <li>Power BI embedded dashboards</li>
+          <li>Teams integration + alerts</li>
+        </ul>
+        <div style="margin-top:1rem; font-size:.8rem; color:var(--gold); font-weight:700;">Est. Pricing: $4,000–6,500/month</div>
+      </div>
+      <div class="card">
+        <div class="card__label">Full Suite — Tier 3</div>
+        <h4 style="margin-bottom:.5rem;">Platform + AI Assistant</h4>
+        <ul class="check-list">
+          <li>All Tier 2 features</li>
+          <li>Copilot Studio AI agent (Teams)</li>
+          <li>RAG over ECP/TCP/NISPOM</li>
+          <li>Azure OpenAI GPT-4o (customer tenant)</li>
+          <li>Natural language FOCI Q&amp;A</li>
+          <li>AI-assisted annual report drafting</li>
+        </ul>
+        <div style="margin-top:1rem; font-size:.8rem; color:var(--gold); font-weight:700;">Est. Pricing: $7,500–12,000/month</div>
+      </div>
+    </div>
+
+    <!-- Add-ons -->
+    <h4 style="margin-bottom:.75rem;">Premium Add-On Modules</h4>
+    <div class="grid-3" style="margin-bottom:2.5rem;">
+      <div class="card">
+        <div class="badge badge--navy" style="margin-bottom:.5rem;">Add-On A</div>
+        <h4 style="font-size:.95rem; margin-bottom:.4rem;">FCL Acquisition</h4>
+        <p style="font-size:.83rem; color:var(--gray-600);">SF-328 guided completion, FOCI risk scoring, FCL package assembly, timeline management. Priced at <strong>$1,000–1,500/month</strong>.</p>
+      </div>
+      <div class="card">
+        <div class="badge badge--navy" style="margin-bottom:.5rem;">Add-On B</div>
+        <h4 style="font-size:.95rem; margin-bottom:.4rem;">FCL Possession</h4>
+        <p style="font-size:.83rem; color:var(--gray-600);">PCL roster, DISS/NBIS tracking, classified material log, storage container inventory, SPP management. Priced at <strong>$1,000–1,500/month</strong>.</p>
+      </div>
+      <div class="card">
+        <div class="badge badge--navy" style="margin-bottom:.5rem;">Add-On C</div>
+        <h4 style="font-size:.95rem; margin-bottom:.4rem;">Classified Computing</h4>
+        <p style="font-size:.83rem; color:var(--gray-600);">ISSM/ISSO tracking, ATO/IATT/SSP artifact management, media logs, TEMPEST documentation, IS self-inspection checklists. Priced at <strong>$1,000–1,500/month</strong>.</p>
+      </div>
+    </div>
+
+    <!-- Deployment -->
+    <h3 style="margin-bottom:1rem;">2.2 Deployment Model &amp; Technical Differentiation</h3>
+    <div class="grid-2" style="margin-bottom:2.5rem; align-items:start;">
+      <div>
+        <p>FulcrumFOCI deploys as a <strong>managed Power Platform solution</strong> into the customer's existing Azure Government or GCC High tenant. This is a critical differentiator: ECP, TCP, and other CUI-adjacent FOCI documents never leave the customer's compliance boundary. There is no shared multi-tenant SaaS infrastructure, no FedRAMP obligation on Fulcrum, and the customer's existing CMMC posture is completely unaffected.</p>
+        <p>The solution is <strong>license-gated via JWT</strong>, allowing Fulcrum to manage subscriptions, enforce tier entitlements, and remotely expire access without ever touching the customer's environment. Updates are delivered as versioned managed solution packages — customers run a single PowerShell script to upgrade.</p>
+        <p>This architecture mirrors how Microsoft's own Power Platform ISV partners deploy (e.g., Brightwork, Inogic, Click Dimensions) and is specifically designed to scale toward AppSource distribution as the partner program matures.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:1rem;">
+        <div class="card card--gold">
+          <div class="card__label">Why This Matters to Buyers</div>
+          <ul class="check-list" style="font-size:.875rem;">
+            <li>Data sovereignty — DCSA-sensitive content stays in the customer's boundary</li>
+            <li>No FedRAMP uplift needed from Fulcrum</li>
+            <li>Leverages Microsoft's existing IL4/IL5 certifications</li>
+            <li>Transparent to CMMC assessors — no new external system to scope</li>
+            <li>Works inside classified air-gap environments with on-premises Power Platform</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card__label">Technology Stack</div>
+          <p style="font-size:.83rem; color:var(--gray-600); margin:0;">Microsoft Power Platform (Dataverse, Power Apps, Power Automate, Power Pages, Power BI, Copilot Studio) · SharePoint Online · Microsoft Entra ID · Azure OpenAI (Tier 3) · JWT license enforcement (RS256)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advisory Practice -->
+    <h3 style="margin-bottom:1rem;">2.3 Advisory Practice</h3>
+    <p style="margin-bottom:1.25rem;">The advisory practice operates across nine service lines anchored to the defense industrial base. It serves as both a standalone revenue engine and a demand-generation flywheel for FulcrumFOCI — advisory clients are the highest-conversion product prospects because they already have a validated FOCI compliance need.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Service Line</th>
+            <th>Engagement Type</th>
+            <th>Typical Scope</th>
+            <th>Pipeline Relationship to SaaS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td--bold">FOCI Advisory</td>
+            <td>Project / Retainer</td>
+            <td>SF-328 analysis, mitigation type selection, ECP/TCP/AOP development, GSC formation, DCSA prep</td>
+            <td class="td--green">Direct → FulcrumFOCI</td>
+          </tr>
+          <tr>
+            <td class="td--bold">CMMC Compliance</td>
+            <td>Project / Retainer</td>
+            <td>Gap assessment, SSP/POA&amp;M, L2/L3 audit prep</td>
+            <td class="td--gold">High crossover (FOCI often co-occurs)</td>
+          </tr>
+          <tr>
+            <td class="td--bold">AI in GCC High</td>
+            <td>Project / Retainer</td>
+            <td>Azure OpenAI architecture, RAG design, Copilot Studio deployment</td>
+            <td class="td--gold">Tier 3 upsell</td>
+          </tr>
+          <tr>
+            <td class="td--bold">vCISO</td>
+            <td>Retainer</td>
+            <td>Ongoing security leadership, board reporting, compliance program management</td>
+            <td>Moderate</td>
+          </tr>
+          <tr>
+            <td class="td--bold">GCC High Platforms</td>
+            <td>Project</td>
+            <td>M365 GCC High migration, Teams/SharePoint deployment</td>
+            <td>Platform prerequisite</td>
+          </tr>
+          <tr>
+            <td class="td--bold">GovCon ERP</td>
+            <td>Project</td>
+            <td>Deltek, JAMIS, Unanet implementations</td>
+            <td>Low direct</td>
+          </tr>
+          <tr>
+            <td class="td--bold">MDM / Apple</td>
+            <td>Project</td>
+            <td>Jamf, Intune for defense environments</td>
+            <td>Low direct</td>
+          </tr>
+          <tr>
+            <td class="td--bold">PMO</td>
+            <td>Project</td>
+            <td>Program management office setup, project governance</td>
+            <td>Low direct</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Corporate Communications</td>
+            <td>Project</td>
+            <td>DCSA notification drafting, board communications, compliance correspondence</td>
+            <td class="td--green">High — DCSA notification tooling in platform</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Target Customers -->
+    <h3 style="margin-bottom:1rem; margin-top:2rem;">2.4 Target Customers</h3>
+    <div class="grid-3" style="margin-bottom:2rem;">
+      <div class="card">
+        <div class="badge badge--green" style="margin-bottom:.6rem;">Segment A — Immediate</div>
+        <h4 style="font-size:.95rem; margin-bottom:.4rem;">Active FOCI Mitigation Holders</h4>
+        <p style="font-size:.83rem; color:var(--gray-600);">~2,000–3,000 companies currently under SSA, SCA, Proxy, or Board Resolution agreements with active DCSA oversight. These companies have an existing, validated compliance burden and no systematic tooling. Average company size: 200–2,000 employees. FSO/ITPSO often working from spreadsheets and SharePoint.</p>
+        <div style="margin-top:.75rem; font-size:.78rem;"><strong>Buyer:</strong> FSO, CISO, VP Operations / CFO (ROI framing)</div>
+      </div>
+      <div class="card card--featured">
+        <div class="badge badge--amber" style="margin-bottom:.6rem;">Segment B — Near-Term Wave</div>
+        <h4 style="font-size:.95rem; margin-bottom:.4rem;">Section 847 Newly Obligated</h4>
+        <p style="font-size:.83rem; color:var(--gray-600);">37,740 uncleared contractors bidding on DoD contracts &gt;$5M. 57% small businesses. Most have never completed an SF-328. Final rule expected late 2026; compliance required within 90 days of contract award. These companies need both advisory (understanding the process) and tooling (managing it ongoing).</p>
+        <div style="margin-top:.75rem; font-size:.78rem;"><strong>Buyer:</strong> CEO/CFO at SMBs, General Counsel, Contracts Manager</div>
+      </div>
+      <div class="card">
+        <div class="badge badge--navy" style="margin-bottom:.6rem;">Segment C — Strategic</div>
+        <h4 style="font-size:.95rem; margin-bottom:.4rem;">Large Cleared Primes</h4>
+        <p style="font-size:.83rem; color:var(--gray-600);">Large primes with complex ownership structures and multiple subsidiary FCLs. Often have dedicated security programs but fragmented tooling. Also includes private equity-backed defense contractors post-acquisition — FOCI mitigation is common in PE-owned DIB companies. Platform sale or enterprise license.</p>
+        <div style="margin-top:.75rem; font-size:.78rem;"><strong>Buyer:</strong> Chief Security Officer, GC, PE operating partner</div>
+      </div>
+    </div>
+
+    <!-- Competitive Landscape -->
+    <h3 style="margin-bottom:1rem;">2.5 Competitive Landscape</h3>
+    <p style="margin-bottom:1.25rem;">No direct competitors exist. The competitive landscape consists of adjacent tools serving overlapping but not equivalent use cases. This white space is Fulcrum's primary strategic advantage.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Competitor / Alternative</th>
+            <th>Type</th>
+            <th>FOCI-Specific</th>
+            <th>NISPOM-Aligned Workflows</th>
+            <th>GSC Report Builder</th>
+            <th>GCC High / AzGov Deploy</th>
+            <th>Tenant-Isolated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td--bold" style="color:var(--gold);">FulcrumFOCI</td>
+            <td>Purpose-Built SaaS</td>
+            <td class="comp-check">✓ Fully</td>
+            <td class="comp-check">✓ 32 CFR 117</td>
+            <td class="comp-check">✓ Automated</td>
+            <td class="comp-check">✓ Native</td>
+            <td class="comp-check">✓ BYOT</td>
+          </tr>
+          <tr>
+            <td class="td--bold">ISI Security Control</td>
+            <td>FSO Compliance Platform</td>
+            <td class="comp-partial">~ Partial</td>
+            <td class="comp-partial">~ General</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-partial">~ FedRAMP High hosted</td>
+            <td class="comp-x">✗ Shared</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Exostar</td>
+            <td>Supply Chain Platform</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-partial">~ Partial</td>
+            <td class="comp-x">✗ Shared</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Drata / Vanta / Hyperproof</td>
+            <td>GRC / Compliance SaaS</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-x">✗ CMMC-focused</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-x">✗</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Word + SharePoint</td>
+            <td>Status Quo</td>
+            <td class="comp-x">✗ Manual</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-check">✓</td>
+            <td class="comp-check">✓</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Law Firm / Consultant</td>
+            <td>Services Only</td>
+            <td class="comp-partial">~ Advisory</td>
+            <td class="comp-partial">~ Knowledge</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-x">✗</td>
+            <td class="comp-x">N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout--green" style="margin-top:1.5rem;">
+      <strong>Moat Summary:</strong> FulcrumFOCI's defensibility comes from four sources: (1) deep NISPOM regulatory knowledge embedded in product logic — not easily replicated by generic GRC platforms; (2) BYOT deployment model matching the compliance posture of the exact buyers; (3) first-mover network effects as FSOs and DCSA-facing companies standardize on the platform; and (4) David Taylor's personal credibility as a 16-year FOCI-mitigated contractor veteran — a key sales trust signal in a relationship-driven market.
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- 3. MARKETING STRATEGY                   -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="marketing">
+  <div class="container">
+    <div class="sec-eyebrow">Section 03</div>
+    <h2 class="sec-title">Marketing Strategy</h2>
+    <div class="rule"></div>
+
+    <!-- Positioning -->
+    <h3 style="margin-bottom:1rem;">3.1 Positioning &amp; Brand Architecture</h3>
+    <div class="grid-2" style="gap:2rem; align-items:start; margin-bottom:2.5rem;">
+      <div>
+        <p>Fulcrum Advisory occupies a distinctive positioning: <em>practitioner-led, inside-the-fence expertise</em>. The brand promise — "Built from inside the defense industrial base, not consulting into it" — resonates immediately with FSOs, CISOs, and security officers who have been burned by consultants who learned FOCI from the frameworks rather than living under them.</p>
+        <p>FulcrumFOCI the product carries an adjacent positioning: <em>the only platform that thinks like your FSO</em>. Every workflow, deadline logic, and document template is built to the specific requirements of 32 CFR Part 117 — not generic GRC controls. The marketing language consistently contrasts FulcrumFOCI against the status quo (Word documents, SharePoint chaos, calendar reminders) rather than against competitors that don't exist.</p>
+        <div class="callout callout--gold" style="margin-top:1.25rem;">
+          <strong>Positioning Statement:</strong> For defense contractors under active FOCI mitigation agreements, FulcrumFOCI is the only purpose-built compliance management platform that deploys in your tenant, manages your full NISPOM obligations, and keeps your FSO inspection-ready — not just document-ready.
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:1rem;">
+        <div class="card">
+          <div class="card__label">Three-Site Lead Architecture</div>
+          <div style="display:flex; flex-direction:column; gap:.75rem; margin-top:.5rem;">
+            <div style="display:flex; gap:.75rem; align-items:flex-start;">
+              <div style="font-size:.75rem; font-weight:700; color:var(--gold); background:var(--navy); padding:.25rem .6rem; border-radius:4px; white-space:nowrap; flex-shrink:0;">sf-328.com</div>
+              <p style="font-size:.82rem; color:var(--gray-600); margin:0;">High-volume SEO traffic capture. Targets the 37,740 newly impacted contractors panicking about Section 847. Converts to advisory leads and FulcrumFOCI trials.</p>
+            </div>
+            <div style="display:flex; gap:.75rem; align-items:flex-start;">
+              <div style="font-size:.75rem; font-weight:700; color:var(--gold); background:var(--navy); padding:.25rem .6rem; border-radius:4px; white-space:nowrap; flex-shrink:0;">fulcrumadvisory.us</div>
+              <p style="font-size:.82rem; color:var(--gray-600); margin:0;">Authority platform. Builds credibility via long-form insights, regulatory analysis, and service descriptions. Mid-funnel for engaged prospects.</p>
+            </div>
+            <div style="display:flex; gap:.75rem; align-items:flex-start;">
+              <div style="font-size:.75rem; font-weight:700; color:var(--gold); background:var(--navy); padding:.25rem .6rem; border-radius:4px; white-space:nowrap; flex-shrink:0;">fulcrumfoci.com</div>
+              <p style="font-size:.82rem; color:var(--gray-600); margin:0;">Product-focused. Tier comparison, module demos, pricing inquiry. Converts product-aware prospects into demo requests.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GTM -->
+    <h3 style="margin-bottom:1rem;">3.2 Go-to-Market Channels</h3>
+    <div class="grid-2" style="gap:1.5rem; margin-bottom:2.5rem;">
+
+      <div class="card">
+        <div class="card__label">Channel 1 — Organic Search (SEO)</div>
+        <h4 style="margin-bottom:.5rem;">Section 847 / SF-328 Traffic Capture</h4>
+        <p style="font-size:.85rem; color:var(--gray-600);">The DFARS proposed rule published May 7, 2026 is generating massive search volume for "SF-328," "FOCI compliance," and "Section 847." sf-328.com is engineered to dominate these terms with FAQ schema markup, long-form authoritative content, and regulatory analysis. The fulcrumadvisory.us insights blog targets mid-funnel terms like "FOCI mitigation SSA," "DCSA self-inspection checklist," and "CMMC FOCI intersection."</p>
+        <ul class="check-list" style="margin-top:.75rem; font-size:.82rem;">
+          <li>Primary target: sf-328.com ranking #1 for "SF-328" and "Section 847 FOCI"</li>
+          <li>Secondary: fulcrumadvisory.us ranking for FOCI advisory + CMMC terms</li>
+          <li>Content cadence: 2–3 regulatory analysis articles/month</li>
+          <li>Link-building via ClearanceJobs, GovExec, FCW outreach</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card__label">Channel 2 — Direct Outreach &amp; Referral</div>
+        <h4 style="margin-bottom:.5rem;">FSO &amp; Security Community Networks</h4>
+        <p style="font-size:.85rem; color:var(--gray-600);">David Taylor's personal network in the cleared contractor community — NCMS (National Classification Management Society), ASIS International, NDIA — represents a high-trust referral channel. FSOs talk to FSOs. One reference customer in a DCSA region creates a word-of-mouth network effect. DCSA IS Reps who see FulcrumFOCI artifacts during assessments become informal evangelists.</p>
+        <ul class="check-list" style="margin-top:.75rem; font-size:.82rem;">
+          <li>Target 10–15 FSO peer referral relationships in Year 1</li>
+          <li>Present at NCMS annual seminar and regional ASIS events</li>
+          <li>LinkedIn authority content: regulatory analysis, FOCI tips</li>
+          <li>DCSA Industrial Security conference presence</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card__label">Channel 3 — Microsoft Partner Ecosystem</div>
+        <h4 style="margin-bottom:.5rem;">Power Platform ISV + Channel Partners</h4>
+        <p style="font-size:.85rem; color:var(--gray-600);">FulcrumFOCI is a Power Platform native application, making Microsoft's own partner and distribution channels a natural fit. Microsoft has active programs for defense and government ISVs. Achieving Microsoft Solution Partner designation (Security) and eventually listing on AppSource opens access to Microsoft's government customer success and sales teams.</p>
+        <ul class="check-list" style="margin-top:.75rem; font-size:.82rem;">
+          <li>Pursue Microsoft ISV Success Program enrollment (Year 1)</li>
+          <li>Apply for Microsoft for Startups Founders Hub (GCC High access)</li>
+          <li>Co-sell arrangement with Microsoft federal sales team</li>
+          <li>Partner with GCC High MSPs (Summit 7, Connecting Point) as channel</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card__label">Channel 4 — Advisory-to-Platform Conversion</div>
+        <h4 style="margin-bottom:.5rem;">Advisory Pipeline Feeds Product</h4>
+        <p style="font-size:.85rem; color:var(--gray-600);">Every FOCI advisory engagement is a qualified FulcrumFOCI prospect. The conversion playbook: deliver advisory (SF-328 analysis, mitigation selection, ECP/TCP drafting) → demonstrate how FulcrumFOCI manages everything ongoing → offer a free 90-day pilot during the FCL processing period when workflows are being built anyway.</p>
+        <ul class="check-list" style="margin-top:.75rem; font-size:.82rem;">
+          <li>Every advisory engagement includes a FulcrumFOCI demo</li>
+          <li>Pilot offer: first 90 days included with FOCI advisory project</li>
+          <li>Target 40%+ advisory-to-platform conversion rate</li>
+          <li>Retainer clients become the highest-retention SaaS customers</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card__label">Channel 5 — Law Firm &amp; DCSA Consultant Partnerships</div>
+        <h4 style="margin-bottom:.5rem;">Referral Network</h4>
+        <p style="font-size:.85rem; color:var(--gray-600);">Section 847 is generating a wave of law firm activity. Practices like Wiley Law, Holland &amp; Knight, Covington, Crowell, and Goodwin are publishing FOCI alerts and handling incoming client inquiries they are not staffed to operationalize. A structured referral arrangement — law firm handles the legal/regulatory work, Fulcrum handles the operational compliance and platform — is a natural partnership model.</p>
+        <ul class="check-list" style="margin-top:.75rem; font-size:.82rem;">
+          <li>Identify 5–8 law firms with active FOCI/national security practices</li>
+          <li>Structured referral agreement with revenue share or reciprocal referrals</li>
+          <li>DCSA-adjacent consultants and ISSO/ISSM professionals as channel partners</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card__label">Channel 6 — Paid &amp; Event</div>
+        <h4 style="margin-bottom:.5rem;">Targeted &amp; Conference Presence</h4>
+        <p style="font-size:.85rem; color:var(--gray-600);">Low-volume, high-intent paid search on FOCI and Section 847 terms. Conference presence at NDIA, NCMS, ClearanceJobs virtual events, and AFCEA. LinkedIn Sponsored Content targeting FSO, CISO, and Security Officer job titles at companies holding DoD contracts &gt;$5M.</p>
+        <ul class="check-list" style="margin-top:.75rem; font-size:.82rem;">
+          <li>Google Ads: "FOCI compliance software," "SF-328 help," "DCSA self-inspection"</li>
+          <li>LinkedIn: FSO / CISO / Security Manager targeting at cleared contractors</li>
+          <li>NCMS Annual Seminar booth + speaking session</li>
+          <li>ClearanceJobs partner content</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Customer Acquisition Metrics -->
+    <h3 style="margin-bottom:1rem;">3.3 Customer Acquisition Model</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Year 1 (2026)</th>
+            <th>Year 2 (2027)</th>
+            <th>Year 3 (2028)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td--bold">sf-328.com Monthly Visitors (est.)</td>
+            <td>2,000 – 5,000</td>
+            <td>8,000 – 15,000</td>
+            <td>20,000 – 35,000</td>
+          </tr>
+          <tr>
+            <td class="td--bold">MQL (Marketing Qualified Leads) / mo</td>
+            <td>8 – 15</td>
+            <td>25 – 45</td>
+            <td>60 – 100</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Advisory Engagements Won</td>
+            <td>6 – 10</td>
+            <td>15 – 25</td>
+            <td>25 – 40</td>
+          </tr>
+          <tr>
+            <td class="td--bold">FulcrumFOCI Customers (net new)</td>
+            <td>3 – 8</td>
+            <td>15 – 25</td>
+            <td>30 – 45</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Advisory → Platform Conversion Rate</td>
+            <td>40%</td>
+            <td>45%</td>
+            <td>50%</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Estimated CAC (Blended)</td>
+            <td>$8,000 – $15,000</td>
+            <td>$5,000 – $10,000</td>
+            <td>$4,000 – $8,000</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Estimated LTV (Platform Customer)</td>
+            <td colspan="3">$180,000 – $360,000+ (3–5 year retention at Tier 2 avg)</td>
+          </tr>
+          <tr>
+            <td class="td--bold">LTV:CAC Ratio (Year 3)</td>
+            <td colspan="3" class="td--green">~25:1 – 45:1 (highly favorable)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout--info" style="margin-top:1.5rem;">
+      <strong>Key Content Marketing Play:</strong> The sf-328.com site is David's highest-leverage marketing asset in 2026. Section 847 rulemaking panic is creating a once-in-a-decade search traffic event. A site that ranks #1 for "SF-328" and "Section 847 FOCI" in the 60-day window before and after the July 6, 2026 comment deadline close could generate 12–24 months of pipeline from a single content investment. Every dollar invested in sf-328.com SEO before the final rule is significantly leveraged.
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- 4. GROW-TO-SELL PLAN                    -->
+<!-- ════════════════════════════════════════ -->
+<section class="section section--alt section--gold-border" id="grow-to-sell">
+  <div class="container">
+    <div class="sec-eyebrow">Section 04</div>
+    <h2 class="sec-title">Grow-to-Sell Plan</h2>
+    <div class="rule"></div>
+    <p class="sec-intro" style="margin-bottom:2.5rem;">The grow-to-sell plan is built around a four-phase value creation arc: (1) prove the product, (2) build recurring revenue, (3) demonstrate category leadership, and (4) reach exit-readiness. Each phase has specific KPIs that both validate operational progress and build the metrics story acquirers will want to see.</p>
+
+    <!-- Phase Cards -->
+    <div style="display:flex; flex-direction:column; gap:1.5rem; margin-bottom:2.5rem;">
+
+      <div class="phase-card">
+        <div class="phase-card__header">
+          <div>
+            <div class="phase-card__num">Phase 1</div>
+            <div class="phase-card__title">Prove the Product &amp; Capture the Wave</div>
+          </div>
+          <span class="phase-card__period">H2 2026 — Q1 2027</span>
+        </div>
+        <div class="phase-card__body">
+          <div class="phase-card__kpis">
+            <div class="kpi-box"><span class="kpi-box__val">3–8</span><span class="kpi-box__key">Platform customers</span></div>
+            <div class="kpi-box"><span class="kpi-box__val">$250K</span><span class="kpi-box__key">Target ARR (SaaS)</span></div>
+            <div class="kpi-box"><span class="kpi-box__val">v1.0</span><span class="kpi-box__key">Managed solution shipped</span></div>
+          </div>
+          <ul class="phase-card__actions">
+            <li>Ship FulcrumFOCI Core (Tier 1) as installable managed Power Platform solution with JWT licensing active</li>
+            <li>Sign 3–8 paying customers — ideally 2+ under active SSA agreements as reference customers</li>
+            <li>Launch sf-328.com and begin SEO ranking for Section 847 / SF-328 terms during peak traffic window</li>
+            <li>Establish 2–3 law firm referral partnerships before the Section 847 final rule drops</li>
+            <li>Document 3 customer success stories (DCSA inspection outcomes, FSO time savings, compliance score improvement)</li>
+            <li>Apply for Microsoft ISV Success Program and begin Partner Center setup</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-card__header">
+          <div>
+            <div class="phase-card__num">Phase 2</div>
+            <div class="phase-card__title">Build Recurring Revenue &amp; Operational Repeatability</div>
+          </div>
+          <span class="phase-card__period">Q2 2027 — Q4 2027</span>
+        </div>
+        <div class="phase-card__body">
+          <div class="phase-card__kpis">
+            <div class="kpi-box"><span class="kpi-box__val">20–30</span><span class="kpi-box__key">Platform customers</span></div>
+            <div class="kpi-box"><span class="kpi-box__val">$1.5M</span><span class="kpi-box__key">Target ARR (combined)</span></div>
+            <div class="kpi-box"><span class="kpi-box__val">&gt;90%</span><span class="kpi-box__key">Gross retention</span></div>
+          </div>
+          <ul class="phase-card__actions">
+            <li>Ship Platform tier (Tier 2) and begin upselling existing Tier 1 customers</li>
+            <li>Achieve 90%+ gross revenue retention — this is the single most important metric for a future acquirer</li>
+            <li>Document and templatize the customer onboarding process (deployment scripts, training materials, success playbooks)</li>
+            <li>Hire first part-time or fractional customer success resource</li>
+            <li>Achieve Microsoft Solution Partner designation (Security or Business Applications)</li>
+            <li>Begin co-sell conversations with Microsoft federal sales team in 2–3 regions</li>
+            <li>Submit case study to NCMS Journal and ClearanceJobs — first industry publication establishing category</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-card__header">
+          <div>
+            <div class="phase-card__num">Phase 3</div>
+            <div class="phase-card__title">Demonstrate Category Leadership &amp; Build the Story</div>
+          </div>
+          <span class="phase-card__period">H1 2028 — Q3 2028</span>
+        </div>
+        <div class="phase-card__body">
+          <div class="phase-card__kpis">
+            <div class="kpi-box"><span class="kpi-box__val">50–65</span><span class="kpi-box__key">Platform customers</span></div>
+            <div class="kpi-box"><span class="kpi-box__val">$3.5M+</span><span class="kpi-box__key">Target ARR (combined)</span></div>
+            <div class="kpi-box"><span class="kpi-box__val">Rule of 40</span><span class="kpi-box__key">Growth + margin ≥40</span></div>
+          </div>
+          <ul class="phase-card__actions">
+            <li>Ship Full Suite (Tier 3) and all three add-on modules — maximum ARPU potential</li>
+            <li>Achieve Rule of 40 (revenue growth rate % + EBITDA margin % ≥ 40) — the threshold that unlocks premium acquisition multiples</li>
+            <li>Engage an investment banker or M&amp;A advisor for a process readiness assessment</li>
+            <li>Build and document a clean, auditable recurring revenue report (MRR waterfall, churn cohorts, NRR)</li>
+            <li>Get DCSA Industrial Security Representative testimonials or informal endorsements</li>
+            <li>Evaluate AppSource listing — Microsoft marketplace certification</li>
+            <li>Begin building a "Company Overview" teaser for M&amp;A conversations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-card__header">
+          <div>
+            <div class="phase-card__num">Phase 4</div>
+            <div class="phase-card__title">Exit Readiness &amp; Process Launch</div>
+          </div>
+          <span class="phase-card__period">Q4 2028 — Q2 2030</span>
+        </div>
+        <div class="phase-card__body">
+          <div class="phase-card__kpis">
+            <div class="kpi-box"><span class="kpi-box__val">80–120</span><span class="kpi-box__key">Platform customers</span></div>
+            <div class="kpi-box"><span class="kpi-box__val">$5M–8M</span><span class="kpi-box__key">Target ARR</span></div>
+            <div class="kpi-box"><span class="kpi-box__val">$35M–75M</span><span class="kpi-box__key">Target exit valuation</span></div>
+          </div>
+          <ul class="phase-card__actions">
+            <li>Engage defense-focused M&amp;A advisor (Raymond James GovTech team, Baird, or DC Capital)</li>
+            <li>Prepare CIM (Confidential Information Memorandum) with clean financial statements and ARR schedules</li>
+            <li>Run structured process: strategic outreach to 8–12 identified acquirers, management presentations, LOI</li>
+            <li>Key due diligence items: IP ownership documentation, customer contracts, RBAC clean audit, no customer concentration &gt;20%</li>
+            <li>Ensure David can provide 12–18 months of transition / earn-out commitment post-close</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- What Makes Fulcrum Attractive to Acquirers -->
+    <h3 style="margin-bottom:1rem;">4.2 What Makes Fulcrum Attractive to Acquirers</h3>
+    <div class="grid-2" style="gap:1.5rem; margin-bottom:2rem;">
+      <div>
+        <h4 style="font-size:.95rem; margin-bottom:.75rem; color:var(--gold);">Financial Profile Metrics</h4>
+        <div style="display:flex; flex-direction:column; gap:.75rem;">
+          <div class="rev-bar-wrap">
+            <div class="rev-bar-label"><span>Gross Revenue Retention Target</span><span>90%+</span></div>
+            <div class="rev-bar-track"><div class="rev-bar-fill" style="width:90%"></div></div>
+          </div>
+          <div class="rev-bar-wrap">
+            <div class="rev-bar-label"><span>Net Revenue Retention Target (with upsells)</span><span>110–120%</span></div>
+            <div class="rev-bar-track"><div class="rev-bar-fill" style="width:100%"></div></div>
+          </div>
+          <div class="rev-bar-wrap">
+            <div class="rev-bar-label"><span>Gross Margin (SaaS)</span><span>75–82%</span></div>
+            <div class="rev-bar-track"><div class="rev-bar-fill" style="width:78%"></div></div>
+          </div>
+          <div class="rev-bar-wrap">
+            <div class="rev-bar-label"><span>Advisory Gross Margin</span><span>65–75%</span></div>
+            <div class="rev-bar-track"><div class="rev-bar-fill" style="width:68%"></div></div>
+          </div>
+          <div class="rev-bar-wrap">
+            <div class="rev-bar-label"><span>Rule of 40 Target (Y3)</span><span>55+</span></div>
+            <div class="rev-bar-track"><div class="rev-bar-fill" style="width:55%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:.95rem; margin-bottom:.75rem; color:var(--gold);">Strategic Value Drivers</h4>
+        <ul class="check-list">
+          <li><strong>Regulatory forcing function:</strong> FOCI compliance is not discretionary — customers who cancel become non-compliant with DCSA. Extremely low churn risk.</li>
+          <li><strong>White space ownership:</strong> First mover with no credible direct competitor. Acquirer gets a category, not just a product.</li>
+          <li><strong>Power Platform leverage:</strong> Acquirer immediately benefits from Microsoft's existing GCC High relationships, AppSource distribution, and co-sell infrastructure.</li>
+          <li><strong>Adjacent expansion:</strong> Natural extension into CMMC workflow management, DCSA facility clearance tracker, NISS integration, and cleared contractor HR/personnel security.</li>
+          <li><strong>AI capabilities:</strong> Tier 3 Copilot Studio AI agent and Azure OpenAI integration command a 30–50% valuation premium over comparable non-AI platforms per current govtech M&amp;A data.</li>
+          <li><strong>David Taylor's expertise:</strong> Acquirer inherits 25+ years of DIB operating experience, a trusted DCSA-adjacent brand, and a content/SEO moat that took years to build.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- 5. EXIT STRATEGY                        -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="exit-strategy">
+  <div class="container">
+    <div class="sec-eyebrow">Section 05</div>
+    <h2 class="sec-title">Exit Strategy</h2>
+    <div class="rule"></div>
+
+    <!-- Exit Options -->
+    <h3 style="margin-bottom:1rem;">5.1 Realistic Exit Paths</h3>
+    <div class="grid-3" style="margin-bottom:2rem;">
+      <div class="card card--featured">
+        <div class="badge badge--gold" style="margin-bottom:.6rem;">Preferred Path</div>
+        <h4 style="margin-bottom:.5rem;">Strategic Acquisition — Defense Prime or IT Integrator</h4>
+        <p style="font-size:.875rem; color:var(--gray-600);">Large defense primes and IT integrators (Leidos, Booz Allen, CACI, Peraton, ManTech, GDIT, Accenture Federal) are actively acquiring specialized defense software companies with recurring revenue and regulatory moats. FulcrumFOCI is a natural bolt-on to any firm with an industrial security or NISP compliance practice. The advisory practice adds a high-margin services wrapper.</p>
+        <div style="margin-top:1rem;">
+          <div style="font-size:.78rem; font-weight:700; color:var(--navy); margin-bottom:.3rem;">Multiple Range</div>
+          <div style="font-size:1.3rem; font-weight:800; color:var(--gold);">10–16× ARR</div>
+          <div style="font-size:.78rem; color:var(--gray-400);">Based on GovTech PE deal medians (11.4× EV/Revenue, 1H 2025) plus AI premium</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="badge badge--amber" style="margin-bottom:.6rem;">Secondary Path</div>
+        <h4 style="margin-bottom:.5rem;">Private Equity — Platform Company / Roll-Up</h4>
+        <p style="font-size:.875rem; color:var(--gray-600);">PE firms (Thoma Bravo, Vista, DC Capital, STG, Enlightenment Capital) are actively building defense compliance software platforms through roll-up acquisitions. FulcrumFOCI as a platform for a NISP/CMMC compliance roll-up with add-on acquisitions (ISSM tools, personnel security systems) fits the govtech consolidation thesis that drove $17B+ in deal volume in 2025.</p>
+        <div style="margin-top:1rem;">
+          <div style="font-size:.78rem; font-weight:700; color:var(--navy); margin-bottom:.3rem;">Multiple Range</div>
+          <div style="font-size:1.3rem; font-weight:800; color:var(--gold);">8–12× ARR</div>
+          <div style="font-size:.78rem; color:var(--gray-400);">Private SaaS median 4.8–5.3× ARR; premium expected for defense regulatory SaaS</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="badge badge--navy" style="margin-bottom:.6rem;">Long-Term Option</div>
+        <h4 style="margin-bottom:.5rem;">Acqui-Hire or Strategic License</h4>
+        <p style="font-size:.875rem; color:var(--gray-600);">A large cleared contractor or consulting firm (Deloitte Federal, KPMG Federal, Guidehouse) might pursue an acqui-hire — acquiring David's expertise and the Fulcrum brand to seed or accelerate their own FOCI/CMMC practice. Alternatively, a technology licensing deal gives a larger platform vendor the FulcrumFOCI IP for integration. Lower valuation but potentially faster execution.</p>
+        <div style="margin-top:1rem;">
+          <div style="font-size:.78rem; font-weight:700; color:var(--navy); margin-bottom:.3rem;">Multiple Range</div>
+          <div style="font-size:1.3rem; font-weight:800; color:var(--gold);">3–6× ARR</div>
+          <div style="font-size:.78rem; color:var(--gray-400);">Or negotiated licensing + employment structure</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Target Acquirers -->
+    <h3 style="margin-bottom:1rem;">5.2 Target Acquirer Profiles</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Acquirer</th>
+            <th>Type</th>
+            <th>Rationale</th>
+            <th>Likely Multiple</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td--bold">Leidos / SAIC</td>
+            <td>Defense Prime</td>
+            <td>Large industrial security practices; FOCI tool fills gap in customer security compliance stack; GCC High expertise alignment</td>
+            <td class="td--gold">12–16× ARR</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Booz Allen Hamilton</td>
+            <td>Defense Consulting + Tech</td>
+            <td>Strong NISP consulting practice; FulcrumFOCI productizes their advisory work; David's expertise is a hire they would otherwise recruit</td>
+            <td class="td--gold">10–14× ARR</td>
+          </tr>
+          <tr>
+            <td class="td--bold">CACI International</td>
+            <td>Defense IT / Services</td>
+            <td>Significant cleared contractor base; industrial security tools; Section 847 compliance is a near-term growth market</td>
+            <td class="td--gold">10–14× ARR</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Peraton / ManTech</td>
+            <td>Defense IT Services</td>
+            <td>Large cleared workforce; NISP compliance overhead is a real internal cost; platform reduces compliance cost and adds customer-facing product</td>
+            <td class="td--gold">9–13× ARR</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Thoma Bravo / Vista</td>
+            <td>Software-Focused PE</td>
+            <td>Proven govtech SaaS roll-up thesis; FulcrumFOCI as platform company for adjacent compliance acquisitions (CMMC tooling, personnel security)</td>
+            <td class="td--gold">8–12× ARR</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Enlightenment Capital / DC Capital</td>
+            <td>Defense-Focused PE</td>
+            <td>Specifically targets DIB compliance and services companies; smaller check sizes match earlier exit timing if desired</td>
+            <td class="td--gold">7–11× ARR</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Microsoft (AppSource / Partner)</td>
+            <td>Platform Vendor</td>
+            <td>FulcrumFOCI as a Microsoft-endorsed compliance app for GCC High — strengthens their defense platform story; IP acquisition or deep partnership</td>
+            <td class="td--gold">Strategic premium</td>
+          </tr>
+          <tr>
+            <td class="td--bold">ISI Security / Exostar</td>
+            <td>Adjacent Platform</td>
+            <td>Either competitor acquires Fulcrum to enter the FOCI-specific market rather than build; defensive acquisition to prevent category formation</td>
+            <td class="td--gold">8–12× ARR</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Valuation Range -->
+    <h3 style="margin-bottom:1rem; margin-top:2rem;">5.3 Valuation Range &amp; Trigger Conditions</h3>
+    <div class="grid-2" style="gap:2rem; align-items:start; margin-bottom:2rem;">
+      <div>
+        <p>Based on current GovTech M&amp;A transaction data and SaaS valuation benchmarks, Fulcrum Advisory Technologies is targeting a <strong>2029–2030 exit</strong> at the following valuation ranges, contingent on hitting the Phase 3/4 ARR milestones:</p>
+
+        <div class="table-wrap" style="margin-top:1rem;">
+          <table>
+            <thead>
+              <tr><th>Scenario</th><th>ARR at Exit</th><th>Multiple</th><th>Implied Valuation</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Conservative</td><td>$4M</td><td>8–9×</td><td class="td--bold">$32–36M</td></tr>
+              <tr><td>Base Case</td><td>$6M</td><td>10–12×</td><td class="td--gold td--bold">$60–72M</td></tr>
+              <tr><td>Optimistic</td><td>$9M</td><td>12–15×</td><td class="td--green td--bold">$108–135M</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="footnote">Multiples based on: GovTech PE EV/Revenue median 11.4× (1H 2025, Raymond James); private SaaS strategic premium 30–50% for AI-enabled platforms; defense regulatory SaaS category premium for first-mover. Base case assumes Rule of 40 compliance and 90%+ GRR at exit.</p>
+      </div>
+      <div>
+        <h4 style="font-size:.95rem; margin-bottom:.75rem; color:var(--gold);">Exit Trigger Conditions</h4>
+        <p style="font-size:.875rem; margin-bottom:.75rem;">A sale process should be initiated when the following conditions are met:</p>
+        <ul class="check-list" style="font-size:.875rem;">
+          <li>$4M+ ARR with 90%+ GRR over trailing 12 months</li>
+          <li>50+ active platform customers with no single customer representing &gt;15% of ARR</li>
+          <li>Positive EBITDA for at least 2 consecutive quarters</li>
+          <li>Section 847 final rule in force — mandatory compliance market fully established</li>
+          <li>Microsoft Solution Partner designation achieved</li>
+          <li>At least one documented DCSA assessment where FulcrumFOCI artifacts were used</li>
+          <li>Clean cap table, documented IP ownership, transferable customer contracts</li>
+        </ul>
+        <div class="callout callout--amber" style="margin-top:1rem; font-size:.83rem;">
+          <strong>Do NOT initiate a process before:</strong> GRR is consistently 90%+, customer count exceeds 40, and at least 2 full annual compliance cycles (GSC reports, self-inspections) have been completed through the platform. These provide the retention and product quality signal acquirers require.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- 6. FINANCIAL PROJECTIONS                -->
+<!-- ════════════════════════════════════════ -->
+<section class="section section--alt section--gold-border" id="financials">
+  <div class="container">
+    <div class="sec-eyebrow">Section 06</div>
+    <h2 class="sec-title">Financial Projections — 3-Year Model</h2>
+    <div class="rule"></div>
+    <p style="color:var(--gray-600); margin-bottom:2rem; font-size:.9rem;">All projections are forward-looking estimates. Revenue figures are based on market research, comparable company benchmarks, and assumed go-to-market execution. Actual results will depend on sales velocity, platform development timeline, and regulatory finalization of Section 847.</p>
+
+    <!-- Revenue Summary Table -->
+    <h3 style="margin-bottom:1rem;">6.1 Revenue Summary</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Revenue Stream</th>
+            <th>Year 1 (2026)</th>
+            <th>Year 2 (2027)</th>
+            <th>Year 3 (2028)</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td--bold">FulcrumFOCI SaaS — Core (Tier 1)</td>
+            <td>$48,000</td>
+            <td>$158,400</td>
+            <td>$302,400</td>
+            <td class="td--muted">2 / 6 / 11 customers avg $2,000/mo</td>
+          </tr>
+          <tr>
+            <td class="td--bold">FulcrumFOCI SaaS — Platform (Tier 2)</td>
+            <td>$72,000</td>
+            <td>$576,000</td>
+            <td>$1,440,000</td>
+            <td class="td--muted">2 / 12 / 25 customers avg $3,000–4,800/mo</td>
+          </tr>
+          <tr>
+            <td class="td--bold">FulcrumFOCI SaaS — Full Suite (Tier 3)</td>
+            <td>—</td>
+            <td>$108,000</td>
+            <td>$450,000</td>
+            <td class="td--muted">0 / 1 / 5 customers avg $7,500/mo (H2 launch)</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Add-On Modules (avg $1,000/mo/module)</td>
+            <td>$12,000</td>
+            <td>$96,000</td>
+            <td>$288,000</td>
+            <td class="td--muted">1 / 8 / 24 add-on subscriptions</td>
+          </tr>
+          <tr style="background:rgba(201,168,76,.06);">
+            <td class="td--bold">Total SaaS ARR (End of Year)</td>
+            <td class="td--gold td--bold">$132,000</td>
+            <td class="td--gold td--bold">$938,400</td>
+            <td class="td--gold td--bold">$2,480,400</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="td--bold">Advisory Projects (one-time)</td>
+            <td>$180,000</td>
+            <td>$425,000</td>
+            <td>$650,000</td>
+            <td class="td--muted">6 / 15 / 22 engagements avg $25-35K</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Advisory Retainers</td>
+            <td>$60,000</td>
+            <td>$180,000</td>
+            <td>$360,000</td>
+            <td class="td--muted">1 / 3 / 6 retainers avg $5,000/mo</td>
+          </tr>
+          <tr style="background:rgba(201,168,76,.06);">
+            <td class="td--bold">Total Advisory Revenue</td>
+            <td class="td--bold">$240,000</td>
+            <td class="td--bold">$605,000</td>
+            <td class="td--bold">$1,010,000</td>
+            <td></td>
+          </tr>
+          <tr style="background:var(--navy);">
+            <td style="font-weight:800; color:var(--white); font-size:.95rem;">TOTAL REVENUE</td>
+            <td style="font-weight:800; color:var(--gold); font-size:1.05rem;">$372,000</td>
+            <td style="font-weight:800; color:var(--gold); font-size:1.05rem;">$1,543,400</td>
+            <td style="font-weight:800; color:var(--gold); font-size:1.05rem;">$3,490,400</td>
+            <td style="color:rgba(255,255,255,.5);">314% YoY / 126% YoY</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Cost Structure -->
+    <h3 style="margin-bottom:1rem; margin-top:2.5rem;">6.2 Cost Structure &amp; EBITDA</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Cost Item</th>
+            <th>Year 1</th>
+            <th>Year 2</th>
+            <th>Year 3</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Platform COGS (hosting, licenses, support)</td>
+            <td>$18,000</td>
+            <td>$80,000</td>
+            <td>$200,000</td>
+            <td class="td--muted">Power Platform capacity, Azure, Power BI Premium Per User</td>
+          </tr>
+          <tr>
+            <td>Advisory COGS (subcontractors, SME time)</td>
+            <td>$60,000</td>
+            <td>$120,000</td>
+            <td>$200,000</td>
+            <td class="td--muted">25–30% of advisory revenue in contractor/SME costs</td>
+          </tr>
+          <tr>
+            <td>David Taylor — Owner Compensation</td>
+            <td>$120,000</td>
+            <td>$180,000</td>
+            <td>$240,000</td>
+            <td class="td--muted">Scaled with business growth</td>
+          </tr>
+          <tr>
+            <td>Product Development (platform builds)</td>
+            <td>$80,000</td>
+            <td>$120,000</td>
+            <td>$150,000</td>
+            <td class="td--muted">Contract Power Platform developer; ~20 hrs/week</td>
+          </tr>
+          <tr>
+            <td>Sales &amp; Marketing</td>
+            <td>$30,000</td>
+            <td>$75,000</td>
+            <td>$140,000</td>
+            <td class="td--muted">Ads, events, content, tools</td>
+          </tr>
+          <tr>
+            <td>Customer Success / Onboarding</td>
+            <td>$12,000</td>
+            <td>$48,000</td>
+            <td>$90,000</td>
+            <td class="td--muted">Part-time / fractional Year 1–2</td>
+          </tr>
+          <tr>
+            <td>G&amp;A (legal, accounting, tools, insurance)</td>
+            <td>$25,000</td>
+            <td>$40,000</td>
+            <td>$65,000</td>
+            <td class="td--muted">QuickBooks, legal retainer, E&amp;O insurance</td>
+          </tr>
+          <tr style="background:rgba(201,168,76,.06);">
+            <td class="td--bold">Total Operating Expenses</td>
+            <td class="td--bold">$345,000</td>
+            <td class="td--bold">$663,000</td>
+            <td class="td--bold">$1,085,000</td>
+            <td></td>
+          </tr>
+          <tr style="background:var(--navy);">
+            <td style="font-weight:800; color:var(--white);">EBITDA</td>
+            <td style="color:var(--gold); font-weight:700;">$27,000 (7.3%)</td>
+            <td style="color:var(--gold); font-weight:700;">$880,400 (57%)</td>
+            <td style="color:var(--gold); font-weight:700;">$2,405,400 (69%)</td>
+            <td style="color:rgba(255,255,255,.5);">Bootstrap viable Year 1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Key SaaS Metrics -->
+    <h3 style="margin-bottom:1rem; margin-top:2.5rem;">6.3 Key SaaS Health Metrics</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Year 1</th>
+            <th>Year 2</th>
+            <th>Year 3</th>
+            <th>Target for Exit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td--bold">Total Platform Customers (EoY)</td>
+            <td>4</td>
+            <td>19</td>
+            <td>41</td>
+            <td>80–120</td>
+          </tr>
+          <tr>
+            <td class="td--bold">ARR (SaaS only)</td>
+            <td>$132,000</td>
+            <td>$938,400</td>
+            <td>$2,480,400</td>
+            <td>$4M–8M</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Average ARR per Customer</td>
+            <td>$33,000</td>
+            <td>$49,390</td>
+            <td>$60,498</td>
+            <td>$65,000–80,000</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Gross Revenue Retention</td>
+            <td>N/A</td>
+            <td>95%</td>
+            <td>92%</td>
+            <td>90%+</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Net Revenue Retention (w/ upsells)</td>
+            <td>N/A</td>
+            <td>110%</td>
+            <td>118%</td>
+            <td>110%+</td>
+          </tr>
+          <tr>
+            <td class="td--bold">SaaS Gross Margin</td>
+            <td>86%</td>
+            <td>83%</td>
+            <td>80%</td>
+            <td>78–82%</td>
+          </tr>
+          <tr>
+            <td class="td--bold">YoY ARR Growth</td>
+            <td>N/A</td>
+            <td>611%</td>
+            <td>164%</td>
+            <td>50%+ at exit</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Rule of 40 (Growth % + EBITDA %)</td>
+            <td>N/A</td>
+            <td>~668</td>
+            <td>~233</td>
+            <td>≥40 at exit</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="footnote">Rule of 40 is extremely high in early years due to rapid growth from a small base — this normalizes as the company scales. A score of 40+ at the time of exit (Years 4–5) is the target for premium acquisition multiples.</p>
+
+    <!-- Platform Customers Chart Visual -->
+    <h3 style="margin-bottom:1rem; margin-top:2.5rem;">6.4 ARR Growth Trajectory</h3>
+    <div style="background:var(--navy); border-radius:var(--radius-xl); padding:2rem; margin-bottom:1rem;">
+      <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:1.5rem;">
+        <div style="text-align:center;">
+          <div style="font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-bottom:.5rem;">End Y1 (2026)</div>
+          <div style="font-size:1.8rem; font-weight:800; color:var(--gold);">$132K</div>
+          <div style="font-size:.75rem; color:rgba(255,255,255,.5);">4 customers</div>
+          <div style="height:8px; background:rgba(255,255,255,.1); border-radius:4px; margin-top:.75rem; overflow:hidden;"><div style="height:100%; width:2%; background:var(--gold); border-radius:4px;"></div></div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-bottom:.5rem;">End Y2 (2027)</div>
+          <div style="font-size:1.8rem; font-weight:800; color:var(--gold);">$938K</div>
+          <div style="font-size:.75rem; color:rgba(255,255,255,.5);">19 customers</div>
+          <div style="height:8px; background:rgba(255,255,255,.1); border-radius:4px; margin-top:.75rem; overflow:hidden;"><div style="height:100%; width:12%; background:var(--gold); border-radius:4px;"></div></div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-bottom:.5rem;">End Y3 (2028)</div>
+          <div style="font-size:1.8rem; font-weight:800; color:var(--gold);">$2.5M</div>
+          <div style="font-size:.75rem; color:rgba(255,255,255,.5);">41 customers</div>
+          <div style="height:8px; background:rgba(255,255,255,.1); border-radius:4px; margin-top:.75rem; overflow:hidden;"><div style="height:100%; width:31%; background:var(--gold); border-radius:4px;"></div></div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-size:.7rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-bottom:.5rem;">Exit Target (2029–30)</div>
+          <div style="font-size:1.8rem; font-weight:800; color:var(--gold-light);">$5–8M</div>
+          <div style="font-size:.75rem; color:rgba(255,255,255,.5);">80–120 customers</div>
+          <div style="height:8px; background:rgba(255,255,255,.1); border-radius:4px; margin-top:.75rem; overflow:hidden;"><div style="height:100%; width:75%; background:var(--gold-light); border-radius:4px;"></div></div>
+        </div>
+      </div>
+      <p style="font-size:.72rem; color:rgba(255,255,255,.3); margin-top:1.25rem; margin-bottom:0;">Bars are scaled proportionally relative to target exit ARR. Forward-looking estimates subject to execution risk and market conditions.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- 7. FUNDING REQUIREMENTS                 -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="funding">
+  <div class="container">
+    <div class="sec-eyebrow">Section 07</div>
+    <h2 class="sec-title">Funding Requirements</h2>
+    <div class="rule"></div>
+
+    <!-- Bootstrap Path -->
+    <h3 style="margin-bottom:1rem;">7.1 Bootstrap Path (Preferred Default)</h3>
+    <p style="margin-bottom:1.5rem;">The financial model demonstrates that Fulcrum Advisory Technologies is viable as a bootstrapped company. Year 1 EBITDA is marginally positive even with aggressive investment in platform development. The advisory practice cash flows the platform build in Year 1, and SaaS revenue becomes the dominant profit driver in Year 2.</p>
+
+    <div class="callout callout--green">
+      <strong>Bootstrap Thesis:</strong> David's deep domain expertise reduces CAC to near zero in the early pipeline (referral and organic). Advisory revenue from the first 3–6 FOCI clients funds the first version of the platform. The BYOT deployment model eliminates infrastructure COGS entirely — Fulcrum never hosts anything. This is an unusually capital-efficient business model for a vertical SaaS product.
+    </div>
+
+    <div class="grid-2" style="margin-top:2rem; gap:1.5rem; align-items:start;">
+      <div>
+        <h4 style="margin-bottom:.75rem;">Bootstrap Milestones Timeline</h4>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-date">Q3 2026</div>
+            <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <h4>Advisory revenue supports first hire</h4>
+              <p>First 4–6 FOCI advisory clients signed. Part-time Power Platform developer contracted. sf-328.com live and beginning to rank. Platform v0.9 demo-ready.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">Q4 2026</div>
+            <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <h4>First paying SaaS customers</h4>
+              <p>FulcrumFOCI Core (Tier 1) GA. 3–5 paying customers. First DCSA inspection cycle completed on platform — reference case established.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">Q2 2027</div>
+            <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <h4>Platform Tier 2 ships</h4>
+              <p>Visitor management and Power BI modules GA. Section 847 final rule nearing publication — demand spike. Begin upselling Tier 1 customers. First part-time CS hire.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">Q4 2027</div>
+            <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+            <div class="tl-body">
+              <h4>$1M+ ARR achieved</h4>
+              <p>20+ platform customers. Microsoft Solution Partner designation. Co-sell conversations active. Business operationally self-funding with growth capital available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accelerated Path with Funding -->
+      <div>
+        <h4 style="margin-bottom:.75rem;">7.2 Funded Path — Acceleration Scenario</h4>
+        <p style="font-size:.88rem; color:var(--gray-600); margin-bottom:1rem;">If external capital is raised (seed round or strategic investor), the funding would accelerate three specific areas:</p>
+
+        <div class="table-wrap" style="margin-bottom:1.25rem;">
+          <table>
+            <thead>
+              <tr><th>Use of Funds</th><th>Amount</th><th>Outcome</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td--bold">Platform development acceleration</td>
+                <td>$350,000</td>
+                <td>Full-time Power Platform developer + UX; ship all three tiers + add-ons by Q2 2027 vs Q4 2027</td>
+              </tr>
+              <tr>
+                <td class="td--bold">Sales &amp; BD hire</td>
+                <td>$200,000</td>
+                <td>Dedicated government sales professional (cleared preferred); 2× sales velocity</td>
+              </tr>
+              <tr>
+                <td class="td--bold">Microsoft ISV partnership</td>
+                <td>$75,000</td>
+                <td>AppSource certification costs, co-sell infrastructure, partner program fees</td>
+              </tr>
+              <tr>
+                <td class="td--bold">Marketing (SEO, events, content)</td>
+                <td>$125,000</td>
+                <td>Domain authority acceleration; conference presence; sf-328.com paid search</td>
+              </tr>
+              <tr>
+                <td class="td--bold">Working capital</td>
+                <td>$250,000</td>
+                <td>18-month runway buffer during scale</td>
+              </tr>
+              <tr style="background:rgba(201,168,76,.08);">
+                <td class="td--bold">Total Seed Round</td>
+                <td class="td--gold td--bold">$1,000,000</td>
+                <td>Achieves $2M+ ARR by end of Year 2 vs $938K bootstrap</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card card--gold">
+          <div class="card__label">Funding Instrument Preference</div>
+          <p style="font-size:.875rem; margin-bottom:.5rem;">SAFE note or revenue-based financing preferred over equity at this stage. Target investor profile: defense-adjacent angel (former CISO, cleared exec, DIB operator) or micro-PE with govtech thesis. Not seeking institutional VC — the exit timeline and market size do not fit a VC return profile.</p>
+          <p style="font-size:.8rem; color:var(--gray-600); margin:0;">Strategic co-founder with cleared contractor network and/or Microsoft government sales experience would be valued over pure capital.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risk Factors -->
+    <h3 style="margin-bottom:1rem; margin-top:2.5rem;">7.3 Key Risks &amp; Mitigations</h3>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td--bold">Section 847 final rule delayed or significantly modified</td>
+            <td>Medium</td>
+            <td>Medium</td>
+            <td>Business is viable without Section 847 — existing FCL holders (2,000–3,000) are the core market. Section 847 is upside, not base case.</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Large incumbent (ISI, Exostar) launches FOCI-specific module</td>
+            <td>Medium</td>
+            <td>High</td>
+            <td>12–18 month head start + deep NISPOM expertise = David's platform will outclass a rushed competitor module. Fast customer reference case acquisition is critical insurance.</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Microsoft changes Power Platform GCC High licensing</td>
+            <td>Low</td>
+            <td>Medium</td>
+            <td>Diversify to Azure Government Power Platform and on-premises options. Microsoft has strong incentive to retain defense ISV partners.</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Sole-founder key-person risk</td>
+            <td>High</td>
+            <td>High</td>
+            <td>Document all domain knowledge in platform logic, onboarding materials, and training content. Hire customer success early. Strategic co-founder or key hire is Year 1–2 priority.</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Long sales cycles in government-adjacent space</td>
+            <td>High</td>
+            <td>Medium</td>
+            <td>Target small-to-mid cleared contractors first (fastest decision cycle). Free 90-day pilot with advisory engagements removes budget approval friction.</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Customer concentration if early large customer dominates ARR</td>
+            <td>Medium</td>
+            <td>Medium</td>
+            <td>Limit any single customer to &lt;15% ARR. Prioritize customer count over deal size in Years 1–2.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- R&D Grants Section -->
+    <h3 style="margin-bottom:1rem; margin-top:2.5rem;">7.4 R&amp;D Grant Programs — FulcrumFOCI AI Agent</h3>
+    <div class="callout callout--info" style="margin-bottom:1.5rem;">
+      <strong>Next Step / Follow-On Action:</strong> Once the marketing strategy is finalized and the Copilot Studio AI Agent design (Tier 3 / FOCI AI Assistant) is fully specified, Fulcrum Advisory Technologies should formally evaluate and pursue applicable non-dilutive grant funding. The FOCI AI Agent — a Retrieval-Augmented Generation (RAG) agent grounded on NISPOM policy, customer ECP/TCP, and DCSA guidance — is an AI product with a clear national security application, making it a strong candidate across several programs. Draft grant applications should be prepared in parallel with Tier 3 product development.
+    </div>
+
+    <p style="margin-bottom:1.5rem; font-size:.9rem; color:var(--gray-600);">The following grant programs are preliminarily identified as potentially applicable. A dedicated grant strategy session and formal scope-to-solicitation review should be conducted in Q3 2026.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Program</th>
+            <th>Agency</th>
+            <th>Award Range</th>
+            <th>Fit Rationale</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td--bold">DoD SBIR Phase I</td>
+            <td>OSD / DARPA / DCSA</td>
+            <td>$100K–$225K</td>
+            <td>Defense AI research with national security application. Most direct fit — SBIR was reauthorized through September 2031 (April 2026). Target topic areas: AI-assisted compliance automation, insider threat detection, and human-machine teaming for security program management. DCSA itself issues SBIR topics through the DoD portal.</td>
+            <td class="td--gold td--bold">High</td>
+          </tr>
+          <tr>
+            <td class="td--bold">DoD SBIR Phase II</td>
+            <td>OSD / DARPA</td>
+            <td>$750K–$1.5M</td>
+            <td>Phase II follows a successful Phase I. Phase II funds productization and commercialization — exactly what FulcrumFOCI Tier 3 represents. Approximately 40–50% of Phase I awards advance to Phase II.</td>
+            <td class="td--gold td--bold">High (after Phase I)</td>
+          </tr>
+          <tr>
+            <td class="td--bold">STTR (Small Business Technology Transfer)</td>
+            <td>DoD / NSF / DARPA</td>
+            <td>$150K–$300K (Phase I)</td>
+            <td>Requires formal university partnership. If David pursues a research collaboration with a defense-focused university (e.g., George Mason, George Washington, Carnegie Mellon SEI) on AI policy grounding or FOCI risk modeling, STTR becomes viable. Potential topics: LLM-based regulatory compliance, automated security policy interpretation.</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td class="td--bold">NSF SBIR (America's Seed Fund)</td>
+            <td>National Science Foundation</td>
+            <td>$275K (Phase I) / $1M (Phase II)</td>
+            <td>NSF SBIR funds "deep technology" commercialization. The AI/ML component of FulcrumFOCI (RAG architecture, LLM-grounded policy Q&amp;A, automated compliance gap detection) may qualify under NSF's Artificial Intelligence topic cluster. NSF does not require a defense focus — broader commercial applicability of the AI approach strengthens the application.</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td class="td--bold">DARPA-Funded AI Programs</td>
+            <td>DARPA</td>
+            <td>Varies ($500K–$5M+)</td>
+            <td>DARPA's AI Forward and related initiatives focus on AI for national security applications. The FOCI AI agent — specifically the insider threat escalation detection, foreign contact pattern analysis, and policy interpretation components — aligns with DARPA's human-machine teaming and AI-assisted security analysis themes. Requires engagement through a prime contractor or direct BAA response.</td>
+            <td>Medium-Low (longer horizon)</td>
+          </tr>
+          <tr>
+            <td class="td--bold">Virginia SBIR-like State Programs</td>
+            <td>CIT (VA) / TEDCO (MD) / MIPS (MD)</td>
+            <td>$25K–$200K</td>
+            <td>Virginia's Center for Innovative Technology (CIT) and Maryland's TEDCO offer matching and accelerator grants for defense-adjacent tech startups. Virginia in particular has strong DIB presence (NOVA corridor). These programs often provide bridge funding between Federal SBIR phases or help cover application preparation costs.</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td class="td--bold">DHS Silicon Valley Innovation Program (SVIP)</td>
+            <td>DHS S&amp;T</td>
+            <td>$50K–$800K</td>
+            <td>SVIP funds innovative technology addressing homeland and national security challenges. Supply chain security, insider threat detection, and foreign influence risk management are active topic areas. The FOCI AI Agent's capability to identify reportable foreign contact patterns and auto-generate DCSA notifications has direct DHS-adjacent applications.</td>
+            <td>Medium-Low</td>
+          </tr>
+          <tr>
+            <td class="td--bold">In-Q-Tel (IQT) Strategic Partnership</td>
+            <td>CIA / IC Community</td>
+            <td>Non-dilutive pilot contracts</td>
+            <td>IQT funds and commercializes technologies for the U.S. Intelligence Community. A FOCI compliance AI agent with foreign influence detection, anomalous contact pattern analysis, and NISPOM-grounded policy interpretation has potential IC application. IQT engagement typically involves a pilot contract rather than a grant — but it is non-dilutive and carries significant credibility.</td>
+            <td>Long-term</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 style="margin-top:1.75rem; margin-bottom:.75rem;">Preliminary Grant Preparation Notes</h4>
+    <div class="grid-2" style="gap:1.5rem; margin-bottom:1rem;">
+      <div class="card card--gold">
+        <div class="card__label">Recommended Immediate Actions (Q3 2026)</div>
+        <ul class="check-list" style="font-size:.875rem;">
+          <li>Register on the DoD SBIR/STTR Innovation Portal (DSIP) at dodsbirsttr.mil</li>
+          <li>Review current open solicitations for DCSA-sponsored and OSD-sponsored SBIR topics related to AI, compliance automation, and industrial security</li>
+          <li>Engage a specialized SBIR proposal writer (firms like RedTeam Consulting, Polaris, or SBIR Coach) for Phase I — the ROI on a $5–15K proposal service vs. $150K+ Phase I award is compelling</li>
+          <li>Identify one university research partner (George Mason CHDS or CMU SEI) for potential STTR alignment</li>
+          <li>Register the company on SAM.gov if not already active — required for all federal grant applications</li>
+          <li>Obtain a DUNS/UEI number and confirm small business status with SBA</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card__label">Strongest Application Angles for SBIR Phase I</div>
+        <p style="font-size:.875rem; color:var(--gray-600); margin-bottom:.75rem;">The FulcrumFOCI AI Agent has several genuinely novel technical claims that would support a competitive SBIR application:</p>
+        <ul class="check-list" style="font-size:.875rem;">
+          <li><strong>RAG over classified-adjacent regulatory text</strong> — grounding LLMs on CUI-designated FOCI documents within a customer's security boundary (no data exfiltration)</li>
+          <li><strong>Automated changed condition classification</strong> — AI-assisted determination of NISPOM reportability based on event type and regulatory citations</li>
+          <li><strong>Foreign contact anomaly detection</strong> — pattern analysis across travel, interaction, and visitor logs to surface statistically anomalous foreign contact frequency</li>
+          <li><strong>Tenant-isolated sovereign AI deployment</strong> — novel architecture for deploying AI compliance agents in FedRAMP IL4/IL5 environments without external data transmission</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout callout--amber">
+      <strong>Important caveat on SBIR eligibility:</strong> SBIR requires the company to be majority-owned and controlled by U.S. citizens or permanent residents, and the principal investigator (David Taylor) must be primarily employed by the small business. If any future equity investment is raised, care must be taken to preserve SBIR eligibility (specifically the VC-owned company rules that apply to some investors). Consult with an SBIR-experienced attorney before raising equity if SBIR funding is a priority.
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════ -->
+<!-- APPENDIX / CLOSING                      -->
+<!-- ════════════════════════════════════════ -->
+<section class="section section--dark">
+  <div class="container">
+    <div style="max-width:720px; margin:0 auto; text-align:center;">
+      <div class="sec-eyebrow sec-eyebrow--light" style="justify-content:center;">Summary</div>
+      <h2 style="font-size:2rem; margin-bottom:1rem;">The Case for Fulcrum Advisory Technologies</h2>
+      <p style="color:rgba(255,255,255,.65); line-height:1.8; margin-bottom:2rem; font-size:1.05rem;">A mandatory compliance market is forming in real time. The regulatory catalyst — Section 847 — is live. The product — FulcrumFOCI — is the only one built for this use case. The founder has 25 years of operating experience under exactly the compliance frameworks the product manages. The business is viable on Day 1 of advisory revenue, and the exit addressable market is documented, quantified, and named. This is a rare combination: <em>a regulatory first-mover with a genuine practitioner edge, no competition, and a Category One acquirer list.</em></p>
+
+      <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-bottom:2rem;">
+        <div style="background:rgba(201,168,76,.15); border:1px solid rgba(201,168,76,.3); border-radius:var(--radius-lg); padding:1.25rem 2rem; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:var(--gold);">$3.5M+</div>
+          <div style="font-size:.75rem; color:rgba(255,255,255,.5); margin-top:.2rem;">Year 3 Target Revenue</div>
+        </div>
+        <div style="background:rgba(201,168,76,.15); border:1px solid rgba(201,168,76,.3); border-radius:var(--radius-lg); padding:1.25rem 2rem; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:var(--gold);">$35–75M</div>
+          <div style="font-size:.75rem; color:rgba(255,255,255,.5); margin-top:.2rem;">Base Exit Range (2029–2030)</div>
+        </div>
+        <div style="background:rgba(201,168,76,.15); border:1px solid rgba(201,168,76,.3); border-radius:var(--radius-lg); padding:1.25rem 2rem; text-align:center;">
+          <div style="font-size:1.6rem; font-weight:800; color:var(--gold);">37,740</div>
+          <div style="font-size:.75rem; color:rgba(255,255,255,.5); margin-top:.2rem;">New Market Entrants by Regulation</div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,.1); padding-top:1.5rem; font-size:.8rem; color:rgba(255,255,255,.3);">
+        <p>Fulcrum Advisory Technologies, LLC · David Taylor, Principal · david.taylor@fulcrumadvisory.us</p>
+        <p style="margin-top:.4rem;">This document is confidential and intended solely for authorized recipients. June 2026 · Version 1.0</p>
+        <p style="margin-top:.4rem;">Data sources: Raymond James GovTech M&amp;A Q2 2025 / Q1 2026 reports; Aventis Advisors SaaS Valuation Multiples 2026; DFARS Proposed Rule (May 7, 2026, Docket DARS-2025-0072); DCSA FOCI statistics; Momentum Cyber M&amp;A Report 2025; ISI Security product research; SaaS Mag M&amp;A Consolidation Wave 2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Smooth scroll offset for sticky nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 72;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
