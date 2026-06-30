@@ -1,7 +1,15 @@
 {
-  "updated": "2026-06-29T10:19:43.154955+00:00",
+  "updated": "2026-06-30T08:54:47.689752+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "566701",
+      "title": "Microsoft Copilot (Microsoft 365): Edit your document with Copilot in PowerPoint in Government Clouds",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566701",
+      "description": "Copilot in PowerPoint helps you create, edit, and refine presentations through natural language\u2014right inside your deck. Start a new presentation or build on an existing one by asking Copilot to generate slides, update content, improve layouts, and polish design, all while preserv"
+    },
     {
       "id": "566203",
       "title": "Outlook: Export support for data files in Mac Outlook",
@@ -193,14 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499616",
       "description": "To improve privacy, when transcription is off, captions will now show only the past five minutes of dialogue instead of the full meeting. If transcription is on, captions display the entire conversation, just like with live transcription. We\u2019re also fixing an issue where changing"
-    },
-    {
-      "id": "499077",
-      "title": "Planner: Information Barrier support in Planner",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499077",
-      "description": "Information Barrier (IB) support in Microsoft Planner will enable organizations to restrict access to plans and tasks based on user groups.  IB will help prevent data leakage, enforce internal policies, and support regulatory mandates by limiting plan visibility and collaboration"
     }
   ]
 }
