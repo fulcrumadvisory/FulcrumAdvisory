@@ -1,7 +1,16 @@
 {
-  "updated": "2026-07-01T09:27:11.276738+00:00",
+  "updated": "2026-07-02T08:40:13.568829+00:00",
   "count": 15,
   "items": [
+    {
+      "id": "2026-13375",
+      "title": "Defense Federal Acquisition Regulation Supplement: Modifications to Printed Circuit Board Acquisition Restrictions (DFARS Case 2022-D011)",
+      "date": "2026-07-02",
+      "type": "Proposed Rule",
+      "abstract": "DoD is seeking information that will assist in the development of a revision to the Defense Federal Acquisition Regulation Supplement (DFARS) to implement sections of the National Defense Authorization Acts for Fiscal Years 2021 and 2022 that address the prohibition on the acquisition of covered printed circuit boards from a covered nation.",
+      "link": "https://www.federalregister.gov/documents/2026/07/02/2026-13375/defense-federal-acquisition-regulation-supplement-modifications-to-printed-circuit-board-acquisition",
+      "citation": ""
+    },
     {
       "id": "2026-09067",
       "title": "Defense Federal Acquisition Regulation Supplement: Mitigating Risks Related to Foreign Ownership, Control, or Influence (DFARS Case 2021-D011)",
@@ -90,15 +99,6 @@
       "type": "Notice",
       "abstract": "The Defense Acquisition Regulations System has submitted to OMB for clearance the following proposal for collection of information under the provisions of the Paperwork Reduction Act.",
       "link": "https://www.federalregister.gov/documents/2024/05/28/2024-11626/information-collection-requirement-defense-federal-acquisition-regulation-supplement-assessing",
-      "citation": ""
-    },
-    {
-      "id": "2024-03809",
-      "title": "Information Collection Requirement; Defense Federal Acquisition Regulation Supplement; Assessing Contractor Implementation of Cybersecurity Requirements",
-      "date": "2024-02-26",
-      "type": "Notice",
-      "abstract": "In compliance with the Paperwork Reduction Act of 1995, DoD announces the proposed extension of a public information collection requirement and seeks public comment on the provisions thereof. DoD invites comments on: whether the proposed collection of information is necessary for the proper performance of the functions of DoD, including whether the",
-      "link": "https://www.federalregister.gov/documents/2024/02/26/2024-03809/information-collection-requirement-defense-federal-acquisition-regulation-supplement-assessing",
       "citation": ""
     },
     {
