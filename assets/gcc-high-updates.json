@@ -1,7 +1,15 @@
 {
-  "updated": "2026-07-07T09:21:40.359812+00:00",
+  "updated": "2026-07-08T08:06:00.897489+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "567010",
+      "title": "Microsoft Purview: Data Loss Prevention - User Based Aggregation of DLP Alerts",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567010",
+      "description": "Enable aggregation of DLP alerts based on common entities user even when multiple rules are matched. This feature should consolidate related alert events into a single alert object to: Reduce alert noise, simplify investigation workflows, enhance contextual understanding of viola"
+    },
     {
       "id": "566701",
       "title": "Microsoft Copilot (Microsoft 365): Edit your document with Copilot in PowerPoint in Government Clouds",
@@ -193,14 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499900",
       "description": "This feature reduces accidental message sends by moving the send button from the bottom of the compose view, in the compose toolbar to the header of the compose view. By moving the send button to a less crowded location, users can avoid accidental taps, resulting in a more intent"
-    },
-    {
-      "id": "499616",
-      "title": "Microsoft Teams: Enhanced privacy and stability for live captions ",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499616",
-      "description": "To improve privacy, when transcription is off, captions will now show only the past five minutes of dialogue instead of the full meeting. If transcription is on, captions display the entire conversation, just like with live transcription. We\u2019re also fixing an issue where changing"
     }
   ]
 }
