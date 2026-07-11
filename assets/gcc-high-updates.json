@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T08:59:19.313570+00:00",
+  "updated": "2026-07-11T07:38:21.537809+00:00",
   "count": 25,
   "items": [
     {
@@ -25,6 +25,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566203",
       "description": "This feature adds support for exporting PST files into Outlook for Mac. "
+    },
+    {
+      "id": "565869",
+      "title": "Microsoft Teams: Personal message reminders for chat and channels",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=565869",
+      "description": "Teams now lets you set and manage reminders directly on chat and channel messages, helping you keep track of important items. Create, update, complete, and delete reminders, track them in a dedicated Reminders view, and receive timely notifications when they become due. Reminders"
     },
     {
       "id": "565374",
@@ -193,14 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499620",
       "description": "Live captions are now available on mobile devices with enhanced customization options, making captions easier to read and follow during meetings. You can personalize your captions by adjusting the font color, caption background color, and caption height. These enhancements ensure"
-    },
-    {
-      "id": "499900",
-      "title": "Outlook: Send Button update",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499900",
-      "description": "This feature reduces accidental message sends by moving the send button from the bottom of the compose view, in the compose toolbar to the header of the compose view. By moving the send button to a less crowded location, users can avoid accidental taps, resulting in a more intent"
     }
   ]
 }
