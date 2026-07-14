@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T08:45:26.221192+00:00",
+  "updated": "2026-07-14T07:44:53.407456+00:00",
   "count": 25,
   "items": [
     {
@@ -99,6 +99,14 @@
       "description": "AI and IT admins in Microsoft Admin Center can 1) gain visibility around oversharing risks and drive remediations 2) Understand how much of sensitive copilot interactions are protected and turn on Purview DLP for M365 Copilot right from there. Enables secure adoption of Copilot."
     },
     {
+      "id": "494839",
+      "title": "Microsoft Purview compliance portal: Scanner data export for custom reporting",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=494839",
+      "description": "Learn about the state of your scanned repositories and create custom reports with the information protection scanner. Labeling, classification and protection actions on scanned files are stored in SQL tables that form a foundation to feed into custom reports."
+    },
+    {
       "id": "488142",
       "title": "Microsoft Excel: Extending support for Insights Services to GCC-H and DoD sovereign clouds",
       "status": "In development",
@@ -193,14 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=500639",
       "description": "With this update, IRM will start supporting collection policies. Collection policies allow customers to scope classification (SITs - Sensitive Information Types) and activities for scoped users. For device indicators based IRM policy, required collection policies will be automati"
-    },
-    {
-      "id": "499620",
-      "title": "Microsoft Teams: Customize captions on Mobile",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499620",
-      "description": "Live captions are now available on mobile devices with enhanced customization options, making captions easier to read and follow during meetings. You can personalize your captions by adjusting the font color, caption background color, and caption height. These enhancements ensure"
     }
   ]
 }
