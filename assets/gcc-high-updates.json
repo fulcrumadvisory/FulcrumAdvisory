@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T07:48:44.748981+00:00",
+  "updated": "2026-07-16T07:53:25.865677+00:00",
   "count": 25,
   "items": [
     {
@@ -83,6 +83,22 @@
       "description": "Retention based file archiving moves inactive content to low-cost storage, lowering costs with no compromise on Compliance, keeping data discoverable and making Copilot results highly relevant."
     },
     {
+      "id": "562340",
+      "title": "Microsoft Teams: Preloaded video for Teams Events and Meetings",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=562340",
+      "description": "Users can now upload videos directly into a Teams event or meeting from OneDrive from the \"Manage view\" options when an organizer has turned on Manage What Attendees See mode. This ensures a smoother high quality video playback with a more consistent experience for attendees."
+    },
+    {
+      "id": "561648",
+      "title": "Microsoft Teams: Town hall media optimization for VDI attendees",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561648",
+      "description": "What\u2019s new\nTeams now supports audio and video offloading for Town hall attendees in VDI environments that are using the new optimization. Media streams are offloaded directly to the user\u2019s local device, improving performance and delivering a high definition viewing experience whi"
+    },
+    {
       "id": "561485",
       "title": "Microsoft Copilot (Microsoft 365): Copilot in Forms - US Government clouds",
       "status": "In development",
@@ -147,6 +163,14 @@
       "description": "Microsoft Teams Rooms on Windows will provide native Pan-Tilt-Zoom (PTZ) controls for connected cameras that support this capability. The feature will initially contain limited support for cameras with mechanical/optical PTZ, with digital PTZ to come in the future."
     },
     {
+      "id": "380721",
+      "title": "Microsoft Purview compliance portal: Data Loss Prevention - Trigger Power automate workflows as outcome of DLP rule match",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=380721",
+      "description": "This introduces a new DLP rule action to trigger custom Power automate workflows when a DLP rule is violated."
+    },
+    {
       "id": "93269",
       "title": "Microsoft Purview compliance portal:  eDiscovery (Premium) \u2013 Hold reports (U.S. Government clouds)",
       "status": "In development",
@@ -177,30 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=501592",
       "description": "Admin should be able to troubleshoot device health and policy sync health through Diagnostics page. "
-    },
-    {
-      "id": "501582",
-      "title": "Microsoft Purview compliance portal: Insider Risk Management - Collection policies impact on IRM",
-      "status": "In development",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=501582",
-      "description": "With this update, Microsoft Purview will start supporting collection policies. Collection policies allow customers to scope classification (SITs - Sensitive Information Types) and activities for scoped users. We recommend reviewing collection policies as they can be created by di"
-    },
-    {
-      "id": "500390",
-      "title": "Outlook: Snooze, Pin and Ignore in the read pop-out ribbon in New Outlook and Outlook for Web",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=500390",
-      "description": "Snooze, pin, and ignore actions are available in the read pop-out ribbon in Outlook for Web and Windows to improve triage efficiency and user control. #newoutlookforwindows"
-    },
-    {
-      "id": "499901",
-      "title": "Outlook: Automatic Draft Minimize",
-      "status": "Rolling out",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=499901",
-      "description": "When users close a draft in progress, it automatically minimizes instead of closing completely. The minimized draft can now be quickly accessed via a button that appears in the message list."
     }
   ]
 }
