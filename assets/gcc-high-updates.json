@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T07:53:25.865677+00:00",
+  "updated": "2026-07-17T07:50:50.274113+00:00",
   "count": 25,
   "items": [
     {
@@ -49,6 +49,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=565374",
       "description": "AI-powered visibility into DLP policy deployment across devices, helping admins track sync progress and understand enforcement coverage. They proactively identify impacted devices, explain root causes of sync failures, and guide admins with recommended actions to quickly diagnose"
+    },
+    {
+      "id": "565132",
+      "title": "Microsoft Teams: Granular channel notification controls",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=565132",
+      "description": "Microsoft Teams introduces flexible presets for channel notifications, allowing you to choose between All new messages, @mentions and replies, or Mute. You can further customize alerts for unfollowed threads, tags, and channel or team mentions, as well as control banner notificat"
     },
     {
       "id": "565222",
@@ -147,6 +155,14 @@
       "description": "GCC-H and DoD sovereign cloud customers will be able to use features in Excel run by Insights Services, including Analyze Data found on the Data tab."
     },
     {
+      "id": "476488",
+      "title": "Microsoft Teams: Ability to separate out the Townhall attendee invites",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=476488",
+      "description": "This backend change will now address the 'separation of attendee' invites from the events crew. This feature allows the organizers of Townhalls to maintain separate invites for attendees."
+    },
+    {
       "id": "472031",
       "title": "Data Loss Prevention- DLP Policy Change Insights with Security Copilot",
       "status": "In development",
@@ -185,22 +201,6 @@
       "date": "September CY2025",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=500871",
       "description": "An enhancement to the 'Manage what attendees see' feature allows organizers and presenters to preview changes to what is going to be displayed on or off the screen before sending the changes live to attendees. This capability is only available for Town hall."
-    },
-    {
-      "id": "501591",
-      "title": "Microsoft Purview Compliance Portal: Data Loss Prevention: DLP to restrict Microsoft 365 Copilot processing on emails with sensitivity labels",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=501591",
-      "description": "Microsoft Purview Data Loss Prevention (DLP) is extended to preventing Microsoft 365 Copilot from processing emails with sensitivity labels. This feature will allow DLP policies to provide detection of sensitivity labels in emails as enterprise grounding data and restrict access "
-    },
-    {
-      "id": "501592",
-      "title": "Microsoft Purview Compliance Portal: Data Loss Prevention - Self-helper troubleshooting through Diagnostics page",
-      "status": "Launched",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=501592",
-      "description": "Admin should be able to troubleshoot device health and policy sync health through Diagnostics page. "
     }
   ]
 }
