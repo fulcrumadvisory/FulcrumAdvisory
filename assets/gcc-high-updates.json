@@ -1,7 +1,15 @@
 {
-  "updated": "2026-07-17T07:50:50.274113+00:00",
+  "updated": "2026-07-18T07:25:51.655189+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "567884",
+      "title": "Microsoft Teams: External phone call routing (GCC High, DoD)",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567884",
+      "description": "External call routing will provide users the ability to redirect all external phone calls to either voicemail or their unanswered settings. "
+    },
     {
       "id": "567300",
       "title": "Microsoft Teams: Prevent presence transition to \"Do not disturb\" setting when screen sharing (GCC High, DoD)",
@@ -193,14 +201,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=93269",
       "description": "<div>Out-of-the-box reports that contain information about all legal holds associated with eDiscovery cases in the Microsoft Purview compliance portal. Sort and filter your view based on various criteria and download the aggregated information for further analysis. </div>"
-    },
-    {
-      "id": "500871",
-      "title": "Microsoft Teams: Preview changes before sending content live in 'Manage what attendees see'",
-      "status": "Rolling out",
-      "date": "September CY2025",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=500871",
-      "description": "An enhancement to the 'Manage what attendees see' feature allows organizers and presenters to preview changes to what is going to be displayed on or off the screen before sending the changes live to attendees. This capability is only available for Town hall."
     }
   ]
 }
