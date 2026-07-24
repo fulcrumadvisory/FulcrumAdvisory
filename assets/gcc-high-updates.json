@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T08:09:23.457705+00:00",
+  "updated": "2026-07-24T08:05:18.161866+00:00",
   "count": 25,
   "items": [
     {
@@ -147,6 +147,14 @@
       "description": "AI and IT admins in Microsoft Admin Center can 1) gain visibility around oversharing risks and drive remediations 2) Understand how much of sensitive copilot interactions are protected and turn on Purview DLP for M365 Copilot right from there. Enables secure adoption of Copilot."
     },
     {
+      "id": "542181",
+      "title": "Microsoft Copilot (Microsoft 365): Edit with Copilot in Excel (Web, Win32, Mac) - GCC",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=542181",
+      "description": "Edit with Copilot lets you build and edit workbooks side by side with Copilot. When you're updating budgets, creating financial models, or analyzing data, Copilot uses Excel's most powerful tools like tables, charts, PivotTables, and formulas to help you get the job done. "
+    },
+    {
       "id": "494839",
       "title": "Microsoft Purview compliance portal: Scanner data export for custom reporting",
       "status": "In development",
@@ -193,14 +201,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=380721",
       "description": "This introduces a new DLP rule action to trigger custom Power automate workflows when a DLP rule is violated."
-    },
-    {
-      "id": "93269",
-      "title": "Microsoft Purview compliance portal:  eDiscovery (Premium) \u2013 Hold reports (U.S. Government clouds)",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=93269",
-      "description": "<div>Out-of-the-box reports that contain information about all legal holds associated with eDiscovery cases in the Microsoft Purview compliance portal. Sort and filter your view based on various criteria and download the aggregated information for further analysis. </div>"
     }
   ]
 }
