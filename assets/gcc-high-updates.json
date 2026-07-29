@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T08:12:29.431568+00:00",
+  "updated": "2026-07-29T08:17:25.010284+00:00",
   "count": 25,
   "items": [
     {
@@ -9,6 +9,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567884",
       "description": "External call routing will provide users the ability to redirect all external phone calls to either voicemail or their unanswered settings. "
+    },
+    {
+      "id": "567469",
+      "title": "Microsoft Teams: PowerPoint Live Light theme support",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567469",
+      "description": "Presenting PowerPoint slides in Teams just got better. PowerPoint Live now supports light mode, giving presenters the option to present in light, dark, classic, or high contrast mode based on their preferences and system settings."
     },
     {
       "id": "567300",
@@ -96,7 +104,7 @@
       "status": "In development",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=562345",
-      "description": "Retention based file archiving moves inactive content to low-cost storage, lowering costs with no compromise on Compliance, keeping data discoverable and making Copilot results highly relevant."
+      "description": "With the introduction of file archiving support in SharePoint Online, administrators are looking to seamlessly include archiving actions within their existing data retention policies. This means that, in addition to keeping or deleting data, admins want to now leverage Purview DL"
     },
     {
       "id": "562340",
@@ -139,20 +147,20 @@
       "description": "With this feature, IRM alerts and other supporting data will be available in the following Microsoft Defender XDR experiences:\n\n1. IRM alerts will be surfaced in unified alert and Incident queue in Microsoft Defender XDR.\n2. IRM alerts, Indicators and enriched events will be avai"
     },
     {
-      "id": "559617",
-      "title": "Microsoft Purview: Purview in Microsoft Admin Center",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=559617",
-      "description": "AI and IT admins in Microsoft Admin Center can 1) gain visibility around oversharing risks and drive remediations 2) Understand how much of sensitive copilot interactions are protected and turn on Purview DLP for M365 Copilot right from there. Enables secure adoption of Copilot."
-    },
-    {
       "id": "542181",
       "title": "Microsoft Copilot (Microsoft 365): Edit with Copilot in Excel (Web, Win32, Mac) - GCC",
       "status": "In development",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=542181",
       "description": "Edit with Copilot lets you build and edit workbooks side by side with Copilot. When you're updating budgets, creating financial models, or analyzing data, Copilot uses Excel's most powerful tools like tables, charts, PivotTables, and formulas to help you get the job done. "
+    },
+    {
+      "id": "502520",
+      "title": "Microsoft Teams: New sharing panel in meetings - improved content discovery and ease of sharing",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=502520",
+      "description": "The sharing panel in today\u2019s meetings is the default place for content discoverability and sharing.  New sharing panel UI is crafted with intent of modernising and simplifying default tasks such as window sharing, but also for easier discovery of sharing options and more discover"
     },
     {
       "id": "494839",
@@ -193,14 +201,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=409534",
       "description": "Microsoft Teams Rooms on Windows will provide native Pan-Tilt-Zoom (PTZ) controls for connected cameras that support this capability. The feature will initially contain limited support for cameras with mechanical/optical PTZ, with digital PTZ to come in the future."
-    },
-    {
-      "id": "380721",
-      "title": "Microsoft Purview compliance portal: Data Loss Prevention - Trigger Power automate workflows as outcome of DLP rule match",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=380721",
-      "description": "This introduces a new DLP rule action to trigger custom Power automate workflows when a DLP rule is violated."
     }
   ]
 }
