@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T08:17:25.010284+00:00",
+  "updated": "2026-07-30T08:05:20.673340+00:00",
   "count": 25,
   "items": [
     {
@@ -91,6 +91,14 @@
       "description": "The new Microsoft Outlook for Windows will be available for US Government clouds (GCC-H and DoD sovereign environments). "
     },
     {
+      "id": "561914",
+      "title": "Microsoft Teams: Mandatory pre-meeting consent",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561914",
+      "description": "We are providing a new configuration experience in Teams Admin Center where tenant admins can enable and customize an explicit consent message before joining any meeting hosted in their organization."
+    },
+    {
       "id": "563810",
       "title": "Outlook: Navigate Your Favorite Folders Without Expanding the Folder Pane",
       "status": "In development",
@@ -139,6 +147,22 @@
       "description": "Provide insights on Copilots and AI Apps usage and recommend retention policies for customers to govern their Copilots and AI App interactions."
     },
     {
+      "id": "560700",
+      "title": "Microsoft Teams: AI-powered notes for in-person\nmeetings with Facilitator in Teams Rooms on Android",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=560700",
+      "description": "In addition to capturing real-time notes and meeting outcomes during scheduled or hybrid meetings, the Facilitator agent assists you with notes, decisions and actions for in-person meetings in Teams Rooms on Android. Simply invite Facilitator with one tap of the room console. Mee"
+    },
+    {
+      "id": "560318",
+      "title": "Microsoft Teams: AI-powered notes for in-person meetings with Facilitator in Teams Rooms on Windows",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=560318",
+      "description": "In addition to capturing real-time notes and meeting outcomes during scheduled or hybrid meetings, the Facilitator agent assists you with notes, decisions and actions for in-person meetings in Teams Rooms on Windows. Simply invite Facilitator with one tap of the room console. Mee"
+    },
+    {
       "id": "560075",
       "title": "Microsoft Purview: Insider Risk Management- IRM alerts in XDR",
       "status": "In development",
@@ -177,30 +201,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=488142",
       "description": "GCC-H and DoD sovereign cloud customers will be able to use features in Excel run by Insights Services, including Analyze Data found on the Data tab."
-    },
-    {
-      "id": "476488",
-      "title": "Microsoft Teams: Ability to separate out the Townhall attendee invites",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=476488",
-      "description": "This backend change will now address the 'separation of attendee' invites from the events crew. This feature allows the organizers of Townhalls to maintain separate invites for attendees."
-    },
-    {
-      "id": "472031",
-      "title": "Data Loss Prevention- DLP Policy Change Insights with Security Copilot",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=472031",
-      "description": "Copilot for Security in DLP can summarize DLP policies. This enhancement enables DLP admins to gain insights on coverage of policies viz. location, classifiers and notifications, and more. \n \nDLP admins can get these insights on all the policies or on few selected policies. They "
-    },
-    {
-      "id": "409534",
-      "title": "\tMicrosoft Teams: Local PTZ for Microsoft Teams Rooms on Windows",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=409534",
-      "description": "Microsoft Teams Rooms on Windows will provide native Pan-Tilt-Zoom (PTZ) controls for connected cameras that support this capability. The feature will initially contain limited support for cameras with mechanical/optical PTZ, with digital PTZ to come in the future."
     }
   ]
 }
