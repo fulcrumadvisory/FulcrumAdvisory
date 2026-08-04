@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T08:59:38.651282+00:00",
+  "updated": "2026-08-04T08:16:28.527533+00:00",
   "count": 25,
   "items": [
     {
@@ -171,6 +171,14 @@
       "description": "With this feature, IRM alerts and other supporting data will be available in the following Microsoft Defender XDR experiences:\n\n1. IRM alerts will be surfaced in unified alert and Incident queue in Microsoft Defender XDR.\n2. IRM alerts, Indicators and enriched events will be avai"
     },
     {
+      "id": "559605",
+      "title": "Microsoft Teams: Improved organization for muted and meeting chats",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=559605",
+      "description": "Microsoft Teams automatically organizes your chats with new built in sections that help reduce clutter and keep conversations easy to find. Muted chats (on by default) are grouped together in a dedicated area, while meeting chats (off by default) can be collected into a single se"
+    },
+    {
       "id": "542181",
       "title": "Microsoft Copilot (Microsoft 365): Edit with Copilot in Excel (Web, Win32, Mac) - GCC",
       "status": "In development",
@@ -193,14 +201,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=494839",
       "description": "Learn about the state of your scanned repositories and create custom reports with the information protection scanner. Labeling, classification and protection actions on scanned files are stored in SQL tables that form a foundation to feed into custom reports."
-    },
-    {
-      "id": "488142",
-      "title": "Microsoft Excel: Extending support for Insights Services to GCC-H and DoD sovereign clouds",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=488142",
-      "description": "GCC-H and DoD sovereign cloud customers will be able to use features in Excel run by Insights Services, including Analyze Data found on the Data tab."
     }
   ]
 }
