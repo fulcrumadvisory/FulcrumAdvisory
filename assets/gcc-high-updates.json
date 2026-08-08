@@ -1,7 +1,23 @@
 {
-  "updated": "2026-08-07T06:58:32.833486+00:00",
+  "updated": "2026-08-08T06:32:03.801942+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "569022",
+      "title": "Outlook: Microsoft Purview Label Inheritance from Email Attachments",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569022",
+      "description": "When composing an email in Outlook for Mac, Microsoft Purview sensitivity labels can be automatically applied or recommended based on the sensitivity labels of attached files. This helps users consistently protect sensitive information, reduces manual labeling effort, and support"
+    },
+    {
+      "id": "569021",
+      "title": "Outlook: Purview Label Inheritance from Email Attachment for iOS and Android",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569021",
+      "description": "Outlook for iOS and Android will support Microsoft Purview sensitivity label inheritance from attachments. When users attach files with sensitivity labels, Outlook can automatically apply or recommend an email sensitivity label based on organizational policy settings. This helps "
+    },
     {
       "id": "568789",
       "title": "Outlook: Enhanced user interface updates for iPhone and iPad",
@@ -33,6 +49,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567461",
       "description": "You can now get oriented and take action faster when using Teams on mobile, with a redesigned header and lightweight dashboard that brings key channel details, people, and pinned content into one intuitive place. It creates a more predictable, familiar experience across desktop a"
+    },
+    {
+      "id": "566858",
+      "title": "Microsoft Teams: Clearer text highlighting in dark mode and high contrast mode",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566858",
+      "description": "We've improved how highlighted text looks when composing messages in dark mode and high contrast mode, giving you a more consistent editing experience."
     },
     {
       "id": "567884",
@@ -177,30 +201,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561209",
       "description": "Provide insights on Copilots and AI Apps usage and recommend retention policies for customers to govern their Copilots and AI App interactions."
-    },
-    {
-      "id": "560700",
-      "title": "Microsoft Teams: AI-powered notes for in-person\nmeetings with Facilitator in Teams Rooms on Android",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=560700",
-      "description": "In addition to capturing real-time notes and meeting outcomes during scheduled or hybrid meetings, the Facilitator agent assists you with notes, decisions and actions for in-person meetings in Teams Rooms on Android. Simply invite Facilitator with one tap of the room console. Mee"
-    },
-    {
-      "id": "560318",
-      "title": "Microsoft Teams: AI-powered notes for in-person meetings with Facilitator in Teams Rooms on Windows",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=560318",
-      "description": "In addition to capturing real-time notes and meeting outcomes during scheduled or hybrid meetings, the Facilitator agent assists you with notes, decisions and actions for in-person meetings in Teams Rooms on Windows. Simply invite Facilitator with one tap of the room console. Mee"
-    },
-    {
-      "id": "560075",
-      "title": "Microsoft Purview: Insider Risk Management- IRM alerts in XDR",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=560075",
-      "description": "With this feature, IRM alerts and other supporting data will be available in the following Microsoft Defender XDR experiences:\n\n1. IRM alerts will be surfaced in unified alert and Incident queue in Microsoft Defender XDR.\n2. IRM alerts, Indicators and enriched events will be avai"
     }
   ]
 }
