@@ -1,7 +1,15 @@
 {
-  "updated": "2026-08-11T06:44:45.695573+00:00",
+  "updated": "2026-08-12T07:05:49.646647+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "569203",
+      "title": "OneNote: New Copilot Notebooks design in the Microsoft 365 Copilot app (DoD, GCC, GCC High)",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569203",
+      "description": "The new Copilot Notebooks design in the Microsoft 365 Copilot app for DoD, GCC, and GCC High clouds now lets users organize related chats, output creations, and references into a persistent AI workspace. Copilot uses the Notebook's accumulated context to ground responses, so work"
+    },
     {
       "id": "569022",
       "title": "Outlook: Microsoft Purview Label Inheritance from Email Attachments",
@@ -193,14 +201,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561648",
       "description": "What\u2019s new\nTeams now supports audio and video offloading for Town hall attendees in VDI environments that are using the new optimization. Media streams are offloaded directly to the user\u2019s local device, improving performance and delivering a high definition viewing experience whi"
-    },
-    {
-      "id": "561485",
-      "title": "Microsoft Copilot (Microsoft 365): Copilot in Forms - US Government clouds",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561485",
-      "description": "Copilot in Forms is being enabled for Microsoft Forms in Government Cloud environments, bringing end-to-end AI assistance to forms, from creating a form, to refining and sending to analyzing results. This rollout includes key Copilot features such as: - Draft with Copilot - Distr"
     }
   ]
 }
