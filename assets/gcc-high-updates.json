@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T07:05:49.646647+00:00",
+  "updated": "2026-08-13T07:09:46.619633+00:00",
   "count": 25,
   "items": [
     {
@@ -131,14 +131,6 @@
       "description": "Teams now lets you set and manage reminders directly on chat and channel messages, helping you keep track of important items. Create, update, complete, and delete reminders, track them in a dedicated Reminders view, and receive timely notifications when they become due. Reminders"
     },
     {
-      "id": "565374",
-      "title": "Microsoft Purview: Endpoint Data Loss Prevention - Policy Sync & Device Health AI-Powered Investigation",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=565374",
-      "description": "AI-powered visibility into DLP policy deployment across devices, helping admins track sync progress and understand enforcement coverage. They proactively identify impacted devices, explain root causes of sync failures, and guide admins with recommended actions to quickly diagnose"
-    },
-    {
       "id": "565132",
       "title": "Microsoft Teams: Granular channel notification controls",
       "status": "In development",
@@ -201,6 +193,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561648",
       "description": "What\u2019s new\nTeams now supports audio and video offloading for Town hall attendees in VDI environments that are using the new optimization. Media streams are offloaded directly to the user\u2019s local device, improving performance and delivering a high definition viewing experience whi"
+    },
+    {
+      "id": "561485",
+      "title": "Microsoft Copilot (Microsoft 365): Copilot in Forms - US Government clouds",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561485",
+      "description": "Copilot in Forms is being enabled for Microsoft Forms in Government Cloud environments, bringing end-to-end AI assistance to forms, from creating a form, to refining and sending to analyzing results. This rollout includes key Copilot features such as: - Draft with Copilot - Distr"
     }
   ]
 }
