@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T07:09:46.619633+00:00",
+  "updated": "2026-08-14T07:06:26.905892+00:00",
   "count": 25,
   "items": [
     {
@@ -123,14 +123,6 @@
       "description": "This feature adds support for exporting PST files into Outlook for Mac. "
     },
     {
-      "id": "565869",
-      "title": "Microsoft Teams: Personal message reminders for chat and channels",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=565869",
-      "description": "Teams now lets you set and manage reminders directly on chat and channel messages, helping you keep track of important items. Create, update, complete, and delete reminders, track them in a dedicated Reminders view, and receive timely notifications when they become due. Reminders"
-    },
-    {
       "id": "565132",
       "title": "Microsoft Teams: Granular channel notification controls",
       "status": "In development",
@@ -201,6 +193,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561485",
       "description": "Copilot in Forms is being enabled for Microsoft Forms in Government Cloud environments, bringing end-to-end AI assistance to forms, from creating a form, to refining and sending to analyzing results. This rollout includes key Copilot features such as: - Draft with Copilot - Distr"
+    },
+    {
+      "id": "561209",
+      "title": "Microsoft Purview: Data Lifecycle Management \u2013 Insights and policy recommendations on Microsoft Copilot and AI Apps interactions for better Data Security and Compliance posture",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561209",
+      "description": "Provide insights on Copilots and AI Apps usage and recommend retention policies for customers to govern their Copilots and AI App interactions."
     }
   ]
 }
