@@ -1,7 +1,15 @@
 {
-  "updated": "2026-08-18T06:23:13.628986+00:00",
+  "updated": "2026-08-19T06:24:08.698540+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "569212",
+      "title": "Microsoft Copilot (Microsoft 365): Federated Copilot Connectors in Microsoft 365 Copilot",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569212",
+      "description": "Federated Copilot connectors enable users to securely connect Microsoft Copilot to their favorite third party sources, retrieving data in real-time using the Model Context Protocol (MCP). Federated Copilot connectors do not store or index customer data in Microsoft - access happe"
+    },
     {
       "id": "569431",
       "title": "Outlook: Change the organizer of a meeting",
@@ -9,6 +17,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569431",
       "description": "Transfer ownership of a meeting or recurring meeting series to another person in your organization. The new organizer must accept the transfer before it is completed. This helps maintain continuity for long-running meetings while preserving the existing event for attendees. Avail"
+    },
+    {
+      "id": "569205",
+      "title": "Microsoft Teams: Temporarily pause all notifications",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569205",
+      "description": "Users are now able to temporarily pause all notifications."
     },
     {
       "id": "569433",
@@ -75,14 +91,6 @@
       "description": "Attendees can take advantage of proximity join with Teams Rooms on Windows and/or Android for fast, effortless connection to nearby room systems during Teams events, such as town halls, webinars, and structured meetings."
     },
     {
-      "id": "567461",
-      "title": "Microsoft Teams: Updated header and dashboard for chats and channels on mobile",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567461",
-      "description": "You can now get oriented and take action faster when using Teams on mobile, with a redesigned header and lightweight dashboard that brings key channel details, people, and pinned content into one intuitive place. It creates a more predictable, familiar experience across desktop a"
-    },
-    {
       "id": "566858",
       "title": "Microsoft Teams: Clearer text highlighting in dark mode and high contrast mode",
       "status": "In development",
@@ -113,6 +121,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567300",
       "description": "We're introducing a setting that allows users to opt-out of transitioning presence automatically to Do Not Disturb when presenting or screen sharing. This ensures that they can continue to receive calls, keeping them connected and responsive without manual presence adjustments."
+    },
+    {
+      "id": "567314",
+      "title": "Microsoft Teams: SharePoint app in Teams",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567314",
+      "description": "When a user who has access to the SharePoint app in Teams clicks a SharePoint page or news link in Teams chat or channels, the link will open inside the SharePoint app in Teams (if available) instead of the mobile browser"
     },
     {
       "id": "567010",
@@ -185,22 +201,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=562340",
       "description": "Users can now upload videos directly into a Teams event or meeting from OneDrive from the \"Manage view\" options when an organizer has turned on Manage What Attendees See mode. This ensures a smoother high quality video playback with a more consistent experience for attendees."
-    },
-    {
-      "id": "561648",
-      "title": "Microsoft Teams: Town hall media optimization for VDI attendees",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561648",
-      "description": "What\u2019s new\nTeams now supports audio and video offloading for Town hall attendees in VDI environments that are using the new optimization. Media streams are offloaded directly to the user\u2019s local device, improving performance and delivering a high definition viewing experience whi"
-    },
-    {
-      "id": "561485",
-      "title": "Microsoft Copilot (Microsoft 365): Copilot in Forms - US Government clouds",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561485",
-      "description": "Copilot in Forms is being enabled for Microsoft Forms in Government Cloud environments, bringing end-to-end AI assistance to forms, from creating a form, to refining and sending to analyzing results. This rollout includes key Copilot features such as: - Draft with Copilot - Distr"
     }
   ]
 }
