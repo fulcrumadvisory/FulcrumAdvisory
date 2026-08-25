@@ -1,7 +1,31 @@
 {
-  "updated": "2026-08-24T06:34:09.305429+00:00",
+  "updated": "2026-08-25T06:26:13.355733+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "569719",
+      "title": "Outlook: Purview DLP Wait-on-Send Support for Mac",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569719",
+      "description": "Outlook for Mac will support Microsoft Purview Data Loss Prevention (DLP) wait-on-send policies. Organizations can require a DLP evaluation before an email is sent and configure how long users must wait for policy evaluation to complete. This helps ensure sensitive information is"
+    },
+    {
+      "id": "569718",
+      "title": "Outlook: Purview DLP Wait-on-Send Support for Outlook mobile apps",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569718",
+      "description": "Outlook for iOS and Android will support Microsoft Purview Data Loss Prevention (DLP) wait-on-send policies. Organizations can require a DLP evaluation before an email is sent and configure how long users must wait for policy evaluation to complete. This helps ensure sensitive in"
+    },
+    {
+      "id": "569716",
+      "title": "Outlook: Purview Data Loss Prevention support for Calendar Events in Outlook mobile apps",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569716",
+      "description": "Outlook for iOS and Android will support Microsoft Purview Data Loss Prevention (DLP) policies for calendar events. Organizations can detect and help prevent the sharing of sensitive information in meeting subjects, descriptions, and invite content through policy tips, user remed"
+    },
     {
       "id": "569717",
       "title": "Outlook: Purview Data Loss Prevention support for Calendar Events in Outlook for Mac",
@@ -177,30 +201,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=564913",
       "description": "The new Microsoft Outlook for Windows will be available for US Government clouds (GCC-H and DoD sovereign environments). "
-    },
-    {
-      "id": "561914",
-      "title": "Microsoft Teams: Mandatory pre-meeting consent",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561914",
-      "description": "We are providing a new configuration experience in Teams Admin Center where tenant admins can enable and customize an explicit consent message before joining any meeting hosted in their organization."
-    },
-    {
-      "id": "563810",
-      "title": "Outlook: Navigate Your Favorite Folders Without Expanding the Folder Pane",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=563810",
-      "description": "You can now quickly switch between your favorite folders without opening the full folder pane. When the pane is collapsed, your favorite folders appear as a vertical list, giving you one-click access to the folders you use most. Each folder shows unread or total counts so you alw"
-    },
-    {
-      "id": "562345",
-      "title": "Microsoft Purview: Data Lifecycle Management - Archive OneDrive and SharePoint files under retention",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=562345",
-      "description": "With the introduction of file archiving support in SharePoint Online, administrators are looking to seamlessly include archiving actions within their existing data retention policies. This means that, in addition to keeping or deleting data, admins want to now leverage Purview DL"
     }
   ]
 }
