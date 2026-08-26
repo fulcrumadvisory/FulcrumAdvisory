@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T06:26:13.355733+00:00",
+  "updated": "2026-08-26T06:27:43.341798+00:00",
   "count": 25,
   "items": [
     {
@@ -56,7 +56,7 @@
       "status": "In development",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569205",
-      "description": "Users are now able to temporarily pause all notifications."
+      "description": "Users can now temporarily pause all notifications to minimize interruptions and stay focused on important work, meetings, or other priorities, without changing their existing notification settings."
     },
     {
       "id": "569433",
@@ -113,14 +113,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=568792",
       "description": "Microsoft Planner will be updated with a cleaner, more modern interface, improved navigation, responsive layouts, and a more consistent experience across Planner in Teams and Planner for the web. This update also introduces Goals in basic plans."
-    },
-    {
-      "id": "568781",
-      "title": "Microsoft Teams: Proximity join support for attendees in Teams events from Teams Rooms on Windows and Android",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=568781",
-      "description": "Attendees can take advantage of proximity join with Teams Rooms on Windows and/or Android for fast, effortless connection to nearby room systems during Teams events, such as town halls, webinars, and structured meetings."
     },
     {
       "id": "566858",
@@ -201,6 +193,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=564913",
       "description": "The new Microsoft Outlook for Windows will be available for US Government clouds (GCC-H and DoD sovereign environments). "
+    },
+    {
+      "id": "561914",
+      "title": "Microsoft Teams: Mandatory pre-meeting consent",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561914",
+      "description": "We are providing a new configuration experience in Teams Admin Center where tenant admins can enable and customize an explicit consent message before joining any meeting hosted in their organization."
     }
   ]
 }
