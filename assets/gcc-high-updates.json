@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T06:27:43.341798+00:00",
+  "updated": "2026-08-27T17:01:41.395697+00:00",
   "count": 25,
   "items": [
     {
@@ -179,14 +179,6 @@
       "description": "This feature adds support for exporting PST files into Outlook for Mac. "
     },
     {
-      "id": "565132",
-      "title": "Microsoft Teams: Granular channel notification controls",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=565132",
-      "description": "Microsoft Teams introduces flexible presets for channel notifications, allowing you to choose between All new messages, @mentions and replies, or Mute. You can further customize alerts for unfollowed threads, tags, and channel or team mentions, as well as control banner notificat"
-    },
-    {
       "id": "564913",
       "title": "Outlook: New Outlook for Windows for GCC-H and DoD",
       "status": "In development",
@@ -201,6 +193,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561914",
       "description": "We are providing a new configuration experience in Teams Admin Center where tenant admins can enable and customize an explicit consent message before joining any meeting hosted in their organization."
+    },
+    {
+      "id": "563810",
+      "title": "Outlook: Navigate Your Favorite Folders Without Expanding the Folder Pane",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=563810",
+      "description": "You can now quickly switch between your favorite folders without opening the full folder pane. When the pane is collapsed, your favorite folders appear as a vertical list, giving you one-click access to the folders you use most. Each folder shows unread or total counts so you alw"
     }
   ]
 }
