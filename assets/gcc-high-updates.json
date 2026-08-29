@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T17:50:28.444750+00:00",
+  "updated": "2026-08-29T11:54:56.886749+00:00",
   "count": 25,
   "items": [
     {
@@ -57,14 +57,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569205",
       "description": "Users can now temporarily pause all notifications to minimize interruptions and stay focused on important work, meetings, or other priorities, without changing their existing notification settings."
-    },
-    {
-      "id": "569433",
-      "title": "Microsoft Teams: App centric management in Teams Admin Center to manage the Apps access for tenants, end-users, and groups in GCC High",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569433",
-      "description": "App centric management introduces new admin settings to control who in the tenant can install Teams apps. First, admins can set a default value for new apps that are published to Teams app store. Second, admins can edit the availability of an app to \u201cAll users can install,\u201d \u201cSpec"
     },
     {
       "id": "569203",
@@ -201,6 +193,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=563810",
       "description": "You can now quickly switch between your favorite folders without opening the full folder pane. When the pane is collapsed, your favorite folders appear as a vertical list, giving you one-click access to the folders you use most. Each folder shows unread or total counts so you alw"
+    },
+    {
+      "id": "562345",
+      "title": "Microsoft Purview: Data Lifecycle Management - Archive OneDrive and SharePoint files under retention",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=562345",
+      "description": "With the introduction of file archiving support in SharePoint Online, administrators are looking to seamlessly include archiving actions within their existing data retention policies. This means that, in addition to keeping or deleting data, admins want to now leverage Purview DL"
     }
   ]
 }
