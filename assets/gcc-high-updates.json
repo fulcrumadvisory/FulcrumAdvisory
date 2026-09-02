@@ -1,7 +1,39 @@
 {
-  "updated": "2026-09-01T10:42:28.943950+00:00",
+  "updated": "2026-09-02T10:07:36.404896+00:00",
   "count": 25,
   "items": [
+    {
+      "id": "570431",
+      "title": "Microsoft 365: Organizational Data Service is now available in GCC-High",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=570431",
+      "description": "We\u2019re excited to announce that Microsoft 365 Organizational Data Service is now available in the GCC-High (GCC-H) environment! Microsoft 365 Organizational Data Service enables rapid ingestion of organizational/HR data through connectors from multiple HRIS systems using a single "
+    },
+    {
+      "id": "570428",
+      "title": "Microsoft Viva: Viva Insights and Copilot Analytics in GCC-High",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=570428",
+      "description": "Microsoft Viva Insights and Copilot Analytics are coming to Microsoft 365 Government Community Cloud High (GCC High), providing eligible organizations with privacy-protected, role-based analytics experiences to help them understand Microsoft 365 Copilot adoption, usage, and impac"
+    },
+    {
+      "id": "569477",
+      "title": "Microsoft Purview: Data Loss Prevention \u2013 Default Protection Controls for Exchange Online in the event of classification failure ",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569477",
+      "description": "Default protection controls for Exchange Online is available in public preview. This release gives administrators fine-grained control to create DLP policies based on specific classification or text extraction failure types \u2014 such as timeout, throttling and other scan errors \u2014 ra"
+    },
+    {
+      "id": "568784",
+      "title": "Microsoft Defender for Identity: Unified identity timeline on the Identity page",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=568784",
+      "description": "The updated identity timeline provides security teams with a single chronological view of activity and alerts associated with an identity and its linked accounts. It normalizes activity from integrated Microsoft security products, including Microsoft Entra sign-ins, Microsoft Gra"
+    },
     {
       "id": "569719",
       "title": "Outlook: Purview DLP Wait-on-Send Support for Mac",
@@ -85,7 +117,7 @@
     {
       "id": "569017",
       "title": "Microsoft Teams: Intelligent call recaps in Queues app",
-      "status": "In development",
+      "status": "Rolling out",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569017",
       "description": "Spend less time catching up on call recordings to resolve customer issues faster. For recorded call queue calls, the Queues app now supports intelligent call recaps for recorded calls that includes AI-generated summary notes, key discussion points, and follow-up actions. Navigate"
@@ -115,6 +147,14 @@
       "description": "We've improved how highlighted text looks when composing messages in dark mode and high contrast mode, giving you a more consistent editing experience."
     },
     {
+      "id": "567007",
+      "title": "Outlook: New Copilot entry point in Classic Outlook",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567007",
+      "description": "We've introduced a new experience for Copilot in the apps\u2014a consistent entry point across apps that sits above your work and understands the context beneath it. Rather than scattering touchpoints across the interface, it anchors Copilot as one connected system across Microsoft 36"
+    },
+    {
       "id": "567884",
       "title": "Microsoft Teams: External phone call routing (GCC High, DoD)",
       "status": "In development",
@@ -125,7 +165,7 @@
     {
       "id": "567469",
       "title": "Microsoft Teams: PowerPoint Live Light theme support",
-      "status": "In development",
+      "status": "Rolling out",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567469",
       "description": "Presenting PowerPoint slides in Teams just got better. PowerPoint Live now supports light mode, giving presenters the option to present in light, dark, classic, or high contrast mode based on their preferences and system settings."
@@ -161,46 +201,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566701",
       "description": "Copilot in PowerPoint helps you create, edit, and refine presentations through natural language\u2014right inside your deck. Start a new presentation or build on an existing one by asking Copilot to generate slides, update content, improve layouts, and polish design, all while preserv"
-    },
-    {
-      "id": "566203",
-      "title": "Outlook: Export support for data files in Mac Outlook",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566203",
-      "description": "This feature adds support for exporting PST files into Outlook for Mac. "
-    },
-    {
-      "id": "564913",
-      "title": "Outlook: New Outlook for Windows for GCC-H and DoD",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=564913",
-      "description": "The new Microsoft Outlook for Windows will be available for US Government clouds (GCC-H and DoD sovereign environments). "
-    },
-    {
-      "id": "561914",
-      "title": "Microsoft Teams: Mandatory pre-meeting consent",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561914",
-      "description": "We are providing a new configuration experience in Teams Admin Center where tenant admins can enable and customize an explicit consent message before joining any meeting hosted in their organization."
-    },
-    {
-      "id": "563810",
-      "title": "Outlook: Navigate Your Favorite Folders Without Expanding the Folder Pane",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=563810",
-      "description": "You can now quickly switch between your favorite folders without opening the full folder pane. When the pane is collapsed, your favorite folders appear as a vertical list, giving you one-click access to the folders you use most. Each folder shows unread or total counts so you alw"
-    },
-    {
-      "id": "562345",
-      "title": "Microsoft Purview: Data Lifecycle Management - Archive OneDrive and SharePoint files under retention",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=562345",
-      "description": "With the introduction of file archiving support in SharePoint Online, administrators are looking to seamlessly include archiving actions within their existing data retention policies. This means that, in addition to keeping or deleting data, admins want to now leverage Purview DL"
     }
   ]
 }
