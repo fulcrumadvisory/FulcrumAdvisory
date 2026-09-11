@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-10T10:12:12.610649+00:00",
+  "updated": "2026-09-11T10:09:23.491536+00:00",
   "count": 25,
   "items": [
     {
@@ -149,10 +149,10 @@
     {
       "id": "566858",
       "title": "Microsoft Teams: Clearer text highlighting in dark mode and high contrast mode",
-      "status": "In development",
+      "status": "Rolling out",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566858",
-      "description": "We've improved how highlighted text looks when composing messages in dark mode and high contrast mode, giving you a more consistent editing experience."
+      "description": "<p>We've improved how highlighted text looks when composing messages in dark mode and high contrast mode, giving you a more consistent editing experience.</p>"
     },
     {
       "id": "567007",
