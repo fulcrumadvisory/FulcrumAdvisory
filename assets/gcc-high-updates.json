@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T11:10:32.710037+00:00",
+  "updated": "2026-09-15T10:38:01.157768+00:00",
   "count": 25,
   "items": [
     {
@@ -160,7 +160,7 @@
       "status": "In development",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567007",
-      "description": "We've introduced a new experience for Copilot in the apps\u2014a consistent entry point across apps that sits above your work and understands the context beneath it. Rather than scattering touchpoints across the interface, it anchors Copilot as one connected system across Microsoft 36"
+      "description": "<p>We've introduced a new experience for Copilot in the apps\u2014a consistent entry point across apps that sits above your work and understands the context beneath it. Rather than scattering touchpoints across the interface, it anchors Copilot as one connected system across Microsoft"
     },
     {
       "id": "567884",
