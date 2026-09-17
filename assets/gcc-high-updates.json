@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16T10:26:43.777804+00:00",
+  "updated": "2026-09-17T10:35:56.918028+00:00",
   "count": 25,
   "items": [
     {
@@ -93,10 +93,10 @@
     {
       "id": "569205",
       "title": "Microsoft Teams: Temporarily pause all notifications",
-      "status": "In development",
+      "status": "Rolling out",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569205",
-      "description": "Users can now temporarily pause all notifications to minimize interruptions and stay focused on important work, meetings, or other priorities, without changing their existing notification settings."
+      "description": "<p>Users can now temporarily pause all notifications to minimize interruptions and stay focused on important work, meetings, or other priorities, without changing their existing notification settings.</p>"
     },
     {
       "id": "569203",
@@ -165,10 +165,10 @@
     {
       "id": "567884",
       "title": "Microsoft Teams: External phone call routing (GCC High, DoD)",
-      "status": "In development",
+      "status": "Rolling out",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567884",
-      "description": "External call routing will provide users the ability to redirect all external phone calls to either voicemail or their unanswered settings. "
+      "description": "<p>External call routing will provide users the ability to redirect all external phone calls to either voicemail or their unanswered settings.</p>"
     },
     {
       "id": "567469",
@@ -181,10 +181,10 @@
     {
       "id": "567300",
       "title": "Microsoft Teams: Prevent presence transition to \"Do not disturb\" setting when screen sharing (GCC High, DoD)",
-      "status": "In development",
+      "status": "Rolling out",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567300",
-      "description": "We're introducing a setting that allows users to opt-out of transitioning presence automatically to Do Not Disturb when presenting or screen sharing. This ensures that they can continue to receive calls, keeping them connected and responsive without manual presence adjustments."
+      "description": "<p>We're introducing a setting that allows users to opt-out of transitioning presence automatically to Do Not Disturb when presenting or screen sharing. This ensures that they can continue to receive calls, keeping them connected and responsive without manual presence adjustments"
     },
     {
       "id": "567314",
@@ -195,12 +195,12 @@
       "description": "When a user who has access to the SharePoint app in Teams clicks a SharePoint page or news link in Teams chat or channels, the link will open inside the SharePoint app in Teams (if available) instead of the mobile browser"
     },
     {
-      "id": "567010",
-      "title": "Microsoft Purview: Data Loss Prevention - User Based Aggregation of DLP Alerts",
+      "id": "566701",
+      "title": "Microsoft Copilot (Microsoft 365): Edit your document with Copilot in PowerPoint in Government Clouds",
       "status": "In development",
       "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567010",
-      "description": "Enable aggregation of DLP alerts based on common entities user even when multiple rules are matched. This feature should consolidate related alert events into a single alert object to: Reduce alert noise, simplify investigation workflows, enhance contextual understanding of viola"
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566701",
+      "description": "Copilot in PowerPoint helps you create, edit, and refine presentations through natural language\u2014right inside your deck. Start a new presentation or build on an existing one by asking Copilot to generate slides, update content, improve layouts, and polish design, all while preserv"
     }
   ]
 }
