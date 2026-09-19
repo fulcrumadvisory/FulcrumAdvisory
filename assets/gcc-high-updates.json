@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18T10:12:14.950355+00:00",
+  "updated": "2026-09-19T09:53:35.694203+00:00",
   "count": 25,
   "items": [
     {
@@ -195,12 +195,12 @@
       "description": "When a user who has access to the SharePoint app in Teams clicks a SharePoint page or news link in Teams chat or channels, the link will open inside the SharePoint app in Teams (if available) instead of the mobile browser"
     },
     {
-      "id": "566701",
-      "title": "Microsoft Copilot (Microsoft 365): Edit your document with Copilot in PowerPoint in Government Clouds",
+      "id": "566203",
+      "title": "Outlook: Export support for data files in Mac Outlook",
       "status": "In development",
       "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566701",
-      "description": "Copilot in PowerPoint helps you create, edit, and refine presentations through natural language\u2014right inside your deck. Start a new presentation or build on an existing one by asking Copilot to generate slides, update content, improve layouts, and polish design, all while preserv"
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566203",
+      "description": "This feature adds support for exporting PST files into Outlook for Mac. "
     }
   ]
 }
