@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23T10:25:24.260791+00:00",
+  "updated": "2026-09-24T10:41:59.345687+00:00",
   "count": 25,
   "items": [
     {
@@ -187,20 +187,20 @@
       "description": "<p>We're introducing a setting that allows users to opt-out of transitioning presence automatically to Do Not Disturb when presenting or screen sharing. This ensures that they can continue to receive calls, keeping them connected and responsive without manual presence adjustments"
     },
     {
-      "id": "567314",
-      "title": "Microsoft Teams: SharePoint app in Teams",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567314",
-      "description": "When a user who has access to the SharePoint app in Teams clicks a SharePoint page or news link in Teams chat or channels, the link will open inside the SharePoint app in Teams (if available) instead of the mobile browser"
-    },
-    {
       "id": "566203",
       "title": "Outlook: Export support for data files in Mac Outlook",
       "status": "In development",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566203",
       "description": "This feature adds support for exporting PST files into Outlook for Mac. "
+    },
+    {
+      "id": "564913",
+      "title": "Outlook: New Outlook for Windows for GCC-H and DoD",
+      "status": "In development",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=564913",
+      "description": "The new Microsoft Outlook for Windows will be available for US Government clouds (GCC-H and DoD sovereign environments). "
     }
   ]
 }
