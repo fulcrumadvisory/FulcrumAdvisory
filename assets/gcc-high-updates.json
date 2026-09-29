@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T12:16:24.538351+00:00",
+  "updated": "2026-09-29T11:44:58.522139+00:00",
   "count": 25,
   "items": [
     {
@@ -141,10 +141,10 @@
     {
       "id": "568792",
       "title": "Planner: Refreshed experience and new capabilities",
-      "status": "In development",
+      "status": "Launched",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=568792",
-      "description": "Microsoft Planner will be updated with a cleaner, more modern interface, improved navigation, responsive layouts, and a more consistent experience across Planner in Teams and Planner for the web. This update also introduces Goals in basic plans."
+      "description": "<p>Microsoft Planner will be updated with a cleaner, more modern interface, improved navigation, responsive layouts, and a more consistent experience across Planner in Teams and Planner for the web. This update also introduces Goals in basic plans.</p>"
     },
     {
       "id": "566858",
@@ -153,14 +153,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=566858",
       "description": "<p>We've improved how highlighted text looks when composing messages in dark mode and high contrast mode, giving you a more consistent editing experience.</p>"
-    },
-    {
-      "id": "567007",
-      "title": "Outlook: New Copilot entry point in Classic Outlook",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567007",
-      "description": "<p>We've introduced a new experience for Copilot in the apps\u2014a consistent entry point across apps that sits above your work and understands the context beneath it. Rather than scattering touchpoints across the interface, it anchors Copilot as one connected system across Microsoft"
     },
     {
       "id": "567884",
@@ -201,6 +193,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=564913",
       "description": "The new Microsoft Outlook for Windows will be available for US Government clouds (GCC-H and DoD sovereign environments). "
+    },
+    {
+      "id": "561914",
+      "title": "Microsoft Teams: Mandatory pre-meeting consent",
+      "status": "Rolling out",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561914",
+      "description": "We are providing a new configuration experience in Teams Admin Center where tenant admins can enable and customize an explicit consent message before joining any meeting hosted in their organization."
     }
   ]
 }
