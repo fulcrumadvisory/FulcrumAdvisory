@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T12:56:14.543134+00:00",
+  "updated": "2026-10-06T12:22:21.893951+00:00",
   "count": 25,
   "items": [
     {
@@ -189,10 +189,10 @@
     {
       "id": "564913",
       "title": "Outlook: New Outlook for Windows for GCC-H and DoD",
-      "status": "In development",
+      "status": "Launched",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=564913",
-      "description": "The new Microsoft Outlook for Windows will be available for US Government clouds (GCC-H and DoD sovereign environments). "
+      "description": "<p>The new Microsoft Outlook for Windows will be available for US Government clouds (GCC-H and DoD sovereign environments).</p>"
     },
     {
       "id": "561914",
