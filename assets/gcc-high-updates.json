@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06T12:22:21.893951+00:00",
+  "updated": "2026-10-07T12:14:50.283004+00:00",
   "count": 25,
   "items": [
     {
@@ -173,7 +173,7 @@
     {
       "id": "567300",
       "title": "Microsoft Teams: Prevent presence transition to \"Do not disturb\" setting when screen sharing (GCC High, DoD)",
-      "status": "Rolling out",
+      "status": "Launched",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567300",
       "description": "<p>We're introducing a setting that allows users to opt-out of transitioning presence automatically to Do Not Disturb when presenting or screen sharing. This ensures that they can continue to receive calls, keeping them connected and responsive without manual presence adjustments"
