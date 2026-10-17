@@ -514,13 +514,13 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 | Item | Status | Notes |
 |---|---|---|
 | Contact form (fulcrumadvisory.us) | ✅ Done | Formspree `xwvzzkbj` wired via AJAX — info@fulcrumadvisory.us |
-| Microsoft Bookings embed | ⏳ Pending | Removed — schedule button links to contact page; re-add when Bookings is resolved |
+| Microsoft Bookings embed | ✅ Done | Live on contact.html — links to outlook.office.com Bookings page (button, not iframe) |
 | LinkedIn URL | ⏳ Pending | Footer + about.html `data-placeholder="true"` |
 | State of incorporation | ⏳ Pending | Needed for `terms.html` |
 | Any certifications (CISSP, etc.) | ⏳ Pending | Add to `about.html` credential cards |
 | Favicon (SVG) | ✅ Done | `assets/favicon.svg` — live |
 | Google Analytics / Search Console | ⏳ Pending | Add `<script>` tag to `<head>` of all pages when ready |
-| Sitemap.xml | ✅ Done | All 35 pages included |
+| Sitemap.xml | ✅ Done | 44 pages included |
 | sf-328-web Formspree endpoint | ⏳ Pending | Replace `FORMSPREE_ENDPOINT` in `sf-328-web/index.html` |
 | fulcrumfoci-web Formspree endpoint | ⏳ Pending | Replace `FORMSPREE_ENDPOINT` in `fulcrumfoci-web/index.html` |
 | DNS — fulcrumadvisory.us | ✅ Done | All 4 GitHub Pages A records live; www CNAME → fulcrumadvisory.github.io; M365 fully wired |
@@ -537,8 +537,8 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 | `styles.css` | ✅ Complete | Sacred — do not modify |
 | `index.html` | ✅ Complete | Hero updated; alert dismiss/expand; FulcrumFOCI product section; Products nav link |
 | `about.html` | ✅ Complete | Background section reordered 25+/16+/10+/1+ yr; ECP credential accurate |
-| `contact.html` | ✅ Complete | Formspree xwvzzkbj wired (AJAX); Bookings removed pending resolution |
-| `services.html` | ✅ Complete | 6 services; pricing card bottom-aligned; delivery model CTA |
+| `contact.html` | ✅ Complete | Formspree xwvzzkbj wired (AJAX); Microsoft Bookings live (outlook.office.com button) |
+| `services.html` | ✅ Complete | 6 services; pricing card bottom-aligned; delivery model CTA; numbering 01–06 corrected |
 | `services/foci-advisory.html` | ✅ Complete | |
 | `services/cmmc-compliance.html` | ✅ Complete | Scoping/enclave expertise added; Cyber AB non-registration noted |
 | `services/ai-govcon.html` | ✅ Complete | AI strategy/roadmap and COTS evaluation added; scope-first framing |
@@ -562,6 +562,19 @@ The contact form in `contact.html` is a **placeholder** matching the same soluti
 | `robots.txt` | ✅ Complete | |
 | `sitemap.xml` | ✅ Complete | All 35 pages included |
 | `assets/favicon.svg` | ✅ Complete | |
+| `contract-vehicles.html` | ✅ Complete | Federal procurement vehicles / SAM.gov reference |
+| `capability-statement.html` | ✅ Complete | |
+| `resources.html` | ✅ Complete | |
+| `tools.html` | ✅ Complete | |
+| `regulatory-watch.html` | ✅ Complete | |
+| `gcc-high-licensing.html` | ✅ Complete | GCC High licensing guide (E3/E5/E7, GCC High SKUs) |
+| `gcc-high-parity.html` | ✅ Complete | |
+| `gcc-high-roadmap.html` | ✅ Complete | |
+| `claude-code-gcc-high.html` | ✅ Complete | |
+| `services/govcon-erp.html` | ✅ Complete | |
+| `services/bpm.html` | ✅ Complete | |
+| `services/pmo.html` | ✅ Complete | |
+| `services/mdm-apple.html` | ✅ Complete | |
 
 ---
 
@@ -632,3 +645,12 @@ CNAME pay  paylinks.commerce.godaddy.com.
 ```
 
 Email at `info@fulcrumadvisory.us` routes through Exchange Online (M365). Registrar: GoDaddy (ns53/ns54.domaincontrol.com).
+
+---
+
+## Session Log
+
+### 2026-10-17 — Web review: nav parity fix, services numbering fix, CLAUDE.md sync
+- What changed: Fixed duplicate "05" service number (Fractional vCISO/vCIO now correctly shows "04") in `services.html`; added Products nav link to all 34 interior pages (both desktop and mobile nav) linking to `index.html#products` (root) or `../index.html#products` (subdirectories); updated CLAUDE.md Section 8 (Bookings marked ✅ Done, sitemap count corrected to 44); updated Section 9 Build Status with 14 undocumented live pages
+- Status: All nav links consistent across site; numbering 01–06 correct; CLAUDE.md reflects actual site state
+- Next steps: LinkedIn URL still pending; Google Analytics/Search Console tag still pending; state of incorporation still pending for terms.html
