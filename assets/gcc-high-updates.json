@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T11:28:36.040619+00:00",
+  "updated": "2026-10-20T10:34:46.061309+00:00",
   "count": 25,
   "items": [
     {
@@ -157,7 +157,7 @@
     {
       "id": "567884",
       "title": "Microsoft Teams: External phone call routing (GCC High, DoD)",
-      "status": "Rolling out",
+      "status": "Launched",
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=567884",
       "description": "<p>External call routing will provide users the ability to redirect all external phone calls to either voicemail or their unanswered settings.</p>"
