@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T13:55:17.431714+00:00",
+  "updated": "2026-11-11T13:08:01.534178+00:00",
   "count": 25,
   "items": [
     {
@@ -57,14 +57,6 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569716",
       "description": "Outlook for iOS and Android will support Microsoft Purview Data Loss Prevention (DLP) policies for calendar events. Organizations can detect and help prevent the sharing of sensitive information in meeting subjects, descriptions, and invite content through policy tips, user remed"
-    },
-    {
-      "id": "569212",
-      "title": "Microsoft Copilot (Microsoft 365): Federated Copilot Connectors in Microsoft 365 Copilot",
-      "status": "In development",
-      "date": "September CY2026",
-      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=569212",
-      "description": "Federated Copilot connectors enable users to securely connect Microsoft Copilot to their favorite third party sources, retrieving data in real-time using the Model Context Protocol (MCP). Federated Copilot connectors do not store or index customer data in Microsoft - access happe"
     },
     {
       "id": "569431",
@@ -201,6 +193,14 @@
       "date": "September CY2026",
       "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561648",
       "description": "What\u2019s new\nTeams now supports audio and video offloading for Town hall attendees in VDI environments that are using the new optimization. Media streams are offloaded directly to the user\u2019s local device, improving performance and delivering a high definition viewing experience whi"
+    },
+    {
+      "id": "561485",
+      "title": "Microsoft Copilot (Microsoft 365): Copilot in Forms - US Government clouds",
+      "status": "Rolling out",
+      "date": "September CY2026",
+      "link": "https://www.microsoft.com/microsoft-365/roadmap?id=561485",
+      "description": "<p>Copilot in Forms is being enabled for Microsoft Forms in Government Cloud environments, bringing end-to-end AI assistance to forms, from creating a form, to refining and sending to analyzing results. This rollout includes key Copilot features such as: - Draft with Copilot - Di"
     }
   ]
 }
